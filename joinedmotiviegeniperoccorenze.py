@@ -4,17 +4,16 @@ import os
 input_dir= "/home/davide/Downloads/genomiChro/intergeniche_tutte/intergeniche_best"
 output_dir = "/home/davide/Downloads/genomiChro/intergeniche_tutte/motivibest"
 patterns = ['.AGT.{3,11}ACT.', '.TAGT.{3,11}ATC.', '.AG.{3,11}ACT.', '.AGT.{3,11}CT.' ]
-"""
+
 for file in os.listdir(input_dir):
     if not file.endswith(".fasta"):
         continue
     input_file = os.path.join(input_dir, file)
     output_file = os.path.join(output_dir, file[:-6]+"_motifs.txt")
-    #print(output_file)
     cercapatterns(input_file, patterns, output_file)
     print(f"Found patterns in {input_file} and saved results to {output_file}")
 
-"""
+
 
 # Specify the directory containing the text files
 input_dir = "/home/davide/Downloads/genomiChro/intergeniche_best_hits/motivitrovati"
@@ -23,7 +22,7 @@ input_dir = "/home/davide/Downloads/genomiChro/intergeniche_best_hits/motivitrov
 output_file = "/home/davide/Downloads/genomiChro/intergeniche_best_hits/motivitrovati/joined.txt"
 
 # Use the cat command to join all text files into a single file
-#os.system(f"cat {input_dir}/*.txt > {output_file}")
+os.system(f"cat {input_dir}/*.txt > {output_file}")
 import re
 import collections
 
@@ -42,7 +41,6 @@ for i in range(len(lines)):
     # If the line contains a string inside [] square brackets
     match = re.search(r'\'(.*?)\'', lines[i])
     if match and i + 2 < len(lines) and lines[i + 2].startswith('Trovato'):
-
         # Add the string to the list
         strings.append(match.group(1))
 
@@ -57,13 +55,12 @@ locus_tags = [string.split(" ")[0] for string, count in sorted_counts]
 new_counts = dict(zip(locus_tags,  [count for string, count in sorted_counts]))
 
 from Bio import SeqIO
-from pprint import pprint
 # List of locus_tags you are interested in
 #infile="Chroococcidiopsis_sp._CCMEE_29_(cyanobacteria)_GCF_023558375.1.gbk"
 infile="prokkaCCMEE29.gbk"
 indir="/home/davide/Downloads/PROKKA_02102024"
 #indir="/home/davide/Downloads/genomiChro/genbanks_prokka"
-from pprint import pformat
+
 # Open and parse the GenBank file
 annotati={}
 with open(os.path.join(indir, infile), "r") as file:

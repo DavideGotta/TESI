@@ -27,7 +27,7 @@ for i in range(len(summaries['DocumentSummarySet']['DocumentSummary'])):
     ftp_path = summaries['DocumentSummarySet']['DocumentSummary'][i]['FtpPath_GenBank']
     #downlaod fasta
     filename = ftp_path + "/" + ftp_path.split('/')[-1] + '_genomic.fna.gz'
-    localpath = f"/home/davide/Downloads/genomiChro/{organism}_{assembly_accession}.fna.gz"
+    localpath = f"/home/davide/Desktop/genomiChro/{organism}_{assembly_accession}.fna.gz"
     urllib.request.urlretrieve(filename, localpath)
 
 

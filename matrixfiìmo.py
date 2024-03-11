@@ -93,4 +93,4 @@ dataframe = dataframe.reindex(dataframe.isnull().sum(axis=1).sort_values().index
 dataframe.to_excel('/home/davide/Downloads/geniconMotivoMEMEinGenomiChro.xlsx', index=False)
 
 # Save DataFrame to csv
-dataframe.to_csv('/home/davide/Downloads/geniconMotivoMEMEinGenomiChro..csv', index=False)
+dataframe.to_csv('/home/davide/Downloads/geniconMotivoMEMEinGenomiChro.csv', index=False)

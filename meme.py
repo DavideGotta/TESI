@@ -1,7 +1,6 @@
 from Bio.motifs import meme
 
 with open("/home/davide/Downloads/meme.xml") as f:
-
     record = meme.read(f)
 
 for motif in record:

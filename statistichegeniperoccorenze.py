@@ -1,4 +1,4 @@
-file = "/home/davide/Downloads/genomiChro/intergeniche_best_hits/motivitrovati/genilistaperoccorrenze.txt"
+file = "/home/davide/Desktop/genomiChro/intergeniche_best_hits/motivitrovati/genilistaperoccorrenze.txt"
 import re
 from collections import Counter
 #extract all numbers after Occorenze = for example Occorenze = 10, count how how many times each number appears

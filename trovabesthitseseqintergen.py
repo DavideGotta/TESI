@@ -1,16 +1,16 @@
-from trovagenisimili import *
+from extractbesthits import *
 import os
 dir_genbank = "/home/davide/Downloads/genomiChro/genbanks_prokka"
 dir= "/home/davide/Downloads/genomiChro/blast_results_all"
 best_dir = "/home/davide/Downloads/genomiChro/blast_results_all/best_hits"
 intergeniche_dir = "/home/davide/Downloads/genomiChro/intergeniche_tutte"
-"""
+
 for file in os.listdir(dir):
     if file.endswith(".txt"):
         output_file = os.path.join(best_dir, file[:-10] + "_best_hits.txt")
         extract_best_hits(os.path.join(dir, file), output_file)
         print(f"Extracted best hits to {output_file}")
-"""
+
 import re
 from intergeniche import sequenze_intergeniche
 for file in os.listdir(best_dir):
