@@ -2,7 +2,7 @@ from Bio import SeqIO
 import re
 
 
-def cercapatterns(input_filename, patterns, output_filename):
+def cercamotivi(input_filename, patterns, output_filename):
     results = {}
     diz = {pattern: 0 for pattern in patterns}
     len_tot=0
@@ -39,7 +39,7 @@ def cercapatterns(input_filename, patterns, output_filename):
         outfile.write(f"Lunghezza totale:{len_tot}")
 
 
-motivi = ['.AGT.{7,9}ACT.', '.TAGT.{3,11}ATC.', '.AG.{3,11}ACT.', '.AGT.{3,11}CT.']
+motivi = ['.AGT.{3,11}ACT.', '.TAGT.{3,11}ATC.', '.AG.{3,11}ACT.', '.AGT.{3,11}CT.']
 
 import os
 dir="/home/davide/Desktop/genomiChro/intergeniche_tutte/motivi_trovati"
@@ -59,5 +59,5 @@ for file in os.listdir(input_dir):
     input_file = os.path.join(input_dir, file)
     output_file = os.path.join(output_dir, file[:-3]+"MOTIVI.txt")
     #print(output_file)
-    cercapatterns(input_file, motivi, output_file)
+    cercamotivi(input_file, motivi, output_file)
     print(f"Found patterns in {input_file} and saved results to {output_file}")

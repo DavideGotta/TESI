@@ -1,4 +1,4 @@
-from cercapattern import cercapatterns
+from cercapattern import cercamotivi
 import os
 
 input_dir= "/home/davide/Downloads/genomiChro/intergeniche_tutte/intergeniche_best"

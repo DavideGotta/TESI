@@ -1,3 +1,9 @@
+"""
+CREAZUIONE DI UNA MATRICE IN CUI LE RIGHE SONO I GENI E LE COLONNE SONO I GENOMI E I VALORI SONO I MOTIVI TROVATI(E LA POSIZIONE) CON FIMO DEL MOTIVO DI 16BP TROVATO CON MEME
+
+CREAZIONE DI GRAFICO A TORTA CHE MOSTRA LA FREQUENZA DEI CODONI DI START(IN TEORIA AVEVO LETTO CHE PER GENI DI RIPARO SPESSO SI HA UN CODONE DI INIZIO ALTERNATIVO)
+"""
+
 # Import necessary libraries
 import os
 import pandas as pd
@@ -23,7 +29,7 @@ def get_intergenic_length(fimo_file, locus_tag):
             for rec in SeqIO.parse(os.path.join(intergen_dir,fasta), 'fasta'):
                 if locus_tag in rec.description:
                     return len(rec.seq)
-dir="/home/davide/Downloads/fimo"
+dir="/home/davide/Desktop/genomiChro/fimo"
 genbank_dir = "/home/davide/Desktop/genomiChro/genbanks_prokka"
 # Initialize DataFrame
 dataframe= pd.DataFrame(columns=['gene'])
@@ -49,7 +55,6 @@ for file in os.listdir(dir):
             for seq in genoma:
                 for record in seq.features:
                     if record.type=='CDS' and record.qualifiers['locus_tag'][0] in data['sequence_name'].values:
-                        # Print first 3 nucleotides of the sequence
                         if record.location.strand == 1:
                             codone = seq.seq[record.location.start:record.location.start+3]
                             codoni[codone] = codoni.get(codone, 0) + 1
@@ -70,7 +75,10 @@ for file in os.listdir(dir):
     data['matched_sequence'] = data['matched_sequence'] + "(" + data['start'].astype(str) + ")"
     data = data.drop(columns=['start'])
     data.rename(columns={'sequence_name':'gene'}, inplace=True)
-    data.rename(columns={'matched_sequence': file[4:-12]}, inplace=True)
+    for file2 in os.listdir(genbank_dir):
+        if file[4:-10] in file2:
+            name = file2[file2.find("_")+1:file2.find("(")-1]
+    data.rename(columns={'matched_sequence': name}, inplace=True)
     dataframe = pd.merge(dataframe, data, on='gene', how='outer')
     df = pd.DataFrame(list(codoni.items()), columns=['Start Codon', 'Frequency'])
     df = df.sort_values(by='Frequency', ascending=False)
@@ -80,10 +88,9 @@ for file in os.listdir(dir):
 
 # Reorder rows sort for number of Nan values
 dataframe = dataframe.reindex(dataframe.isnull().sum(axis=1).sort_values().index)
-print(dataframe.shape)
 
 # Save DataFrame to excel
-dataframe.to_excel('/home/davide/Downloads/mergedproduct.xlsx', index=False)
+dataframe.to_excel('/home/davide/Downloads/geniconMotivoMEMEinGenomiChro.xlsx', index=False)
 
 # Save DataFrame to csv
-dataframe.to_csv('/home/davide/Downloads/mergedproduct.csv', index=False)
+dataframe.to_csv('/home/davide/Downloads/geniconMotivoMEMEinGenomiChro..csv', index=False)
