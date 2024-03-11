@@ -126,7 +126,7 @@ def sequenze_intergenichetutte(input, output, max_len=300):
                 mystrand = '-' if feature.location.strand == -1 else '+'
                 mystart, myend = int(mystart), int(myend)
                 # Check the strand of the CDS and add the info to the appropriate list
-                with open("operoni", "r") as f:
+                with open("operoniCCMEE", "r") as f:
                     content = f.readlines()
                 if not geneDentroOperone(mystart + 1, mystrand, content):
                     if mystrand == '-':

@@ -20,7 +20,7 @@ with open(file, 'r') as file:
 operons_filtered = {k: v for k, v in operons.items() if len(v) > 1}
 
 #write the operons filtered to a new file
-with open("operoni", 'w') as file:
+with open("operoniCCMEE", 'w') as file:
     for k,v in operons_filtered.items():
         inter=v[0][3]+" "+v[-1][4]+" "+v[0][5]
         print(k,inter)
