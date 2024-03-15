@@ -1,3 +1,4 @@
+import pandas as pd
 from bioservices import UniProt
 from Bio import ExPASy
 from Bio import SwissProt
@@ -15,7 +16,11 @@ class GeneAnalyzer:
         if len(results_lines) < 2:
             results = self.uniprot_service.search(self.gene_name, frmt="tsv", limit=3)
             results_lines = results.split("\n")
-        protein_id = results_lines[1].split("\t")[0]
+        try:
+            protein_id = results_lines[1].split("\t")[0]
+        except IndexError:
+            print(f"No Uniprot ID found for {self.gene_name}.")
+            protein_id = None
         return protein_id
 
     def fetch_uniprot_info(self, uniprot_id):
@@ -37,18 +42,28 @@ class GeneAnalyzer:
 
 # Uso della classe
 import re
-with open("genifimo.txt", "r") as f:
-    lines = f.readlines()
-    for line in lines:
-        #gene = re.search(r'gene=(\w+)', line).group(1)
-        gene=line.split()[0]
-        print(gene)
-        if "/" in gene:
-            gene = gene.split("/")[0]
-        if "_" in gene:
-            gene = gene.split("_")[0]
-        analyzer = GeneAnalyzer(gene)
-        uniprot_id = analyzer.get_uniprot_id()
-        go_annotation = analyzer.fetch_go_annotation(uniprot_id)
-        with open("go_annotationsFIMO.txt", "a") as f:
-            f.write(f"{gene} {go_annotation}\n")
+df=pd.read_csv("/home/davide/Downloads/geniconMotivoMEMEinGenomiChro.csv")
+#rename first column to 'gene'
+df.rename(columns={df.columns[0]: 'gene'}, inplace=True)
+#add column GO annotation
+df['GO annotation'] = ""
+for gene in df['gene']:
+    if "/" in gene:
+        gene = gene.split("/")[0]
+    if "_" in gene:
+        gene = gene.split("_")[0]
+    #create a GeneAnalyzer object
+    gene_analyzer = GeneAnalyzer(gene)
+    #get the uniprot id
+    uniprot_id = gene_analyzer.get_uniprot_id()
+    #fetch go annotation
+    go_annotation = gene_analyzer.fetch_go_annotation(uniprot_id)
+    #add go annotation to the dataframe
+    df.loc[df['gene'] == gene, 'GO annotation'] = go_annotation
+    print(f"Gene: {gene}")
+    print(f"Uniprot ID: {uniprot_id}")
+    print(f"GO annotation: {go_annotation}")
+    print("\n")
+
+    df.to_csv("/home/davide/Desktop/genomiChro/intergeniche_tutte/motivounicobest/geniconMotivoMEMEinGenomiChroGO.csv", index=False)
+    df.to_excel("/home/davide/Desktop/genomiChro/intergeniche_tutte/motivounicobest/geniconMotivoMEMEinGenomiChroGO.xlsx", index=False)

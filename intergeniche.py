@@ -1,4 +1,9 @@
 import re  # Import the re module for regular expressions
+from Bio import SeqIO  # Import the SeqIO module from the Biopython package
+from Bio.SeqRecord import SeqRecord  # Import the SeqRecord module from the Biopython package
+from Bio.Seq import Seq  # Import the Seq module from the Biopython package
+from Bio.SeqFeature import SeqFeature, FeatureLocation  # Import the SeqFeature module from the Biopython package
+from Bio.Seq import MutableSeq  # Import the MutableSeq module from the Biopython package
 def geneDentroOperone(gene_start, fil, ranges):
     """
     :param gene_start:  start of the gene 
@@ -109,7 +114,7 @@ def sequenze_intergeniche(genoma, geni, output):
     SeqIO.write(intergeniche, output, "fasta")
 
 
-def sequenze_intergenichetutte(input, output, max_len=300):
+def sequenze_intergenichetutte(input, output, max_len=300,op=False):
     intergeniche = []  # Lista per memorizzare le sequenze intergeniche
     genoma = SeqIO.parse(input, "genbank")
 
@@ -126,19 +131,29 @@ def sequenze_intergenichetutte(input, output, max_len=300):
                 mystrand = '-' if feature.location.strand == -1 else '+'
                 mystart, myend = int(mystart), int(myend)
                 # Check the strand of the CDS and add the info to the appropriate list
-                with open("operoniCCMEE", "r") as f:
-                    content = f.readlines()
-                if not geneDentroOperone(mystart + 1, mystrand, content):
+                if op:
+                    with open("operoniCCMEE", "r") as f:
+                        content = f.readlines()
+                    if not geneDentroOperone(mystart + 1, mystrand, content):
+                        if mystrand == '-':
+                            cds_list_minus.append((mystart, myend, feature.qualifiers["locus_tag"][0],
+                                                   feature.qualifiers["product"][0],
+                                                   feature.qualifiers.get("gene", [' '])[0],
+                                                   geneInizioOperone(mystart + 1, mystrand, content)))
+                        else:
+                            cds_list_plus.append((mystart, myend, feature.qualifiers["locus_tag"][0],
+                                                  feature.qualifiers["product"][0],
+                                                  feature.qualifiers.get("gene", [' '])[0],
+                                                  geneInizioOperone(mystart + 1, mystrand, content)))
+                else:
                     if mystrand == '-':
                         cds_list_minus.append((mystart, myend, feature.qualifiers["locus_tag"][0],
                                                feature.qualifiers["product"][0],
-                                               feature.qualifiers.get("gene", [' '])[0],
-                                               geneInizioOperone(mystart + 1, mystrand, content)))
+                                               feature.qualifiers.get("gene", [' '])[0]))
                     else:
                         cds_list_plus.append((mystart, myend, feature.qualifiers["locus_tag"][0],
                                               feature.qualifiers["product"][0],
-                                              feature.qualifiers.get("gene", [' '])[0],
-                                              geneInizioOperone(mystart + 1, mystrand, content)))
+                                              feature.qualifiers.get("gene", [' '])[0]))
 
         # Loop attraverso i geni in direzione +
         for i, n in enumerate(cds_list_plus):
@@ -151,7 +166,7 @@ def sequenze_intergenichetutte(input, output, max_len=300):
                 last_end = this_start - max_len  # Aggiorna quello che sarà l'inizio della sequenza intergenica
             # Aggiungi la sequenza intergenica alla lista come SeqRecord
             description = f"product = {cds_list_plus[i][3]}, gene = {cds_list_plus[i][4]} {last_end + 1}-{this_start} +"
-            if n[-1]:
+            if op and n[-1]:
                 description = "OPERON " + description
             if len(intergene_seq) == 0:
                 continue
@@ -175,7 +190,7 @@ def sequenze_intergenichetutte(input, output, max_len=300):
                 next_start = this_end + max_len
             intergene_seq = intergene_seq.reverse_complement()  # Complemento inverso della sequenza intergenica
             description = f"product = {cds_list_minus[i][3]}, gene = {cds_list_minus[i][4]} {this_end}-{next_start + 1} -"
-            if n[-1]:
+            if op and n[-1]:
                 description = "OPERON " + description
             # Aggiungi la sequenza intergenica alla lista come SeqRecord
             if len(intergene_seq) == 0:
@@ -187,15 +202,7 @@ def sequenze_intergenichetutte(input, output, max_len=300):
                     description=description
                 )
             )
-        break
+
     # Scrivi le sequenze intergeniche nel file di output
     SeqIO.write(intergeniche, output, "fasta")
 
-
-# Call the function to find intergenic sequences
-from Bio import SeqIO
-from Bio.SeqRecord import SeqRecord
-
-input_file = "/home/davide/Desktop/genomiChro/genbanks_prokka/Chroococcidiopsis_sp._CCMEE_29_cyanobacteria_GCF_023558375.1.gbk"
-output_file = "/home/davide/Desktop/genomiChro/intergeniche_operoni/INTERGENICHE_OP_1000.fa"
-sequenze_intergenichetutte(input_file, output_file,max_len=1000)

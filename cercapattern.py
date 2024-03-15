@@ -39,25 +39,19 @@ def cercamotivi(input_filename, patterns, output_filename):
         outfile.write(f"Lunghezza totale:{len_tot}")
 
 
-motivi = ['.AGT.{3,11}ACT.', '.TAGT.{3,11}ATC.', '.AG.{3,11}ACT.', '.AGT.{3,11}CT.']
+motivi = ['.AGT.{8}ACT.','TAGT.{9}CTA']
+#, '.TAGT.{3,11}ATC.', '.AG.{3,11}ACT.', '.AGT.{3,11}CT.'
 
 import os
-dir="/home/davide/Desktop/genomiChro/intergeniche_tutte/motivi_trovati"
-"""
+# Specify the input directory
+dir="/home/davide/Desktop/genomiChro/intergeniche_RefSeq"
+# Specify the output directory
+output_dir = "/home/davide/Desktop/genomiChro/intergeniche_RefSeq/motivo"
 for file in os.listdir(dir):
-    input_file = dir+file
-    output_file = f"/home/davide/Desktop/genomiChro/motivituttogenoma/{file[:-6]}.txt"
-    cercapatterns(input_file, motivi, output_file)
-    print(f"Scritto {output_file}")
-"""
-input_dir = "/home/davide/Desktop/genomiChro/intergeniche_operoni"
-output_dir = "/home/davide/Desktop/genomiChro/intergeniche_operoni/motivitrovati"
-#find how many times each motif is found in the genome
-for file in os.listdir(input_dir):
-    if not file.endswith(".fa"):
+    #if file is directory or hidden file skip
+    if not file.endswith(".fasta"):
         continue
-    input_file = os.path.join(input_dir, file)
-    output_file = os.path.join(output_dir, file[:-3]+"MOTIVI.txt")
-    #print(output_file)
+    input_file = os.path.join(dir, file)
+    output_file = os.path.join(output_dir, file[:-3]+"_motifs.txt")
     cercamotivi(input_file, motivi, output_file)
     print(f"Found patterns in {input_file} and saved results to {output_file}")
