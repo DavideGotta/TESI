@@ -6,7 +6,18 @@ genbank="/home/davide/Desktop/genomiChro/genbanks_prokka/Chroococcidiopsis_sp._C
 from Bio import SeqIO
 from Bio.SeqRecord import SeqRecord
 from Bio.Seq import Seq
-def extract_proteins_prokka(input,output,genes):
+def extract_proteins_prokka(input: str,output: str,genes: list) -> None:
+    """
+       Extracts protein sequences from a GenBank file for a given list of genes.
+
+       Args:
+           input (str): Path to the input GenBank file.
+           output (str): Path to the output FASTA file.
+           genes (list): List of gene names to extract protein sequences for.
+
+       Returns:
+           None
+         """
     # Create a list to hold the protein sequences
     proteins = []
     genoma = SeqIO.parse(input, "genbank")
@@ -29,4 +40,4 @@ def extract_proteins_prokka(input,output,genes):
                     )
     # Write the protein sequences to a FASTA file
     SeqIO.write(proteins, output, "fasta")
-extract_proteins_prokka(genbank,"/home/davide/Desktop/genomiChro/proteineriparo.fasta",geni)
+#extract_proteins_prokka(genbank,"/home/davide/Desktop/genomiChro/proteineriparo.fasta",geni)
