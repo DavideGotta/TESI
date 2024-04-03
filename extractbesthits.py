@@ -26,4 +26,7 @@ def extract_words(filename):
     matches = re.findall(r'>(\S+)', content)
     return matches
 
-geni=extract_words('/home/davide/Downloads/TS821/genisimili')
+#geni=extract_words('/home/davide/Downloads/TS821/genisimili')
+file="/home/davide/Desktop/genomiChro/blastp_polimerasi_Chroococcidiopsis/polimerasi_Chroococcidiopsis_sp._CCMEE_29_GCF_023558375.1.pin.txt"
+output_file="/home/davide/Desktop/genomiChro/blastp_polimerasi_Chroococcidiopsis/best_hitsCCMEE29.txt"
+extract_best_hits(file, output_file)
