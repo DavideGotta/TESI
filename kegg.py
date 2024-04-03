@@ -20,4 +20,4 @@ for proteina in proteine:
         continue
     #read like seqrecord
 
-SeqIO.write(seqs,"proteineAnaCd.fasta","fasta")
+SeqIO.write(seqs, "proteineAna.fasta", "fasta")
