@@ -1,0 +1,2249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:cis="http://zlab.bu.edu/schema/cisml" xmlns:fimo="http://noble.gs.washington.edu/schema/cisml" xmlns:mem="http://noble.gs.washington.edu/meme">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>FIMO Results</title>
+<style type="text/css">
+td.left {text-align: left;}
+td.right {text-align: right; padding-right: 1cm;}
+</style>
+</head>
+<body color="#000000">
+<a name="top_buttons"></a>
+<hr>
+<table summary="buttons" align="left" cellspacing="0">
+<tr>
+<td bgcolor="#00FFFF"><a href="#database_and_motifs"><b>Database and Motifs</b></a></td>
+<td bgcolor="#DDFFDD"><a href="#sec_i"><b>High-scoring Motif Occurences</b></a></td>
+<td bgcolor="#DDDDFF"><a href="#debugging_information"><b>Debugging Information</b></a></td>
+<td bgcolor="#FFDD00"><a href="fimo.tsv""><b>Results in TSV Format</b></a></td>
+<td bgcolor="#FFDDFF"><a href="fimo.gff""><b>Results in GFF3 Format</b></a></td>
+<td bgcolor="#00FFFF" id="best_site"><a href="best_site.narrowPeak""><b>Best Site per Sequence</b></a></td>
+<script>
+var new_icon_src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAQCAMAAAAyEe/dAAAACVBMVEX//wAAAAD////s2cV/AAAAdUlEQVQYlXVRBxLAIAhL+P+jC2HZhXcBZEWEldDsZcLIcAhHWWnK8SDcWQhMFUHdAQ1CqQ5+CWPmlHojl+nCJNRtzu4qRc3IUzmTVpXYK0nox0z0PI1stgchdK7lEv7ekhvalw8WW547Gyzedt/2/gLx8WXjXF/1AYFriNAWAAAAAElFTkSuQmCC";
+var new_icon = document.createElement("img");
+new_icon.src = new_icon_src;
+new_icon.alt = "NEW";
+const elem = document.getElementById("best_site");
+elem.appendChild(document.createTextNode("  "));
+elem.appendChild(new_icon);
+</script>
+</tr>
+</table>
+<br/>
+<br/>
+<hr/>
+<center><big><b>FIMO - Motif search tool</b></big></center>
+<hr>
+<p>
+FIMO version 5.5.5, (Release date: Thu Sep 14 08:48:04 2023 +1000)
+</p>
+<p>
+For further information on how to interpret these results please access <a href="https://meme-suite.org/meme/doc/fimo-output-format.html">https://meme-suite.org/meme/doc/fimo-output-format.html</a>.<br>
+To get a copy of the FIMO software please access <a href="https://meme-suite.org">https://meme-suite.org</a>
+
+</p>
+<p>If you use FIMO in your research, please cite the following paper:<br>
+Charles E. Grant, Timothy L. Bailey, and William Stafford Noble,
+"FIMO: Scanning for occurrences of a given motif",
+<i>Bioinformatics</i>, <b>27</b>(7):1017-1018, 2011.
+<a href="http://bioinformatics.oxfordjournals.org/content/27/7/1017">[full text]</a></p>
+<hr>
+<center><big><b><a name="database_and_motifs">DATABASE AND MOTIFS</a></b></big></center>
+<hr>
+<div style="padding-left: 0.75in; line-height: 1em; font-family: monospace;">
+<p>
+  DATABASE /home/davide/Desktop/genomiChro/intergeniche_RefSeq/Chroococcidiopsis_sp._TS-821_GCF_002939305_intergen.fasta
+  <br />
+  Database contains 4374 sequences, 865515 residues
+</p>
+<p>
+  MOTIFS /home/davide/Downloads/motivo16.meme (DNA)
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom: 1px dashed;">MOTIF</th>
+        <th style="border-bottom: 1px dashed; padding-left: 1em;">WIDTH</th>
+        <th style="border-bottom: 1px dashed; padding-left: 1em;text-align:left;" >
+         BEST POSSIBLE MATCH
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align:right;">TAGTACARYTGTACTA</td>
+        <td style="text-align:right;padding-left: 1em;">16</td>
+        <td style="text-align:left;padding-left: 1em;">TAGTACAATTGTACTA</td>
+       </tr>
+    </tbody>
+  </table>
+</p>
+<p>
+Random model letter frequencies (--nrdb--):
+<br/>
+
+A 0.282 C 0.222 G 0.229 T 0.267 </p>
+</div>
+<hr>
+<center><big><b><a name="sec_i">SECTION I: HIGH-SCORING MOTIF OCCURENCES</a></b></big></center>
+<hr>
+<ul>
+<li>
+There were 187 motif occurences with a p-value less than 0.0001.
+
+The full set of motif occurences can be seen in the
+TSV (tab-delimited values) output file
+<a href="fimo.tsv">fimo.tsv</a>, 
+the GFF3 file 
+<a href="fimo.gff">fimo.gff</a> 
+which may be suitable for uploading to the 
+<a href="http://genome.ucsc.edu/cgi-bin/hgTables">UCSC Genome Table Browser</a>
+(assuming the FASTA input sequences included genomic coordinates in UCSC or Galaxy format),
+or the XML file 
+<a href="fimo.xml">fimo.xml</a>.
+</li>
+<li>
+The <i>p</i>-value of a motif occurrence is defined as the
+probability of a random sequence of the same length as the motif
+matching that position of the sequence with as good or better a score.
+</li>
+<li>
+The score for the match of a position in a sequence to a motif
+is computed by summing the appropriate entries from each column of
+the position-dependent scoring matrix that represents the motif.
+</li>
+<li>
+The q-value of a motif occurrence is defined as the
+false discovery rate if the occurrence is accepted as significant.
+</li>
+<li>The table is sorted by increasing <i>p</i>-value.</li>
+</ul>
+<table border="1">
+<thead>
+<tr>
+<th>Motif ID</th>
+<th>Alt ID</th>
+<th>Sequence Name</th>
+<th>Strand</th>
+<th>Start</th>
+<th>End</th>
+<th>p-value</th>
+<th>q-value</th>
+<th>Matched Sequence</th>
+</tr>
+</thead>
+<tbody>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS16690</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">234</td>
+      <td style="text-align:left;">249</td>
+      <td style="text-align:left;">7.22e-08</td>
+      <td style="text-align:left;">0.0294</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTACAATTATTCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS16855</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">239</td>
+      <td style="text-align:left;">254</td>
+      <td style="text-align:left;">8.75e-08</td>
+      <td style="text-align:left;">0.0294</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTCATTTGTACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS19395</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">238</td>
+      <td style="text-align:left;">253</td>
+      <td style="text-align:left;">4.24e-07</td>
+      <td style="text-align:left;">0.076</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTATATCTGCACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS19390</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">70</td>
+      <td style="text-align:left;">85</td>
+      <td style="text-align:left;">4.64e-07</td>
+      <td style="text-align:left;">0.076</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTGCAGATATACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS15000</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">93</td>
+      <td style="text-align:left;">108</td>
+      <td style="text-align:left;">6.4e-07</td>
+      <td style="text-align:left;">0.076</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAGTACATATGTACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS12640</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">164</td>
+      <td style="text-align:left;">179</td>
+      <td style="text-align:left;">7.86e-07</td>
+      <td style="text-align:left;">0.076</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTGCATCTGTACTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS12645</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">213</td>
+      <td style="text-align:left;">228</td>
+      <td style="text-align:left;">9.66e-07</td>
+      <td style="text-align:left;">0.076</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGTACAGATGCACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS20810</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">171</td>
+      <td style="text-align:left;">186</td>
+      <td style="text-align:left;">1.02e-06</td>
+      <td style="text-align:left;">0.076</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTATGTTTGTTCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS08520</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">207</td>
+      <td style="text-align:left;">222</td>
+      <td style="text-align:left;">1.02e-06</td>
+      <td style="text-align:left;">0.076</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TGGTACATTTGTACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS20805</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">73</td>
+      <td style="text-align:left;">88</td>
+      <td style="text-align:left;">1.32e-06</td>
+      <td style="text-align:left;">0.0817</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGAACAAACATACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS01045</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">107</td>
+      <td style="text-align:left;">122</td>
+      <td style="text-align:left;">1.34e-06</td>
+      <td style="text-align:left;">0.0817</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTACGAATGTTCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS08795</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">208</td>
+      <td style="text-align:left;">223</td>
+      <td style="text-align:left;">1.98e-06</td>
+      <td style="text-align:left;">0.111</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATTACAGATGTAATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS18600</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">15</td>
+      <td style="text-align:left;">30</td>
+      <td style="text-align:left;">2.83e-06</td>
+      <td style="text-align:left;">0.128</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAGTACAAATGAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS15775</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">102</td>
+      <td style="text-align:left;">117</td>
+      <td style="text-align:left;">2.83e-06</td>
+      <td style="text-align:left;">0.128</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTAAATCTATACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS19345</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">162</td>
+      <td style="text-align:left;">177</td>
+      <td style="text-align:left;">2.97e-06</td>
+      <td style="text-align:left;">0.128</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGTACATTTGTACTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS15770</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">69</td>
+      <td style="text-align:left;">84</td>
+      <td style="text-align:left;">3.04e-06</td>
+      <td style="text-align:left;">0.128</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTATAGATTTACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS17915</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">13</td>
+      <td style="text-align:left;">28</td>
+      <td style="text-align:left;">3.98e-06</td>
+      <td style="text-align:left;">0.154</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGAAAAACTTCTCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS01995</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">255</td>
+      <td style="text-align:left;">270</td>
+      <td style="text-align:left;">4.12e-06</td>
+      <td style="text-align:left;">0.154</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTGCAAATATAATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS11485</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">197</td>
+      <td style="text-align:left;">212</td>
+      <td style="text-align:left;">5.87e-06</td>
+      <td style="text-align:left;">0.191</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTAAATCTTATCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS03470</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">230</td>
+      <td style="text-align:left;">245</td>
+      <td style="text-align:left;">5.9e-06</td>
+      <td style="text-align:left;">0.191</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTAAAAATTTTATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS06935</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">268</td>
+      <td style="text-align:left;">283</td>
+      <td style="text-align:left;">5.98e-06</td>
+      <td style="text-align:left;">0.191</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGAAAATTTTTAATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS14950</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">48</td>
+      <td style="text-align:left;">63</td>
+      <td style="text-align:left;">7.77e-06</td>
+      <td style="text-align:left;">0.237</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTAAGACTTTTCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS17080</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">150</td>
+      <td style="text-align:left;">165</td>
+      <td style="text-align:left;">1.03e-05</td>
+      <td style="text-align:left;">0.275</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTATGACTGAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS17085</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">251</td>
+      <td style="text-align:left;">266</td>
+      <td style="text-align:left;">1.06e-05</td>
+      <td style="text-align:left;">0.275</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTCAGTCATACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS18230</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">126</td>
+      <td style="text-align:left;">141</td>
+      <td style="text-align:left;">1.08e-05</td>
+      <td style="text-align:left;">0.275</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CATTACACCTGTACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS14975</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">29</td>
+      <td style="text-align:left;">44</td>
+      <td style="text-align:left;">1.17e-05</td>
+      <td style="text-align:left;">0.275</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGAACATCTTTAATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS22740</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">96</td>
+      <td style="text-align:left;">111</td>
+      <td style="text-align:left;">1.17e-05</td>
+      <td style="text-align:left;">0.275</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGAGTATATATACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS18235</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">42</td>
+      <td style="text-align:left;">57</td>
+      <td style="text-align:left;">1.19e-05</td>
+      <td style="text-align:left;">0.275</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTACAGGTGTAATG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS01320</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">232</td>
+      <td style="text-align:left;">247</td>
+      <td style="text-align:left;">1.19e-05</td>
+      <td style="text-align:left;">0.275</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGAGCAATTATTCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS09610</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">159</td>
+      <td style="text-align:left;">174</td>
+      <td style="text-align:left;">1.33e-05</td>
+      <td style="text-align:left;">0.291</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTCATATATACTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS11330</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">42</td>
+      <td style="text-align:left;">57</td>
+      <td style="text-align:left;">1.38e-05</td>
+      <td style="text-align:left;">0.291</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGAGAAATTAAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS18520</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">204</td>
+      <td style="text-align:left;">219</td>
+      <td style="text-align:left;">1.47e-05</td>
+      <td style="text-align:left;">0.291</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATTACGATTTTTCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS14190</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">244</td>
+      <td style="text-align:left;">259</td>
+      <td style="text-align:left;">1.53e-05</td>
+      <td style="text-align:left;">0.291</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAGTGCAAATGTACTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS09620</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">102</td>
+      <td style="text-align:left;">117</td>
+      <td style="text-align:left;">1.57e-05</td>
+      <td style="text-align:left;">0.291</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTGAATTTTATCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS05725</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">5</td>
+      <td style="text-align:left;">20</td>
+      <td style="text-align:left;">1.61e-05</td>
+      <td style="text-align:left;">0.291</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATAAAATATATACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS04345</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">276</td>
+      <td style="text-align:left;">291</td>
+      <td style="text-align:left;">1.7e-05</td>
+      <td style="text-align:left;">0.291</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATAAAAACTTTACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS17590</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">205</td>
+      <td style="text-align:left;">220</td>
+      <td style="text-align:left;">1.71e-05</td>
+      <td style="text-align:left;">0.291</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTGTATATGCACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS14850</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">270</td>
+      <td style="text-align:left;">285</td>
+      <td style="text-align:left;">1.71e-05</td>
+      <td style="text-align:left;">0.291</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTTAGTTGAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS17495</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">283</td>
+      <td style="text-align:left;">298</td>
+      <td style="text-align:left;">1.71e-05</td>
+      <td style="text-align:left;">0.291</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGTGTAGCTTTTCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS12820</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">88</td>
+      <td style="text-align:left;">103</td>
+      <td style="text-align:left;">1.78e-05</td>
+      <td style="text-align:left;">0.291</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTTAGTTACTCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS04620</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">139</td>
+      <td style="text-align:left;">154</td>
+      <td style="text-align:left;">1.82e-05</td>
+      <td style="text-align:left;">0.291</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GATTAAAATTTTTCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS17595</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">280</td>
+      <td style="text-align:left;">295</td>
+      <td style="text-align:left;">1.87e-05</td>
+      <td style="text-align:left;">0.291</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTGCATATACACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS14855</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">188</td>
+      <td style="text-align:left;">203</td>
+      <td style="text-align:left;">1.9e-05</td>
+      <td style="text-align:left;">0.291</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTCAACTAAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS17500</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">243</td>
+      <td style="text-align:left;">258</td>
+      <td style="text-align:left;">1.91e-05</td>
+      <td style="text-align:left;">0.291</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGAAAAGCTACACTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS15470</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">203</td>
+      <td style="text-align:left;">218</td>
+      <td style="text-align:left;">1.99e-05</td>
+      <td style="text-align:left;">0.297</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGAACATTTACTCTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS14820</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">153</td>
+      <td style="text-align:left;">168</td>
+      <td style="text-align:left;">2.36e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATTGTATTTGCTCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS16130</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">121</td>
+      <td style="text-align:left;">136</td>
+      <td style="text-align:left;">2.37e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATAGAAACTGTAATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS04520</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">107</td>
+      <td style="text-align:left;">122</td>
+      <td style="text-align:left;">2.52e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGAGTAACTTTTCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS04525</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">87</td>
+      <td style="text-align:left;">102</td>
+      <td style="text-align:left;">2.53e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGAAAAGTTACTCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS07405</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">15</td>
+      <td style="text-align:left;">30</td>
+      <td style="text-align:left;">2.54e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTAAAATCCTACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS20655</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">122</td>
+      <td style="text-align:left;">137</td>
+      <td style="text-align:left;">2.65e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TGGTTAAGTTGTTCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS17330</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">53</td>
+      <td style="text-align:left;">68</td>
+      <td style="text-align:left;">2.68e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGAATAACTGCAATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS23795</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">48</td>
+      <td style="text-align:left;">63</td>
+      <td style="text-align:left;">2.71e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTATATTTAAAATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS23025</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">165</td>
+      <td style="text-align:left;">180</td>
+      <td style="text-align:left;">2.74e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGAATAATTAAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS07350</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">18</td>
+      <td style="text-align:left;">33</td>
+      <td style="text-align:left;">2.9e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATTAAGTATTTTCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS14825</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">158</td>
+      <td style="text-align:left;">173</td>
+      <td style="text-align:left;">2.91e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGAGCAAATACAATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS23985</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">40</td>
+      <td style="text-align:left;">55</td>
+      <td style="text-align:left;">2.99e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATTTCAGATTTACTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS25380</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">66</td>
+      <td style="text-align:left;">81</td>
+      <td style="text-align:left;">3.29e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGAATATTTTAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS05140</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;">16</td>
+      <td style="text-align:left;">3.34e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTTGACTATACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS07345</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">182</td>
+      <td style="text-align:left;">197</td>
+      <td style="text-align:left;">3.34e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGAAAATACTTAATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS10340</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">238</td>
+      <td style="text-align:left;">253</td>
+      <td style="text-align:left;">3.36e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATTGCACTCATACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS14770</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">144</td>
+      <td style="text-align:left;">159</td>
+      <td style="text-align:left;">3.39e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTATAATTTTTATG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS09650</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">30</td>
+      <td style="text-align:left;">45</td>
+      <td style="text-align:left;">3.52e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATTAAGATCTCACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS10725</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">155</td>
+      <td style="text-align:left;">170</td>
+      <td style="text-align:left;">3.52e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGAGCAAATTAAATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS22630</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">61</td>
+      <td style="text-align:left;">76</td>
+      <td style="text-align:left;">3.6e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATTAGAGTTGTTCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS11560</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">169</td>
+      <td style="text-align:left;">184</td>
+      <td style="text-align:left;">3.6e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTTATTTTCACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS25160</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">86</td>
+      <td style="text-align:left;">101</td>
+      <td style="text-align:left;">3.64e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATTAAAACTTTAATT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS03185</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">5</td>
+      <td style="text-align:left;">20</td>
+      <td style="text-align:left;">3.68e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGAATAGCCATTCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS10345</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">280</td>
+      <td style="text-align:left;">295</td>
+      <td style="text-align:left;">3.68e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTATGAGTGCAATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS14775</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">28</td>
+      <td style="text-align:left;">43</td>
+      <td style="text-align:left;">3.75e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CATAAAAATTATACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS03390</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">91</td>
+      <td style="text-align:left;">106</td>
+      <td style="text-align:left;">3.77e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGATAGAACGTTCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS09180</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">154</td>
+      <td style="text-align:left;">169</td>
+      <td style="text-align:left;">3.77e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTAAATCTGTGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS02055</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">264</td>
+      <td style="text-align:left;">279</td>
+      <td style="text-align:left;">3.8e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTGCATCCTTAATT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS20300</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">199</td>
+      <td style="text-align:left;">214</td>
+      <td style="text-align:left;">3.86e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTAAGCTGATATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS17755</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">21</td>
+      <td style="text-align:left;">36</td>
+      <td style="text-align:left;">4.04e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGAACACTTATACTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS14635</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">175</td>
+      <td style="text-align:left;">190</td>
+      <td style="text-align:left;">4.14e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GATTACATTTATACTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS13495</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">125</td>
+      <td style="text-align:left;">140</td>
+      <td style="text-align:left;">4.22e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGATTATTTGCAATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS13500</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">204</td>
+      <td style="text-align:left;">219</td>
+      <td style="text-align:left;">4.24e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATTGCAAATAATCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS12675</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">205</td>
+      <td style="text-align:left;">220</td>
+      <td style="text-align:left;">4.24e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGCACAACTTTTCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS17875</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">31</td>
+      <td style="text-align:left;">46</td>
+      <td style="text-align:left;">4.26e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAGTACAGTTTTTATT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS02060</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">169</td>
+      <td style="text-align:left;">184</td>
+      <td style="text-align:left;">4.28e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATTAAGGATGCACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS19360</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">202</td>
+      <td style="text-align:left;">217</td>
+      <td style="text-align:left;">4.43e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CATTAAAAATTTTCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS00290</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">154</td>
+      <td style="text-align:left;">169</td>
+      <td style="text-align:left;">4.46e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTAAATCCTAAATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS06040</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">92</td>
+      <td style="text-align:left;">107</td>
+      <td style="text-align:left;">4.48e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATTAAAACTTAAATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS17185</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">121</td>
+      <td style="text-align:left;">136</td>
+      <td style="text-align:left;">4.5e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATAACGACTATTCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS04035</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">190</td>
+      <td style="text-align:left;">205</td>
+      <td style="text-align:left;">4.58e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATTGAGATTTTACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS04530</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">145</td>
+      <td style="text-align:left;">160</td>
+      <td style="text-align:left;">4.6e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTAGAAACGCACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS06500</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">23</td>
+      <td style="text-align:left;">38</td>
+      <td style="text-align:left;">4.62e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTGAAAATAAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS00265</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">261</td>
+      <td style="text-align:left;">276</td>
+      <td style="text-align:left;">4.72e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CATAACAACTGTTCTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS17795</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">80</td>
+      <td style="text-align:left;">95</td>
+      <td style="text-align:left;">4.74e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTAATATTTTATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS02705</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">255</td>
+      <td style="text-align:left;">270</td>
+      <td style="text-align:left;">4.74e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GATAACAACTGCAATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS17870</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">252</td>
+      <td style="text-align:left;">267</td>
+      <td style="text-align:left;">4.85e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATAAAAACTGTACTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS17720</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">259</td>
+      <td style="text-align:left;">274</td>
+      <td style="text-align:left;">4.85e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GATTACGGCTGTTATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS03680</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">133</td>
+      <td style="text-align:left;">148</td>
+      <td style="text-align:left;">4.9e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTAAAATTAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS15165</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">39</td>
+      <td style="text-align:left;">54</td>
+      <td style="text-align:left;">4.92e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTAGAATTGCAATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS13305</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">79</td>
+      <td style="text-align:left;">94</td>
+      <td style="text-align:left;">4.95e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATAAAAGTTGTTCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS17180</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">129</td>
+      <td style="text-align:left;">144</td>
+      <td style="text-align:left;">5.02e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGAATAGTCGTTATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS01715</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">244</td>
+      <td style="text-align:left;">259</td>
+      <td style="text-align:left;">5.07e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GATAACATTTGTTCTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS15925</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">161</td>
+      <td style="text-align:left;">176</td>
+      <td style="text-align:left;">5.09e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TACTACGTCTGTACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS00260</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">10</td>
+      <td style="text-align:left;">25</td>
+      <td style="text-align:left;">5.12e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGAACAGTTGTTATG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS09455</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">222</td>
+      <td style="text-align:left;">237</td>
+      <td style="text-align:left;">5.19e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAGAACATTTTTTCTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS08475</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">52</td>
+      <td style="text-align:left;">67</td>
+      <td style="text-align:left;">5.26e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATTACACCTTTACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS08045</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">40</td>
+      <td style="text-align:left;">55</td>
+      <td style="text-align:left;">5.29e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATAAAACCTATTCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS02190</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">133</td>
+      <td style="text-align:left;">148</td>
+      <td style="text-align:left;">5.39e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGAGAGATTTTTATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS04020</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">204</td>
+      <td style="text-align:left;">219</td>
+      <td style="text-align:left;">5.39e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATTAAATCCCTACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS14475</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">161</td>
+      <td style="text-align:left;">176</td>
+      <td style="text-align:left;">5.42e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATAAAAATTGTTATT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS24040</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">265</td>
+      <td style="text-align:left;">280</td>
+      <td style="text-align:left;">5.42e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTTAAATTTACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS07350</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">169</td>
+      <td style="text-align:left;">184</td>
+      <td style="text-align:left;">5.46e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTAATTTATACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS02000</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">36</td>
+      <td style="text-align:left;">51</td>
+      <td style="text-align:left;">5.54e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGTTAATATGCTCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS17650</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">83</td>
+      <td style="text-align:left;">98</td>
+      <td style="text-align:left;">5.57e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTAAAGTTGTTTTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS11050</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">162</td>
+      <td style="text-align:left;">177</td>
+      <td style="text-align:left;">5.57e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTTAATTATAATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS18780</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">15</td>
+      <td style="text-align:left;">30</td>
+      <td style="text-align:left;">5.62e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GATTATAAGTTTACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS01710</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">165</td>
+      <td style="text-align:left;">180</td>
+      <td style="text-align:left;">5.65e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGAACAAATGTTATC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS07345</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">31</td>
+      <td style="text-align:left;">46</td>
+      <td style="text-align:left;">5.77e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTATAAATTAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS08905</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">72</td>
+      <td style="text-align:left;">87</td>
+      <td style="text-align:left;">5.77e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAATATAAATGTACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS13760</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">154</td>
+      <td style="text-align:left;">169</td>
+      <td style="text-align:left;">5.83e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAGTAAAATTTAACTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS13970</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">117</td>
+      <td style="text-align:left;">132</td>
+      <td style="text-align:left;">5.85e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATTTCAACTTTAATT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS17880</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">28</td>
+      <td style="text-align:left;">43</td>
+      <td style="text-align:left;">5.91e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTGAATTTGTAACA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS11060</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">61</td>
+      <td style="text-align:left;">76</td>
+      <td style="text-align:left;">5.94e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAGTTAAATCTTTCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS04715</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">41</td>
+      <td style="text-align:left;">56</td>
+      <td style="text-align:left;">6e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATTACAGATTATATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS08480</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">283</td>
+      <td style="text-align:left;">298</td>
+      <td style="text-align:left;">6.05e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTAAAGGTGTAATT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS06900</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">107</td>
+      <td style="text-align:left;">122</td>
+      <td style="text-align:left;">6.1e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TGTTACAATTTCTCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS19660</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">131</td>
+      <td style="text-align:left;">146</td>
+      <td style="text-align:left;">6.1e-05</td>
+      <td style="text-align:left;">0.333</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GATAAAATTTTTTCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS16050</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">64</td>
+      <td style="text-align:left;">79</td>
+      <td style="text-align:left;">6.25e-05</td>
+      <td style="text-align:left;">0.338</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTATAAATACAATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS11055</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">119</td>
+      <td style="text-align:left;">134</td>
+      <td style="text-align:left;">6.57e-05</td>
+      <td style="text-align:left;">0.343</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGAAAGATTTAACTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS21590</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">270</td>
+      <td style="text-align:left;">285</td>
+      <td style="text-align:left;">6.57e-05</td>
+      <td style="text-align:left;">0.343</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATTGAGTTTGTTCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS05215</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">146</td>
+      <td style="text-align:left;">161</td>
+      <td style="text-align:left;">6.69e-05</td>
+      <td style="text-align:left;">0.343</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATTGCAATTTTTATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS20070</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">248</td>
+      <td style="text-align:left;">263</td>
+      <td style="text-align:left;">6.78e-05</td>
+      <td style="text-align:left;">0.343</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGAATGCTTGCACTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS03830</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">152</td>
+      <td style="text-align:left;">167</td>
+      <td style="text-align:left;">6.81e-05</td>
+      <td style="text-align:left;">0.343</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTACAAAAGAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS20475</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">70</td>
+      <td style="text-align:left;">85</td>
+      <td style="text-align:left;">6.84e-05</td>
+      <td style="text-align:left;">0.343</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGTACATCCTTAATT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS23100</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">119</td>
+      <td style="text-align:left;">134</td>
+      <td style="text-align:left;">6.84e-05</td>
+      <td style="text-align:left;">0.343</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTATGTATTTAATT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS04865</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">150</td>
+      <td style="text-align:left;">165</td>
+      <td style="text-align:left;">6.93e-05</td>
+      <td style="text-align:left;">0.343</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGATTATTTATACTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS21020</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">229</td>
+      <td style="text-align:left;">244</td>
+      <td style="text-align:left;">6.93e-05</td>
+      <td style="text-align:left;">0.343</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTAATTTATACTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS02475</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">37</td>
+      <td style="text-align:left;">52</td>
+      <td style="text-align:left;">6.99e-05</td>
+      <td style="text-align:left;">0.343</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTAAAACCTTACCT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS20065</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">58</td>
+      <td style="text-align:left;">73</td>
+      <td style="text-align:left;">7.09e-05</td>
+      <td style="text-align:left;">0.343</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGTGCAAGCATTCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS15725</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">58</td>
+      <td style="text-align:left;">73</td>
+      <td style="text-align:left;">7.13e-05</td>
+      <td style="text-align:left;">0.343</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGTGCACCTTTACTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS05210</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">59</td>
+      <td style="text-align:left;">74</td>
+      <td style="text-align:left;">7.13e-05</td>
+      <td style="text-align:left;">0.343</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATAAAAATTGCAATT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS22280</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">117</td>
+      <td style="text-align:left;">132</td>
+      <td style="text-align:left;">7.13e-05</td>
+      <td style="text-align:left;">0.343</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TGGAAAAGGTTTACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS21595</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">208</td>
+      <td style="text-align:left;">223</td>
+      <td style="text-align:left;">7.13e-05</td>
+      <td style="text-align:left;">0.343</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGAACAAACTCAATT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS19070</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">74</td>
+      <td style="text-align:left;">89</td>
+      <td style="text-align:left;">7.16e-05</td>
+      <td style="text-align:left;">0.343</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TGTAGCAATTGCACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS17635</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">144</td>
+      <td style="text-align:left;">159</td>
+      <td style="text-align:left;">7.35e-05</td>
+      <td style="text-align:left;">0.344</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATTATAAATTTACTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS12310</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">180</td>
+      <td style="text-align:left;">195</td>
+      <td style="text-align:left;">7.35e-05</td>
+      <td style="text-align:left;">0.344</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GATTGCATTTTTAATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS20990</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">111</td>
+      <td style="text-align:left;">126</td>
+      <td style="text-align:left;">7.41e-05</td>
+      <td style="text-align:left;">0.344</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATAGCAATTATACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS04860</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">218</td>
+      <td style="text-align:left;">233</td>
+      <td style="text-align:left;">7.41e-05</td>
+      <td style="text-align:left;">0.344</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAGTATAAATAATCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS18470</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">82</td>
+      <td style="text-align:left;">97</td>
+      <td style="text-align:left;">7.48e-05</td>
+      <td style="text-align:left;">0.344</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATTAAATGTGCACTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS23950</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">129</td>
+      <td style="text-align:left;">144</td>
+      <td style="text-align:left;">7.52e-05</td>
+      <td style="text-align:left;">0.344</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATAACGACTTAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS14190</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">175</td>
+      <td style="text-align:left;">190</td>
+      <td style="text-align:left;">7.55e-05</td>
+      <td style="text-align:left;">0.344</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATTAAGAATTTTATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS10365</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">249</td>
+      <td style="text-align:left;">264</td>
+      <td style="text-align:left;">7.61e-05</td>
+      <td style="text-align:left;">0.344</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TGGTAAAATTAATCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS22430</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">202</td>
+      <td style="text-align:left;">217</td>
+      <td style="text-align:left;">7.71e-05</td>
+      <td style="text-align:left;">0.344</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTCAGCTTCTATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS20915</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">5</td>
+      <td style="text-align:left;">20</td>
+      <td style="text-align:left;">7.74e-05</td>
+      <td style="text-align:left;">0.344</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTAAATCTAAAATT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS04515</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">121</td>
+      <td style="text-align:left;">136</td>
+      <td style="text-align:left;">7.85e-05</td>
+      <td style="text-align:left;">0.344</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTACAAACAAAATT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS12305</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">194</td>
+      <td style="text-align:left;">209</td>
+      <td style="text-align:left;">7.85e-05</td>
+      <td style="text-align:left;">0.344</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATTAAAAATGCAATC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS08810</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">277</td>
+      <td style="text-align:left;">292</td>
+      <td style="text-align:left;">7.85e-05</td>
+      <td style="text-align:left;">0.344</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATTAAGATTTAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS01440</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">33</td>
+      <td style="text-align:left;">48</td>
+      <td style="text-align:left;">7.89e-05</td>
+      <td style="text-align:left;">0.344</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTAGAAACTTTCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS03780</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">83</td>
+      <td style="text-align:left;">98</td>
+      <td style="text-align:left;">7.96e-05</td>
+      <td style="text-align:left;">0.344</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATTAAAATCTAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS10365</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">263</td>
+      <td style="text-align:left;">278</td>
+      <td style="text-align:left;">8.06e-05</td>
+      <td style="text-align:left;">0.344</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATTAAAATCACAATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS05345</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">21</td>
+      <td style="text-align:left;">36</td>
+      <td style="text-align:left;">8.09e-05</td>
+      <td style="text-align:left;">0.344</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTAATCTTTTCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS22435</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">199</td>
+      <td style="text-align:left;">214</td>
+      <td style="text-align:left;">8.09e-05</td>
+      <td style="text-align:left;">0.344</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATAGAAGCTGAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS22235</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">15</td>
+      <td style="text-align:left;">30</td>
+      <td style="text-align:left;">8.2e-05</td>
+      <td style="text-align:left;">0.346</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATAAAAATTATACCA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS03590</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">146</td>
+      <td style="text-align:left;">161</td>
+      <td style="text-align:left;">8.28e-05</td>
+      <td style="text-align:left;">0.347</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATTATAACTTTTATT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS02890</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">84</td>
+      <td style="text-align:left;">99</td>
+      <td style="text-align:left;">8.35e-05</td>
+      <td style="text-align:left;">0.348</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATAGAGTTTGTAATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS04035</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">105</td>
+      <td style="text-align:left;">120</td>
+      <td style="text-align:left;">8.5e-05</td>
+      <td style="text-align:left;">0.349</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTGGGTTGTTCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS11060</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">160</td>
+      <td style="text-align:left;">175</td>
+      <td style="text-align:left;">8.5e-05</td>
+      <td style="text-align:left;">0.349</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATTATACATTTAATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS21510</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">37</td>
+      <td style="text-align:left;">52</td>
+      <td style="text-align:left;">8.57e-05</td>
+      <td style="text-align:left;">0.349</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTTGATTTAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS22900</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">108</td>
+      <td style="text-align:left;">123</td>
+      <td style="text-align:left;">8.57e-05</td>
+      <td style="text-align:left;">0.349</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAGATAAGATGAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS09200</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">64</td>
+      <td style="text-align:left;">79</td>
+      <td style="text-align:left;">8.68e-05</td>
+      <td style="text-align:left;">0.349</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTAAAAACTCACTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS01695</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">194</td>
+      <td style="text-align:left;">209</td>
+      <td style="text-align:left;">8.72e-05</td>
+      <td style="text-align:left;">0.349</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATTAAAGTTATTATT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS11810</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">2</td>
+      <td style="text-align:left;">17</td>
+      <td style="text-align:left;">8.91e-05</td>
+      <td style="text-align:left;">0.349</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTAAAGGTATTCCA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS07415</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">127</td>
+      <td style="text-align:left;">142</td>
+      <td style="text-align:left;">8.91e-05</td>
+      <td style="text-align:left;">0.349</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTATACTTGCTATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS11055</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">20</td>
+      <td style="text-align:left;">35</td>
+      <td style="text-align:left;">8.95e-05</td>
+      <td style="text-align:left;">0.349</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATTAAATGTATAATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS21910</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">122</td>
+      <td style="text-align:left;">137</td>
+      <td style="text-align:left;">8.95e-05</td>
+      <td style="text-align:left;">0.349</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAGTAAAATTTCTCTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS07875</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">283</td>
+      <td style="text-align:left;">298</td>
+      <td style="text-align:left;">8.95e-05</td>
+      <td style="text-align:left;">0.349</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATAATATCTATTCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS18785</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">250</td>
+      <td style="text-align:left;">265</td>
+      <td style="text-align:left;">9.03e-05</td>
+      <td style="text-align:left;">0.349</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTTGAACTTACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS21240</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">79</td>
+      <td style="text-align:left;">94</td>
+      <td style="text-align:left;">9.15e-05</td>
+      <td style="text-align:left;">0.349</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGATTAACTGCAATT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS01840</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">9</td>
+      <td style="text-align:left;">24</td>
+      <td style="text-align:left;">9.19e-05</td>
+      <td style="text-align:left;">0.349</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATATAACTTATACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS07870</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">94</td>
+      <td style="text-align:left;">109</td>
+      <td style="text-align:left;">9.23e-05</td>
+      <td style="text-align:left;">0.349</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGAATAGATATTATT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS01690</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">148</td>
+      <td style="text-align:left;">163</td>
+      <td style="text-align:left;">9.35e-05</td>
+      <td style="text-align:left;">0.349</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATAATAACTTTAATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS00075</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">260</td>
+      <td style="text-align:left;">275</td>
+      <td style="text-align:left;">9.39e-05</td>
+      <td style="text-align:left;">0.349</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATTGAATTTATTATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS25130</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">66</td>
+      <td style="text-align:left;">81</td>
+      <td style="text-align:left;">9.43e-05</td>
+      <td style="text-align:left;">0.349</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTCATATTTTCTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS08625</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">222</td>
+      <td style="text-align:left;">237</td>
+      <td style="text-align:left;">9.43e-05</td>
+      <td style="text-align:left;">0.349</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTAAAACATTATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS01835</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">210</td>
+      <td style="text-align:left;">225</td>
+      <td style="text-align:left;">9.47e-05</td>
+      <td style="text-align:left;">0.349</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTATAAGTTATATA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS17640</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">6</td>
+      <td style="text-align:left;">21</td>
+      <td style="text-align:left;">9.59e-05</td>
+      <td style="text-align:left;">0.349</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATTTAAATTTTACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS13340</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">106</td>
+      <td style="text-align:left;">121</td>
+      <td style="text-align:left;">9.59e-05</td>
+      <td style="text-align:left;">0.349</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAGTATATTCATACTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS19360</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">114</td>
+      <td style="text-align:left;">129</td>
+      <td style="text-align:left;">9.63e-05</td>
+      <td style="text-align:left;">0.349</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGAGCATTTGCTATG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS10340</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">232</td>
+      <td style="text-align:left;">247</td>
+      <td style="text-align:left;">9.63e-05</td>
+      <td style="text-align:left;">0.349</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTACTATTGCACTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS13520</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">280</td>
+      <td style="text-align:left;">295</td>
+      <td style="text-align:left;">9.92e-05</td>
+      <td style="text-align:left;">0.358</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATTGCAGTTACACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">TAGTACARYTGTACTA</td>
+      <td style="text-align:left;">MEME-1</td>
+      <td style="text-align:left;">B1A85_RS12835</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">186</td>
+      <td style="text-align:left;">201</td>
+      <td style="text-align:left;">9.96e-05</td>
+      <td style="text-align:left;">0.358</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTTAATTCATCTA</td>
+   </tr>
+</tbody>
+</table>
+
+<hr>
+<center><big><b><a name="debugging_information">DEBUGGING INFORMATION</a></b></big></center>
+<hr>
+<p>
+Command line:
+</p>
+<pre>
+fimo --oc /home/davide/Desktop/genomiChro/intergeniche_RefSeq/fimo/Chroococcidiopsis_sp._TS-821_GCF_002939305_intergen --verbosity 1 --bgfile --nrdb-- --thresh 1.0E-4 --norc /home/davide/Downloads/motivo16.meme /home/davide/Desktop/genomiChro/intergeniche_RefSeq/Chroococcidiopsis_sp._TS-821_GCF_002939305_intergen.fasta
+</pre>
+<p>
+Settings:
+</p>
+<pre>
+<table>
+  <tr>
+    <td style="padding-right: 2em">output_directory = /home/davide/Desktop/genomiChro/intergeniche_RefSeq/fimo/Chroococcidiopsis_sp._TS-821_GCF_002939305_intergen</td>
+    <td style="padding-left: 5em; padding-right: 2em">MEME file name = /home/davide/Downloads/motivo16.meme</td>
+    <td style="padding-left: 5em; padding-right: 2em">sequence file name = /home/davide/Desktop/genomiChro/intergeniche_RefSeq/Chroococcidiopsis_sp._TS-821_GCF_002939305_intergen.fasta</td>
+  </tr>  <tr>
+    <td style="padding-right: 2em">background file name = --nrdb--</td>
+    <td style="padding-left: 5em; padding-right: 2em">alphabet = DNA</td>
+    <td style="padding-left: 5em; padding-right: 2em">max stored scores = 100000</td>
+  </tr>  <tr>
+    <td style="padding-right: 2em">allow clobber = true</td>
+    <td style="padding-left: 5em; padding-right: 2em">compute q-values = true</td>
+    <td style="padding-left: 5em; padding-right: 2em">parse genomic coord. = true</td>
+  </tr>
+  <tr>
+    <td style="padding-right: 2em">text only = false</td>
+    <td style="padding-left: 5em; padding-right: 2em">scan both strands = false</td>
+    <td style="padding-left: 5em; padding-right: 2em">max strand = false</td>
+  </tr>
+  <tr>
+    <td style="padding-right: 2em">threshold type = p-value</td>
+    <td style="padding-left: 5em; padding-right: 2em">output theshold = 0.0001</td>
+    <td style="padding-left: 5em; padding-right: 2em">pseudocount = 0.1</td>
+  </tr>
+  <tr>
+    <td style="padding-right: 2em">alpha = 1</td>
+    <td style="padding-left: 5em; padding-right: 2em">verbosity = 1</td>
+    <td style="padding-left: 5em; padding-right: 2em"></td>
+  </tr>
+
+</table>
+</pre>
+<p>
+This information can be useful in the event you wish to report a
+problem with the FIMO software.
+</p>
+<hr>
+<span style="background-color: #DDDDFF"><a href="#top_buttons"><b>Go to top</b></a></span>
+</body>
+</html>
