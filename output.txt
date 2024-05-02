@@ -94,7 +94,9 @@ LAU37_RS29570 300
  For promoter at    243:
         hns:  TAATTTAA at position     222 Score -   9
        phoB:  TTTAATTA at position     225 Score -  11
-       arcA:  TTAATTAA at position     226 Score -  13LAU37_RS19450 156
+       arcA:  TTAATTAA at position     226 Score -  13
+
+LAU37_RS19450 156
 > test sequence                                                                 
  Length of sequence-       156
  Threshold for promoters -  0.20
@@ -110,7 +112,9 @@ LAU37_RS29570 300
      rpoD17:  TTTTATAG at position      85 Score -  10
         hns:  ATTAAATT at position     114 Score -   9
         crp:  TTAAATTG at position     115 Score -  10
-        fnr:  TAAATTGT at position     116 Score -  12LAU37_RS01815 300
+        fnr:  TAAATTGT at position     116 Score -  12
+
+LAU37_RS01815 300
 > test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
@@ -122,7 +126,9 @@ LAU37_RS29570 300
  Oligonucleotides from known TF binding sites:
 
  For promoter at    171:
-        crp:  GTGTGTAA at position     163 Score -  10LAU37_RS20890 300
+        crp:  GTGTGTAA at position     163 Score -  10
+
+LAU37_RS20890 300
 > test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
@@ -135,7 +141,9 @@ LAU37_RS29570 300
 
  For promoter at    183:
         fis:  TTATCTAA at position     160 Score -  11
-        fnr:  ATAAATAT at position     172 Score -   9LAU37_RS01810 300
+        fnr:  ATAAATAT at position     172 Score -   9
+
+LAU37_RS01810 300
 > test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
@@ -147,7 +155,9 @@ LAU37_RS29570 300
  Oligonucleotides from known TF binding sites:
 
  For promoter at    271:
-       pdhR:  TTGTTAAA at position     255 Score -   8LAU37_RS14470 128
+       pdhR:  TTGTTAAA at position     255 Score -   8
+
+       LAU37_RS14470 128
 > test sequence                                                                 
  Length of sequence-       128
  Threshold for promoters -  0.20
@@ -160,7 +170,9 @@ LAU37_RS29570 300
 
  For promoter at     63:
        nagC:  ATTTTAGA at position      12 Score -   6
-       nagC:  ATTTTAGA at position      19 Score -   6LAU37_RS30680 284
+       nagC:  ATTTTAGA at position      19 Score -   6
+
+       LAU37_RS30680 284
 > test sequence                                                                 
  Length of sequence-       284
  Threshold for promoters -  0.20
@@ -171,7 +183,9 @@ LAU37_RS29570 300
 
  Oligonucleotides from known TF binding sites:
 
- No such sites for promoter at    163LAU37_RS16010 300
+ No such sites for promoter at    163
+
+ LAU37_RS16010 300
 > test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
@@ -201,7 +215,9 @@ LAU37_RS16005 300
  Oligonucleotides from known TF binding sites:
 
  For promoter at    133:
-     rpoD16:  CAGATATA at position     117 Score -   9LAU37_RS16005 300
+     rpoD16:  CAGATATA at position     117 Score -   9
+
+     LAU37_RS16005 300
 > test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
@@ -213,7 +229,9 @@ LAU37_RS16005 300
  Oligonucleotides from known TF binding sites:
 
  For promoter at    133:
-     rpoD16:  CAGATATA at position     117 Score -   9LAU37_RS28060 300
+     rpoD16:  CAGATATA at position     117 Score -   9
+
+     LAU37_RS28060 300
 > test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
@@ -228,7 +246,9 @@ LAU37_RS16005 300
      rpoD18:  TTAATTTT at position     193 Score -   9
      rpoD17:  ACAAGTGT at position     205 Score -  11
      rpoD18:  TTAATTTT at position     215 Score -   9
-       cpxR:  CTTGTAAG at position     237 Score -  11LAU37_RS28065 300
+       cpxR:  CTTGTAAG at position     237 Score -  11
+
+       LAU37_RS28065 300
 > test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
@@ -240,7 +260,9 @@ LAU37_RS16005 300
  Oligonucleotides from known TF binding sites:
 
  For promoter at    132:
-     rpoD17:  ATAATAAT at position     121 Score -   8LAU37_RS24035 300
+     rpoD17:  ATAATAAT at position     121 Score -   8
+
+     LAU37_RS24035 300
 > test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
@@ -252,7 +274,9 @@ LAU37_RS16005 300
  Oligonucleotides from known TF binding sites:
 
  For promoter at    172:
-      argR2:  GCAAATAA at position     149 Score -   6LAU37_RS29790 300
+      argR2:  GCAAATAA at position     149 Score -   6
+
+      LAU37_RS29790 300
 > test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
@@ -265,7 +289,9 @@ LAU37_RS16005 300
 
  For promoter at    136:
         lrp:  TAAGATAA at position      79 Score -  16
-        ihf:  TATACTTT at position     124 Score -  15LAU37_RS29795 300
+        ihf:  TATACTTT at position     124 Score -  15
+
+        LAU37_RS29795 300
 > test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
@@ -279,7 +305,9 @@ LAU37_RS16005 300
  For promoter at    232:
        lexA:  TATATACT at position     182 Score -  18
         ihf:  AAAGTATA at position     201 Score -  14
-       tyrR:  CTTACACA at position     250 Score -   9LAU37_RS03005 300
+       tyrR:  CTTACACA at position     250 Score -   9
+
+       LAU37_RS03005 300
 > test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
@@ -297,7 +325,9 @@ LAU37_RS16005 300
        rpoN:  AAATTGTA at position     218 Score -   8
        arcA:  AATTGTAA at position     219 Score -  16
         fis:  TGTAAATT at position     222 Score -  15
-        fnr:  TAAATTGT at position     224 Score -  12LAU37_RS22815 300
+        fnr:  TAAATTGT at position     224 Score -  12
+
+        LAU37_RS22815 300
 > test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
@@ -309,7 +339,9 @@ LAU37_RS16005 300
  Oligonucleotides from known TF binding sites:
 
  For promoter at     63:
-       soxS:  CAAGTATA at position      34 Score -  12LAU37_RS31200 166
+       soxS:  CAAGTATA at position      34 Score -  12
+
+       LAU37_RS31200 166
 > test sequence                                                                 
  Length of sequence-       166
  Threshold for promoters -  0.20
@@ -322,7 +354,9 @@ LAU37_RS16005 300
 
  For promoter at     99:
        phoB:  CTTACATA at position      77 Score -  16
-        lrp:  TTTAGTGT at position     108 Score -   9LAU37_RS00155 300
+        lrp:  TTTAGTGT at position     108 Score -   9
+
+        LAU37_RS00155 300
 > test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
@@ -333,7 +367,9 @@ LAU37_RS16005 300
 
  Oligonucleotides from known TF binding sites:
 
- No such sites for promoter at    262LAU37_RS04690 258
+ No such sites for promoter at    262
+
+ LAU37_RS04690 258
 > test sequence                                                                 
  Length of sequence-       258
  Threshold for promoters -  0.20
@@ -345,7 +381,9 @@ LAU37_RS16005 300
  Oligonucleotides from known TF binding sites:
 
  For promoter at    125:
-       nagC:  TTTAATTT at position      79 Score -   7LAU37_RS08430 300
+       nagC:  TTTAATTT at position      79 Score -   7
+
+       LAU37_RS08430 300
 > test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
@@ -358,7 +396,9 @@ LAU37_RS16005 300
 
  For promoter at    188:
      rpoD18:  TTGCTTTT at position     148 Score -   6
-       argR:  CACAATAA at position     203 Score -   9LAU37_RS25215 300
+       argR:  CACAATAA at position     203 Score -   9
+
+       LAU37_RS25215 300
 > test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
@@ -371,7 +411,9 @@ LAU37_RS16005 300
 
  For promoter at    211:
      rpoD16:  CAGATATA at position     161 Score -   9
-     rpoD17:  ATACTTAA at position     217 Score -  13LAU37_RS03855 300
+     rpoD17:  ATACTTAA at position     217 Score -  13
+
+     LAU37_RS03855 300
 > test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
@@ -388,7 +430,9 @@ LAU37_RS16005 300
         fis:  TATACTTA at position      96 Score -  18
      rpoD17:  ATACTTAA at position      97 Score -  13
      rpoD19:  TACTTAAA at position      98 Score -   8
-     rpoD17:  CTTAAAAT at position     100 Score -  11LAU37_RS27545 227
+     rpoD17:  CTTAAAAT at position     100 Score -  11
+
+     LAU37_RS27545 227
 > test sequence                                                                 
  Length of sequence-       227
  Threshold for promoters -  0.20
@@ -400,7 +444,9 @@ LAU37_RS16005 300
  Oligonucleotides from known TF binding sites:
 
  For promoter at    157:
-     rpoD19:  TCCTGCTA at position     139 Score -   7LAU37_RS16145 300
+     rpoD19:  TCCTGCTA at position     139 Score -   7
+
+     LAU37_RS16145 300
 > test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
@@ -414,11 +460,15 @@ LAU37_RS16005 300
  For promoter at     69:
         fnr:  TCAAGAGT at position      35 Score -  13
        metJ:  CTTTACAT at position      54 Score -  14
-       ompR:  TTTACATT at position      55 Score -  11LAU37_RS15195 68
+       ompR:  TTTACATT at position      55 Score -  11
+
+       LAU37_RS15195 68
 > test sequence                                                                 
  Length of sequence-        68
  Threshold for promoters -  0.20
- Number of predicted promoters -      0LAU37_RS25940 300
+ Number of predicted promoters -      0
+
+ LAU37_RS25940 300
 > test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
