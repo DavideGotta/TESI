@@ -114,10 +114,9 @@ def sequenze_intergeniche(genoma, geni, output):
     SeqIO.write(intergeniche, output, "fasta")
 
 
-def sequenze_intergenichetutte(input, output, max_len=300,op=False):
+def sequenze_intergenichetutte(input, output, max_len=300,op=False,c=0):
     intergeniche = []  # Lista per memorizzare le sequenze intergeniche
     genoma = SeqIO.parse(input, "genbank")
-
     # Loop attraverso le features nel file GenBank
     for sequenze in genoma:
         # sequenze sta per sequenzefold perchè il file genbank potrebbe non contenere un solo cromosoma circolare
@@ -160,12 +159,12 @@ def sequenze_intergenichetutte(input, output, max_len=300,op=False):
 
             last_end = 0 if i == 0 else cds_list_plus[i - 1][1]
             this_start = n[0]  # Ottieni l'inizio del gene corrente
-            intergene_seq = sequenze.seq[last_end:this_start]  # Ottieni la sequenza intergenica
+            intergene_seq = sequenze.seq[last_end:this_start+c]  # Ottieni la sequenza intergenica
             if len(intergene_seq) >= max_len:  # Se la sequenza intergenica è più lunga di max_len, prendi solo le ultime max_len basi(default 300)
-                intergene_seq = sequenze.seq[this_start - max_len:this_start]
+                intergene_seq = sequenze.seq[this_start - max_len:this_start+c]
                 last_end = this_start - max_len  # Aggiorna quello che sarà l'inizio della sequenza intergenica
             # Aggiungi la sequenza intergenica alla lista come SeqRecord
-            description = f"product = {cds_list_plus[i][3]}, gene = {cds_list_plus[i][4]} {last_end + 1}-{this_start} +"
+            description = f"product = {cds_list_plus[i][3]}, gene = {cds_list_plus[i][4]} {last_end + 1}-{this_start+c} +"
             if op and n[-1]:
                 description = "OPERON " + description
             if len(intergene_seq) == 0:
@@ -179,17 +178,16 @@ def sequenze_intergenichetutte(input, output, max_len=300,op=False):
             )
         # Loop attraverso i geni in direzione -
         for i, n in enumerate(cds_list_minus):
-            next_start = len(sequenze.seq) if i + 1 == len(cds_list_minus) else cds_list_minus[i + 1][
-                0]  # Ottieni l'inizio del prossimo gene(gene precedente per la direzione -)
+            next_start = len(sequenze.seq) if i + 1 == len(cds_list_minus) else cds_list_minus[i + 1][0]  # Ottieni l'inizio del prossimo gene(gene precedente per la direzione -)
             this_end = n[1]  # Ottieni la fine del gene corrente(inizio del gene per la direzione -)
-            intergene_seq = sequenze.seq[this_end:next_start]  # Ottieni la sequenza intergenica
+            intergene_seq = sequenze.seq[this_end-c:next_start]  # Ottieni la sequenza intergenica
             if len(intergene_seq) >= max_len:
                 # Se la sequenza intergenica è più lunga di max_len, prendi solo le prime max_len basi(default 300)
-                intergene_seq = sequenze.seq[this_end:this_end + max_len] if this_end + max_len < len(
-                    sequenze.seq) else sequenze.seq[this_end:]
+                intergene_seq = sequenze.seq[this_end-c:this_end + max_len] if this_end + max_len < len(
+                    sequenze.seq) else sequenze.seq[this_end-c:]
                 next_start = this_end + max_len
             intergene_seq = intergene_seq.reverse_complement()  # Complemento inverso della sequenza intergenica
-            description = f"product = {cds_list_minus[i][3]}, gene = {cds_list_minus[i][4]} {this_end}-{next_start + 1} -"
+            description = f"product = {cds_list_minus[i][3]}, gene = {cds_list_minus[i][4]} {this_end-c}-{next_start + 1} -"
             if op and n[-1]:
                 description = "OPERON " + description
             # Aggiungi la sequenza intergenica alla lista come SeqRecord
@@ -205,4 +203,8 @@ def sequenze_intergenichetutte(input, output, max_len=300,op=False):
 
     # Scrivi le sequenze intergeniche nel file di output
     SeqIO.write(intergeniche, output, "fasta")
+# file_in="/home/davide/Desktop/genomiChro/annotati_Refseq/Chroococcidiopsis_sp._CCMEE_29_GCF_023558375.gbff"
+# file_out="/home/davide/Desktop/genomiChro/intergeniche_RefSeq/Chroococcidiopsis_sp._CCMEE_29_GCF_023558375_intergen-300+50.fasta"
+# sequenze_intergenichetutte(file_in, file_out, 300,op=False,c=50)
+
 

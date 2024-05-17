@@ -1,6 +1,5 @@
 
- LAU37_RS05875 236
-> test sequence                                                                 
+LAU37_RS05875 236> test sequence                                                                 
  Length of sequence-       236
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -8,12 +7,7 @@
  -10 box at pos.     70 TCTTAAGAT Score    56
  -35 box at pos.     49 TTCAAT    Score    35
 
- Oligonucleotides from known TF binding sites:
-
- No such sites for promoter at     85
- LAU37_RS16180 300
-> test sequence                                                                 
- Length of sequence-       300
+LAU37_RS16180 300> test sequence                                                                 
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
  Promoter Pos:     93 LDF-  2.55
@@ -22,12 +16,7 @@
 
  Oligonucleotides from known TF binding sites:
 
- For promoter at     93:
-     rpoD17:  CCCCTTTT at position      95 Score -  12
-       hipB:  CCTTTTTA at position      97 Score -  11
 
- LAU37_RS14595 300
-> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -38,13 +27,8 @@
  Oligonucleotides from known TF binding sites:
 
  For promoter at    119:
-     rpoD17:  AATTTTCT at position      76 Score -   7
-
-LAU37_RS14590 300
-> test sequence                                                                 
- Length of sequence-       300
+LAU37_RS14590 300> test sequence                                                                 
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
  Promoter Pos:     82 LDF-  3.53
  -10 box at pos.     67 TTTTAAAGT Score    55
  -35 box at pos.     47 TAGCTA    Score    16
@@ -53,14 +37,9 @@ LAU37_RS14590 300
 
  For promoter at     82:
      rpoD17:  GAGTAAAA at position      28 Score -   8
-       narL:  AAGTAGTA at position      52 Score -   9
-
-LAU37_RS16880 123
-> test sequence                                                                 
+LAU37_RS16880 123> test sequence                                                                 
  Length of sequence-       123
- Threshold for promoters -  0.20
  Number of predicted promoters -      1
- Promoter Pos:     77 LDF-  1.88
  -10 box at pos.     62 TGTTACAAT Score    77
  -35 box at pos.     38 ATCAGT    Score   -12
 
@@ -69,19 +48,11 @@ LAU37_RS16880 123
  No such sites for promoter at     77
 
 
-LAU37_RS29575 300
-> test sequence                                                                 
- Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
  Promoter Pos:    274 LDF-  3.49
- -10 box at pos.    259 AATTAAATT Score    47
  -35 box at pos.    241 ATCAAA    Score    10
-
-
-
-LAU37_RS29570 300
-> test sequence                                                                 
+LAU37_RS29570 300> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -89,15 +60,7 @@ LAU37_RS29570 300
  -10 box at pos.    228 AATTAATCT Score    43
  -35 box at pos.    204 TCTAAG    Score    -2
 
- Oligonucleotides from known TF binding sites:
-
- For promoter at    243:
-        hns:  TAATTTAA at position     222 Score -   9
-       phoB:  TTTAATTA at position     225 Score -  11
-       arcA:  TTAATTAA at position     226 Score -  13
-
-LAU37_RS19450 156
-> test sequence                                                                 
+LAU37_RS19450 156> test sequence                                                                 
  Length of sequence-       156
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -105,17 +68,7 @@ LAU37_RS19450 156
  -10 box at pos.    113 GATTAAATT Score    49
  -35 box at pos.     93 TTCATT    Score    33
 
- Oligonucleotides from known TF binding sites:
-
- For promoter at    128:
-     rpoD18:  TTGCTTTT at position      81 Score -   6
-     rpoD17:  TTTTATAG at position      85 Score -  10
-        hns:  ATTAAATT at position     114 Score -   9
-        crp:  TTAAATTG at position     115 Score -  10
-        fnr:  TAAATTGT at position     116 Score -  12
-
-LAU37_RS01815 300
-> test sequence                                                                 
+LAU37_RS01815 300> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -128,56 +81,38 @@ LAU37_RS01815 300
  For promoter at    171:
         crp:  GTGTGTAA at position     163 Score -  10
 
-LAU37_RS20890 300
-> test sequence                                                                 
- Length of sequence-       300
- Threshold for promoters -  0.20
+LAU37_RS20890 300> test sequence                                                                 
  Number of predicted promoters -      1
  Promoter Pos:    183 LDF-  4.25
  -10 box at pos.    168 TTGTATAAA Score    49
  -35 box at pos.    151 TTGCCA    Score    61
-
  Oligonucleotides from known TF binding sites:
-
  For promoter at    183:
         fis:  TTATCTAA at position     160 Score -  11
         fnr:  ATAAATAT at position     172 Score -   9
 
-LAU37_RS01810 300
-> test sequence                                                                 
- Length of sequence-       300
- Threshold for promoters -  0.20
+LAU37_RS01810 300> test sequence                                                                 
  Number of predicted promoters -      1
  Promoter Pos:    271 LDF-  4.46
  -10 box at pos.    256 TGTTAAACT Score    76
  -35 box at pos.    236 TTCTCT    Score    28
 
- Oligonucleotides from known TF binding sites:
 
- For promoter at    271:
        pdhR:  TTGTTAAA at position     255 Score -   8
 
-       LAU37_RS14470 128
-> test sequence                                                                 
+LAU37_RS14470 128> test sequence                                                                 
  Length of sequence-       128
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:     63 LDF-  3.53
  -10 box at pos.     48 CTTCATAAT Score    56
  -35 box at pos.     29 TTGGAT    Score    27
 
  Oligonucleotides from known TF binding sites:
 
  For promoter at     63:
-       nagC:  ATTTTAGA at position      12 Score -   6
        nagC:  ATTTTAGA at position      19 Score -   6
-
-       LAU37_RS30680 284
-> test sequence                                                                 
+LAU37_RS30680 284> test sequence                                                                 
  Length of sequence-       284
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:    163 LDF-  2.17
  -10 box at pos.    148 CAGTACATT Score    40
  -35 box at pos.    126 TTGCCA    Score    61
 
@@ -185,15 +120,10 @@ LAU37_RS01810 300
 
  No such sites for promoter at    163
 
- LAU37_RS16010 300
-> test sequence                                                                 
  Length of sequence-       300
- Threshold for promoters -  0.20
  Number of predicted promoters -      1
  Promoter Pos:    175 LDF-  5.36
  -10 box at pos.    159 AGTTACGAT Score    56
- -35 box at pos.    135 TTAATG    Score    29
-
  Oligonucleotides from known TF binding sites:
 
  For promoter at    175:
@@ -202,12 +132,7 @@ LAU37_RS01810 300
       rpoH2:  CTCTCCCA at position     175 Score -   6
         fnr:  TTATACAA at position     186 Score -  14
 
-
-LAU37_RS16005 300
-> test sequence                                                                 
- Length of sequence-       300
- Threshold for promoters -  0.20
- Number of predicted promoters -      1
+LAU37_RS16005 300> test sequence                                                                 
  Promoter Pos:    133 LDF-  4.53
  -10 box at pos.    118 AGATATACT Score    67
  -35 box at pos.     94 TTGTCT    Score    48
@@ -217,53 +142,40 @@ LAU37_RS16005 300
  For promoter at    133:
      rpoD16:  CAGATATA at position     117 Score -   9
 
-     LAU37_RS16005 300
-> test sequence                                                                 
  Length of sequence-       300
- Threshold for promoters -  0.20
  Number of predicted promoters -      1
  Promoter Pos:    133 LDF-  4.53
  -10 box at pos.    118 AGATATACT Score    67
  -35 box at pos.     94 TTGTCT    Score    48
 
- Oligonucleotides from known TF binding sites:
-
  For promoter at    133:
      rpoD16:  CAGATATA at position     117 Score -   9
 
-     LAU37_RS28060 300
-> test sequence                                                                 
+LAU37_RS28060 300> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
  Promoter Pos:    238 LDF-  4.50
  -10 box at pos.    223 CATTATTAT Score    61
- -35 box at pos.    198 TTTTAG    Score    22
 
- Oligonucleotides from known TF binding sites:
-
- For promoter at    238:
      rpoD18:  TTAATTTT at position     193 Score -   9
      rpoD17:  ACAAGTGT at position     205 Score -  11
      rpoD18:  TTAATTTT at position     215 Score -   9
        cpxR:  CTTGTAAG at position     237 Score -  11
 
-       LAU37_RS28065 300
-> test sequence                                                                 
+LAU37_RS28065 300> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
  Promoter Pos:    132 LDF-  4.31
  -10 box at pos.    117 GAATATAAT Score    65
- -35 box at pos.     93 TTGCCG    Score    55
 
  Oligonucleotides from known TF binding sites:
 
  For promoter at    132:
      rpoD17:  ATAATAAT at position     121 Score -   8
 
-     LAU37_RS24035 300
-> test sequence                                                                 
+LAU37_RS24035 300> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -272,12 +184,9 @@ LAU37_RS16005 300
  -35 box at pos.    135 TTGTGA    Score    30
 
  Oligonucleotides from known TF binding sites:
-
- For promoter at    172:
       argR2:  GCAAATAA at position     149 Score -   6
 
-      LAU37_RS29790 300
-> test sequence                                                                 
+LAU37_RS29790 300> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -285,14 +194,9 @@ LAU37_RS16005 300
  -10 box at pos.    121 ATCTATACT Score    66
  -35 box at pos.    100 CTGTCT    Score    13
 
- Oligonucleotides from known TF binding sites:
 
- For promoter at    136:
-        lrp:  TAAGATAA at position      79 Score -  16
-        ihf:  TATACTTT at position     124 Score -  15
 
-        LAU37_RS29795 300
-> test sequence                                                                 
+LAU37_RS29795 300> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -303,12 +207,7 @@ LAU37_RS16005 300
  Oligonucleotides from known TF binding sites:
 
  For promoter at    232:
-       lexA:  TATATACT at position     182 Score -  18
-        ihf:  AAAGTATA at position     201 Score -  14
-       tyrR:  CTTACACA at position     250 Score -   9
 
-       LAU37_RS03005 300
-> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -319,16 +218,11 @@ LAU37_RS16005 300
  Oligonucleotides from known TF binding sites:
 
  For promoter at    228:
-       lexA:  TATATATA at position     183 Score -  14
-       lexA:  TATATAAA at position     185 Score -  14
-      argR2:  ATATAAAT at position     186 Score -  13
        rpoN:  AAATTGTA at position     218 Score -   8
-       arcA:  AATTGTAA at position     219 Score -  16
         fis:  TGTAAATT at position     222 Score -  15
         fnr:  TAAATTGT at position     224 Score -  12
 
-        LAU37_RS22815 300
-> test sequence                                                                 
+LAU37_RS22815 300> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -336,13 +230,8 @@ LAU37_RS16005 300
  -10 box at pos.     48 GCTTATTAT Score    62
  -35 box at pos.     24 TTTACT    Score    42
 
- Oligonucleotides from known TF binding sites:
-
- For promoter at     63:
        soxS:  CAAGTATA at position      34 Score -  12
-
-       LAU37_RS31200 166
-> test sequence                                                                 
+LAU37_RS31200 166> test sequence                                                                 
  Length of sequence-       166
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -354,11 +243,7 @@ LAU37_RS16005 300
 
  For promoter at     99:
        phoB:  CTTACATA at position      77 Score -  16
-        lrp:  TTTAGTGT at position     108 Score -   9
 
-        LAU37_RS00155 300
-> test sequence                                                                 
- Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
  Promoter Pos:    262 LDF-  2.75
@@ -369,11 +254,8 @@ LAU37_RS16005 300
 
  No such sites for promoter at    262
 
- LAU37_RS04690 258
-> test sequence                                                                 
+LAU37_RS04690 258> test sequence                                                                 
  Length of sequence-       258
- Threshold for promoters -  0.20
- Number of predicted promoters -      1
  Promoter Pos:    125 LDF-  2.20
  -10 box at pos.    110 GAGCAAAAT Score    44
  -35 box at pos.     85 TTGCTG    Score    47
@@ -383,74 +265,51 @@ LAU37_RS16005 300
  For promoter at    125:
        nagC:  TTTAATTT at position      79 Score -   7
 
-       LAU37_RS08430 300
-> test sequence                                                                 
+LAU37_RS08430 300> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
- Promoter Pos:    188 LDF-  2.37
- -10 box at pos.    173 TTCTACAGT Score    41
  -35 box at pos.    154 TTGCAT    Score    50
 
- Oligonucleotides from known TF binding sites:
 
- For promoter at    188:
      rpoD18:  TTGCTTTT at position     148 Score -   6
        argR:  CACAATAA at position     203 Score -   9
 
-       LAU37_RS25215 300
-> test sequence                                                                 
+LAU37_RS25215 300> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:    211 LDF-  4.85
  -10 box at pos.    196 TTGTACTAT Score    57
  -35 box at pos.    178 TTGAAG    Score    54
 
  Oligonucleotides from known TF binding sites:
 
  For promoter at    211:
-     rpoD16:  CAGATATA at position     161 Score -   9
      rpoD17:  ATACTTAA at position     217 Score -  13
-
-     LAU37_RS03855 300
-> test sequence                                                                 
+LAU37_RS03855 300> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
- Promoter Pos:    125 LDF-  9.43
  -10 box at pos.    110 AGCTATACT Score    73
  -35 box at pos.     91 TTTCCT    Score    37
 
  Oligonucleotides from known TF binding sites:
 
  For promoter at    125:
-        lrp:  ATTTTTTT at position      86 Score -  11
      rpoD17:  CCTATACT at position      94 Score -  15
-        fis:  TATACTTA at position      96 Score -  18
      rpoD17:  ATACTTAA at position      97 Score -  13
      rpoD19:  TACTTAAA at position      98 Score -   8
      rpoD17:  CTTAAAAT at position     100 Score -  11
 
-     LAU37_RS27545 227
-> test sequence                                                                 
- Length of sequence-       227
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
  Promoter Pos:    157 LDF-  1.40
  -10 box at pos.    142 TGCTACGCT Score    46
  -35 box at pos.    118 TTGGCT    Score    33
 
- Oligonucleotides from known TF binding sites:
 
- For promoter at    157:
      rpoD19:  TCCTGCTA at position     139 Score -   7
 
-     LAU37_RS16145 300
-> test sequence                                                                 
+LAU37_RS16145 300> test sequence                                                                 
  Length of sequence-       300
- Threshold for promoters -  0.20
- Number of predicted promoters -      1
  Promoter Pos:     69 LDF-  4.71
  -10 box at pos.     54 CTTTACATT Score    46
  -35 box at pos.     30 TTAAAT    Score    32
@@ -458,35 +317,24 @@ LAU37_RS16005 300
  Oligonucleotides from known TF binding sites:
 
  For promoter at     69:
-        fnr:  TCAAGAGT at position      35 Score -  13
        metJ:  CTTTACAT at position      54 Score -  14
-       ompR:  TTTACATT at position      55 Score -  11
 
-       LAU37_RS15195 68
-> test sequence                                                                 
+LAU37_RS15195 68> test sequence                                                                 
  Length of sequence-        68
  Threshold for promoters -  0.20
  Number of predicted promoters -      0
 
- LAU37_RS25940 300
-> test sequence                                                                 
- Length of sequence-       300
- Threshold for promoters -  0.20
+LAU37_RS25940 300> test sequence                                                                 
  Number of predicted promoters -      1
  Promoter Pos:    261 LDF-  5.10
  -10 box at pos.    246 TATTAGAAT Score    62
  -35 box at pos.    226 TTGCAT    Score    50
-
  Oligonucleotides from known TF binding sites:
-
  For promoter at    261:
        deoR:  TTAGAATA at position     248 Score -  17
 
-LAU37_RS10340 300
-> test sequence                                                                 
+LAU37_RS10340 300> test sequence                                                                 
  Length of sequence-       300
- Threshold for promoters -  0.20
- Number of predicted promoters -      1
  Promoter Pos:    277 LDF-  2.99
  -10 box at pos.    262 TTTTGAAAT Score    41
  -35 box at pos.    242 TTGAGT    Score    38
@@ -497,34 +345,23 @@ LAU37_RS10340 300
        nagC:  GAAATAAG at position     266 Score -   8
      rpoD19:  TGTTGTGT at position     284 Score -   8
 
- LAU37_RS15700 300
-> test sequence                                                                 
  Length of sequence-       300
- Threshold for promoters -  0.20
  Number of predicted promoters -      1
  Promoter Pos:    143 LDF-  3.32
  -10 box at pos.    128 ATCTAAAAT Score    69
  -35 box at pos.    111 TAGATT    Score    16
 
  Oligonucleotides from known TF binding sites:
-
- For promoter at    143:
         fis:  TTATCTAA at position     126 Score -  11
         fur:  TAATGCTT at position     143 Score -   6
 
-LAU37_RS15700
-> test sequence                                                                 
- Length of sequence-       300
+LAU37_RS15700> test sequence                                                                 
  Threshold for promoters -  0.20
- Number of predicted promoters -      1
  Promoter Pos:    143 LDF-  3.32
  -10 box at pos.    128 ATCTAAAAT Score    69
  -35 box at pos.    111 TAGATT    Score    16
 
  
-LAU37_RS10345
-> test sequence                                                                 
- Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
  Promoter Pos:    159 LDF-  3.28
@@ -532,18 +369,12 @@ LAU37_RS10345
  -35 box at pos.    122 TTTTCG    Score    28
 
  
-LAU37_RS26155
-> test sequence                                                                 
+LAU37_RS26155> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
  Promoter Pos:    100 LDF-  6.32
- -10 box at pos.     85 AGGTAAAAG Score    44
  -35 box at pos.     61 TTGTAA    Score    47
-
- 
-LAU37_RS25935
-> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -552,18 +383,14 @@ LAU37_RS25935
  -35 box at pos.    221 TCGCAA    Score    18
 
  
-LAU37_RS17180
-> test sequence                                                                 
+LAU37_RS17180> test sequence                                                                 
  Length of sequence-       186
- Threshold for promoters -  0.20
  Number of predicted promoters -      1
- Promoter Pos:    151 LDF-  3.02
  -10 box at pos.    136 TTGTATGCT Score    61
  -35 box at pos.    112 ATGCCG    Score    25
 
  
-LAU37_RS25105
-> test sequence                                                                 
+LAU37_RS25105> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -572,18 +399,14 @@ LAU37_RS25105
  -35 box at pos.     85 TTCCCA    Score    41
 
  
-LAU37_RS18960
-> test sequence                                                                 
  Length of sequence-       300
- Threshold for promoters -  0.20
  Number of predicted promoters -      1
  Promoter Pos:     66 LDF-  1.80
  -10 box at pos.     51 GGGTTTTAT Score    39
  -35 box at pos.     34 TTAAAA    Score    37
 
  
-LAU37_RS30475
-> test sequence                                                                 
+LAU37_RS30475> test sequence                                                                 
  Length of sequence-       111
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -592,8 +415,7 @@ LAU37_RS30475
  -35 box at pos.     38 TGGAAA    Score    23
 
  
-LAU37_RS21505
-> test sequence                                                                 
+LAU37_RS21505> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -602,8 +424,7 @@ LAU37_RS21505
  -35 box at pos.    226 TTTAAG    Score    35
 
  
-LAU37_RS07875
-> test sequence                                                                 
+LAU37_RS07875> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -612,8 +433,7 @@ LAU37_RS07875
  -35 box at pos.     36 TTGACA    Score    66
 
  
-LAU37_RS12715
-> test sequence                                                                 
+LAU37_RS12715> test sequence                                                                 
  Length of sequence-       133
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -622,8 +442,7 @@ LAU37_RS12715
  -35 box at pos.     67 ATACCT    Score     3
 
  
-LAU37_RS05115
-> test sequence                                                                 
+LAU37_RS05115> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -632,8 +451,7 @@ LAU37_RS05115
  -35 box at pos.    127 TTGACA    Score    66
 
  
-LAU37_RS00750
-> test sequence                                                                 
+LAU37_RS00750> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -642,8 +460,7 @@ LAU37_RS00750
  -35 box at pos.    164 TTGCCT    Score    56
 
  
-LAU37_RS05120
-> test sequence                                                                 
+LAU37_RS05120> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -652,8 +469,7 @@ LAU37_RS05120
  -35 box at pos.    242 TTCCCT    Score    36
 
  
-LAU37_RS00380
-> test sequence                                                                 
+LAU37_RS00380> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -662,8 +478,7 @@ LAU37_RS00380
  -35 box at pos.    190 TTGCAG    Score    49
 
  
-LAU37_RS06765
-> test sequence                                                                 
+LAU37_RS06765> test sequence                                                                 
  Length of sequence-       164
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -672,8 +487,7 @@ LAU37_RS06765
  -35 box at pos.     62 TTGATA    Score    58
 
  
-LAU37_RS00385
-> test sequence                                                                 
+LAU37_RS00385> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -682,8 +496,7 @@ LAU37_RS00385
  -35 box at pos.    181 TCGTAA    Score    10
 
  
-LAU37_RS05465
-> test sequence                                                                 
+LAU37_RS05465> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -692,8 +505,7 @@ LAU37_RS05465
  -35 box at pos.    231 CAGCAA    Score   -17
 
  
-LAU37_RS11335
-> test sequence                                                                 
+LAU37_RS11335> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -702,8 +514,7 @@ LAU37_RS11335
  -35 box at pos.    211 TTCAAC    Score    18
 
  
-LAU37_RS05470
-> test sequence                                                                 
+LAU37_RS05470> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -712,8 +523,7 @@ LAU37_RS05470
  -35 box at pos.    178 TTGAGA    Score    43
 
  
-LAU37_RS05470
-> test sequence                                                                 
+LAU37_RS05470> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -722,8 +532,7 @@ LAU37_RS05470
  -35 box at pos.    178 TTGAGA    Score    43
 
  
-LAU37_RS04165
-> test sequence                                                                 
+LAU37_RS04165> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -732,8 +541,7 @@ LAU37_RS04165
  -35 box at pos.    221 TTGACA    Score    66
 
  
-LAU37_RS24535
-> test sequence                                                                 
+LAU37_RS24535> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -742,8 +550,7 @@ LAU37_RS24535
  -35 box at pos.    142 TTAACA    Score    43
 
  
-LAU37_RS25320
-> test sequence                                                                 
+LAU37_RS25320> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -752,8 +559,7 @@ LAU37_RS25320
  -35 box at pos.    230 TTACCT    Score    33
 
  
-LAU37_RS10950
-> test sequence                                                                 
+LAU37_RS10950> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -762,8 +568,7 @@ LAU37_RS10950
  -35 box at pos.     92 TTGAGG    Score    37
 
  
-LAU37_RS07320
-> test sequence                                                                 
+LAU37_RS07320> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -772,8 +577,7 @@ LAU37_RS07320
  -35 box at pos.    211 TTGAAG    Score    54
 
  
-LAU37_RS12190
-> test sequence                                                                 
+LAU37_RS12190> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -782,8 +586,7 @@ LAU37_RS12190
  -35 box at pos.    224 CTGCCT    Score    21
 
  
-LAU37_RS24540
-> test sequence                                                                 
+LAU37_RS24540> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -792,8 +595,7 @@ LAU37_RS24540
  -35 box at pos.    182 TTAACA    Score    43
 
  
-LAU37_RS28725
-> test sequence                                                                 
+LAU37_RS28725> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -802,8 +604,7 @@ LAU37_RS28725
  -35 box at pos.     71 CTGTCT    Score    13
 
  
-LAU37_RS02165
-> test sequence                                                                 
+LAU37_RS02165> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -812,8 +613,7 @@ LAU37_RS02165
  -35 box at pos.     55 CTGACC    Score     9
 
  
-LAU37_RS07630
-> test sequence                                                                 
+LAU37_RS07630> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -822,13 +622,11 @@ LAU37_RS07630
  -35 box at pos.    105 TTCATT    Score    33
 
  
-LAU37_RS04265
-> test sequence                                                                 
+LAU37_RS04265> test sequence                                                                 
  Length of sequence-        68
  Threshold for promoters -  0.20
  Number of predicted promoters -      
-LAU37_RS12185
-> test sequence                                                                 
+LAU37_RS12185> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -837,8 +635,7 @@ LAU37_RS12185
  -35 box at pos.    177 TTGCTC    Score    31
 
  
-LAU37_RS10215
-> test sequence                                                                 
+LAU37_RS10215> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -847,8 +644,7 @@ LAU37_RS10215
  -35 box at pos.    230 TTTAAA    Score    41
 
  
-LAU37_RS06405
-> test sequence                                                                 
+LAU37_RS06405> test sequence                                                                 
  Length of sequence-       259
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -857,8 +653,7 @@ LAU37_RS06405
  -35 box at pos.    110 TTGTAT    Score    42
 
  
-LAU37_RS28940
-> test sequence                                                                 
+LAU37_RS28940> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -867,8 +662,7 @@ LAU37_RS28940
  -35 box at pos.    241 TTTACT    Score    42
 
  
-LAU37_RS01860
-> test sequence                                                                 
+LAU37_RS01860> test sequence                                                                 
  Length of sequence-       214
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -877,8 +671,7 @@ LAU37_RS01860
  -35 box at pos.    163 CTGAAT    Score    20
 
  
-LAU37_RS28445
-> test sequence                                                                 
+LAU37_RS28445> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -887,8 +680,7 @@ LAU37_RS28445
  -35 box at pos.    211 TTCATA    Score    38
 
  
-LAU37_RS13150
-> test sequence                                                                 
+LAU37_RS13150> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -897,8 +689,7 @@ LAU37_RS13150
  -35 box at pos.     91 TTCACA    Score    46
 
  
-LAU37_RS27440
-> test sequence                                                                 
+LAU37_RS27440> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -907,8 +698,7 @@ LAU37_RS27440
  -35 box at pos.    233 TCTACA    Score    10
 
  
-LAU37_RS27440
-> test sequence                                                                 
+LAU37_RS27440> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -917,8 +707,7 @@ LAU37_RS27440
  -35 box at pos.    233 TCTACA    Score    10
 
  
-LAU37_RS25300
-> test sequence                                                                 
+LAU37_RS25300> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -927,8 +716,7 @@ LAU37_RS25300
  -35 box at pos.     59 TTAAAA    Score    37
 
  
-LAU37_RS30370
-> test sequence                                                                 
+LAU37_RS30370> test sequence                                                                 
  Length of sequence-       283
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -937,13 +725,11 @@ LAU37_RS30370
  -35 box at pos.    192 ATGCCT    Score    26
 
  
-LAU37_RS18910
-> test sequence                                                                 
+LAU37_RS18910> test sequence                                                                 
  Length of sequence-        83
  Threshold for promoters -  0.20
  Number of predicted promoters -      
-LAU37_RS12480
-> test sequence                                                                 
+LAU37_RS12480> test sequence                                                                 
  Length of sequence-       211
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -952,8 +738,7 @@ LAU37_RS12480
  -35 box at pos.    157 TTTTTA    Score    26
 
  
-LAU37_RS01345
-> test sequence                                                                 
+LAU37_RS01345> test sequence                                                                 
  Length of sequence-       102
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -962,8 +747,7 @@ LAU37_RS01345
  -35 box at pos.     32 TTAATG    Score    29
 
  
-LAU37_RS01105
-> test sequence                                                                 
+LAU37_RS01105> test sequence                                                                 
  Length of sequence-        94
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -972,8 +756,7 @@ LAU37_RS01105
  -35 box at pos.     34 TAGCAA    Score    18
 
  
-LAU37_RS19510
-> test sequence                                                                 
+LAU37_RS19510> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -982,13 +765,11 @@ LAU37_RS19510
  -35 box at pos.    213 TTGTCA    Score    53
 
  
-LAU37_RS30905
-> test sequence                                                                 
+LAU37_RS30905> test sequence                                                                 
  Length of sequence-        54
  Threshold for promoters -  0.20
  Number of predicted promoters -      
-LAU37_RS15200
-> test sequence                                                                 
+LAU37_RS15200> test sequence                                                                 
  Length of sequence-        97
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -997,8 +778,7 @@ LAU37_RS15200
  -35 box at pos.     27 TGGGCA    Score     1
 
  
-LAU37_RS08725
-> test sequence                                                                 
+LAU37_RS08725> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1007,8 +787,7 @@ LAU37_RS08725
  -35 box at pos.     70 ATGAAA    Score    30
 
  
-LAU37_RS12315
-> test sequence                                                                 
+LAU37_RS12315> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1017,8 +796,7 @@ LAU37_RS12315
  -35 box at pos.     33 ATGAAA    Score    30
 
  
-LAU37_RS16025
-> test sequence                                                                 
+LAU37_RS16025> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1027,8 +805,7 @@ LAU37_RS16025
  -35 box at pos.    221 CAGACA    Score    -6
 
  
-LAU37_RS12770
-> test sequence                                                                 
+LAU37_RS12770> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1037,8 +814,7 @@ LAU37_RS12770
  -35 box at pos.     37 CTGATT    Score    18
 
  
-LAU37_RS25305
-> test sequence                                                                 
+LAU37_RS25305> test sequence                                                                 
  Length of sequence-       253
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1047,8 +823,7 @@ LAU37_RS25305
  -35 box at pos.    177 TTGTAA    Score    47
 
  
-LAU37_RS27590
-> test sequence                                                                 
+LAU37_RS27590> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1057,8 +832,7 @@ LAU37_RS27590
  -35 box at pos.    127 TTGTCT    Score    48
 
  
-LAU37_RS16030
-> test sequence                                                                 
+LAU37_RS16030> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1067,8 +841,7 @@ LAU37_RS16030
  -35 box at pos.    223 ATCACA    Score    16
 
  
-LAU37_RS27585
-> test sequence                                                                 
+LAU37_RS27585> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1077,8 +850,7 @@ LAU37_RS27585
  -35 box at pos.     76 TTAACT    Score    38
 
  
-LAU37_RS11410
-> test sequence                                                                 
+LAU37_RS11410> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1087,8 +859,7 @@ LAU37_RS11410
  -35 box at pos.     98 TTGGGA    Score    15
 
  
-LAU37_RS28270
-> test sequence                                                                 
+LAU37_RS28270> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1097,8 +868,7 @@ LAU37_RS28270
  -35 box at pos.    108 TTGGCT    Score    33
 
  
-LAU37_RS28270
-> test sequence                                                                 
+LAU37_RS28270> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1107,8 +877,7 @@ LAU37_RS28270
  -35 box at pos.    108 TTGGCT    Score    33
 
  
-LAU37_RS01540
-> test sequence                                                                 
+LAU37_RS01540> test sequence                                                                 
  Length of sequence-       257
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1117,8 +886,7 @@ LAU37_RS01540
  -35 box at pos.    191 TTGTTA    Score    45
 
  
-LAU37_RS19980
-> test sequence                                                                 
+LAU37_RS19980> test sequence                                                                 
  Length of sequence-        80
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1127,8 +895,7 @@ LAU37_RS19980
  -35 box at pos.     26 TTCCTC    Score    11
 
  
-LAU37_RS12145
-> test sequence                                                                 
+LAU37_RS12145> test sequence                                                                 
  Length of sequence-       190
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1137,8 +904,7 @@ LAU37_RS12145
  -35 box at pos.     38 TGGACA    Score    29
 
  
-LAU37_RS21710
-> test sequence                                                                 
+LAU37_RS21710> test sequence                                                                 
  Length of sequence-        88
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1147,8 +913,7 @@ LAU37_RS21710
  -35 box at pos.     31 TTTAGA    Score    24
 
  
-LAU37_RS22620
-> test sequence                                                                 
+LAU37_RS22620> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1157,13 +922,11 @@ LAU37_RS22620
  -35 box at pos.    226 TAGAAG    Score    17
 
  
-LAU37_RS00510
-> test sequence                                                                 
+LAU37_RS00510> test sequence                                                                 
  Length of sequence-        54
  Threshold for promoters -  0.20
  Number of predicted promoters -      
-LAU37_RS20020
-> test sequence                                                                 
+LAU37_RS20020> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1172,8 +935,7 @@ LAU37_RS20020
  -35 box at pos.     32 TTCACA    Score    46
 
  
-LAU37_RS19335
-> test sequence                                                                 
+LAU37_RS19335> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1182,8 +944,7 @@ LAU37_RS19335
  -35 box at pos.    228 AGGACA    Score    -1
 
  
-LAU37_RS05820
-> test sequence                                                                 
+LAU37_RS05820> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1192,8 +953,7 @@ LAU37_RS05820
  -35 box at pos.    241 ATGCCA    Score    31
 
  
-LAU37_RS26015
-> test sequence                                                                 
+LAU37_RS26015> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1202,8 +962,7 @@ LAU37_RS26015
  -35 box at pos.    204 GTGACG    Score    27
 
  
-LAU37_RS19340
-> test sequence                                                                 
+LAU37_RS19340> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1212,8 +971,7 @@ LAU37_RS19340
  -35 box at pos.    193 TTGAGT    Score    38
 
  
-LAU37_RS20025
-> test sequence                                                                 
+LAU37_RS20025> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1222,8 +980,7 @@ LAU37_RS20025
  -35 box at pos.    147 TTCAAA    Score    40
 
  
-LAU37_RS05105
-> test sequence                                                                 
+LAU37_RS05105> test sequence                                                                 
  Length of sequence-        99
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1232,8 +989,7 @@ LAU37_RS05105
  -35 box at pos.     29 ATCAGG    Score   -13
 
  
-LAU37_RS18710
-> test sequence                                                                 
+LAU37_RS18710> test sequence                                                                 
  Length of sequence-       285
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1242,8 +998,7 @@ LAU37_RS18710
  -35 box at pos.     42 TTCCCC    Score    19
 
  
-LAU37_RS16045
-> test sequence                                                                 
+LAU37_RS16045> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1252,8 +1007,7 @@ LAU37_RS16045
  -35 box at pos.    114 TTGTTA    Score    45
 
  
-LAU37_RS02080
-> test sequence                                                                 
+LAU37_RS02080> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1262,8 +1016,7 @@ LAU37_RS02080
  -35 box at pos.    123 TTGTAC    Score    25
 
  
-LAU37_RS02080
-> test sequence                                                                 
+LAU37_RS02080> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1272,8 +1025,7 @@ LAU37_RS02080
  -35 box at pos.    123 TTGTAC    Score    25
 
  
-LAU37_RS31805
-> test sequence                                                                 
+LAU37_RS31805> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1282,8 +1034,7 @@ LAU37_RS31805
  -35 box at pos.    235 TTTACG    Score    41
 
  
-LAU37_RS26915
-> test sequence                                                                 
+LAU37_RS26915> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1292,8 +1043,7 @@ LAU37_RS26915
  -35 box at pos.     42 ATCAAA    Score    10
 
  
-LAU37_RS08650
-> test sequence                                                                 
+LAU37_RS08650> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1302,8 +1052,7 @@ LAU37_RS08650
  -35 box at pos.     82 CTGAAT    Score    20
 
  
-LAU37_RS11565
-> test sequence                                                                 
+LAU37_RS11565> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1312,13 +1061,11 @@ LAU37_RS11565
  -35 box at pos.    228 TTCCCT    Score    36
 
  
-LAU37_RS05485
-> test sequence                                                                 
+LAU37_RS05485> test sequence                                                                 
  Length of sequence-        85
  Threshold for promoters -  0.20
  Number of predicted promoters -      
-LAU37_RS05385
-> test sequence                                                                 
+LAU37_RS05385> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1327,8 +1074,7 @@ LAU37_RS05385
  -35 box at pos.    231 TTAAAG    Score    31
 
  
-LAU37_RS00770
-> test sequence                                                                 
+LAU37_RS00770> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1337,8 +1083,7 @@ LAU37_RS00770
  -35 box at pos.    186 TTCATG    Score    32
 
  
-LAU37_RS17555
-> test sequence                                                                 
+LAU37_RS17555> test sequence                                                                 
  Length of sequence-       257
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1347,8 +1092,7 @@ LAU37_RS17555
  -35 box at pos.    181 TTTTAA    Score    28
 
  
-LAU37_RS14780
-> test sequence                                                                 
+LAU37_RS14780> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1357,8 +1101,7 @@ LAU37_RS14780
  -35 box at pos.    185 TTGCTA    Score    53
 
  
-LAU37_RS07635
-> test sequence                                                                 
+LAU37_RS07635> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1367,8 +1110,7 @@ LAU37_RS07635
  -35 box at pos.     38 TTTAAA    Score    41
 
  
-LAU37_RS13850
-> test sequence                                                                 
+LAU37_RS13850> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1377,8 +1119,7 @@ LAU37_RS13850
  -35 box at pos.     27 TAGTAT    Score     5
 
  
-LAU37_RS00775
-> test sequence                                                                 
+LAU37_RS00775> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1387,8 +1128,7 @@ LAU37_RS00775
  -35 box at pos.     61 TCGCTA    Score    16
 
  
-LAU37_RS09660
-> test sequence                                                                 
+LAU37_RS09660> test sequence                                                                 
  Length of sequence-       175
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1397,8 +1137,7 @@ LAU37_RS09660
  -35 box at pos.     48 TTGCAA    Score    55
 
  
-LAU37_RS17450
-> test sequence                                                                 
+LAU37_RS17450> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1407,8 +1146,7 @@ LAU37_RS17450
  -35 box at pos.     87 TTCAGC    Score     1
 
  
-LAU37_RS13845
-> test sequence                                                                 
+LAU37_RS13845> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1417,8 +1155,7 @@ LAU37_RS13845
  -35 box at pos.     91 TTAACT    Score    38
 
  
-LAU37_RS02295
-> test sequence                                                                 
+LAU37_RS02295> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1427,8 +1164,7 @@ LAU37_RS02295
  -35 box at pos.    238 TAGGCA    Score     1
 
  
-LAU37_RS02705
-> test sequence                                                                 
+LAU37_RS02705> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1437,8 +1173,7 @@ LAU37_RS02705
  -35 box at pos.     42 TTGTTT    Score    40
 
  
-LAU37_RS20290
-> test sequence                                                                 
+LAU37_RS20290> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1447,8 +1182,7 @@ LAU37_RS20290
  -35 box at pos.    198 TTCAAT    Score    35
 
  
-LAU37_RS17945
-> test sequence                                                                 
+LAU37_RS17945> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1457,8 +1191,7 @@ LAU37_RS17945
  -35 box at pos.    108 TATAAA    Score     4
 
  
-LAU37_RS17945
-> test sequence                                                                 
+LAU37_RS17945> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1467,8 +1200,7 @@ LAU37_RS17945
  -35 box at pos.    108 TATAAA    Score     4
 
  
-LAU37_RS11570
-> test sequence                                                                 
+LAU37_RS11570> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1477,8 +1209,7 @@ LAU37_RS11570
  -35 box at pos.    243 GTCAAA    Score     7
 
  
-LAU37_RS11125
-> test sequence                                                                 
+LAU37_RS11125> test sequence                                                                 
  Length of sequence-       152
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1487,8 +1218,7 @@ LAU37_RS11125
  -35 box at pos.     31 TTGCAA    Score    55
 
  
-LAU37_RS11760
-> test sequence                                                                 
+LAU37_RS11760> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1497,8 +1227,7 @@ LAU37_RS11760
  -35 box at pos.     92 TTTCCA    Score    42
 
  
-LAU37_RS25815
-> test sequence                                                                 
+LAU37_RS25815> test sequence                                                                 
  Length of sequence-       282
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1507,8 +1236,7 @@ LAU37_RS25815
  -35 box at pos.    202 CTCAAT    Score     0
 
  
-LAU37_RS04375
-> test sequence                                                                 
+LAU37_RS04375> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1517,8 +1245,7 @@ LAU37_RS04375
  -35 box at pos.    159 TTCAAA    Score    40
 
  
-LAU37_RS20425
-> test sequence                                                                 
+LAU37_RS20425> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1527,8 +1254,7 @@ LAU37_RS20425
  -35 box at pos.    233 TTGAAT    Score    55
 
  
-LAU37_RS04330
-> test sequence                                                                 
+LAU37_RS04330> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1537,8 +1263,7 @@ LAU37_RS04330
  -35 box at pos.     62 TTTAAA    Score    41
 
  
-LAU37_RS03630
-> test sequence                                                                 
+LAU37_RS03630> test sequence                                                                 
  Length of sequence-       115
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1547,8 +1272,7 @@ LAU37_RS03630
  -35 box at pos.     39 GTAACG    Score     4
 
  
-LAU37_RS02290
-> test sequence                                                                 
+LAU37_RS02290> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1557,8 +1281,7 @@ LAU37_RS02290
  -35 box at pos.    227 TAGAAG    Score    17
 
  
-LAU37_RS01315
-> test sequence                                                                 
+LAU37_RS01315> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1567,13 +1290,11 @@ LAU37_RS01315
  -35 box at pos.    109 TTTACT    Score    42
 
  
-LAU37_RS20110
-> test sequence                                                                 
+LAU37_RS20110> test sequence                                                                 
  Length of sequence-        42
  Threshold for promoters -  0.20
  Number of predicted promoters -      
-LAU37_RS24975
-> test sequence                                                                 
+LAU37_RS24975> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1582,8 +1303,7 @@ LAU37_RS24975
  -35 box at pos.    215 TCGAAC    Score     1
 
  
-LAU37_RS11745
-> test sequence                                                                 
+LAU37_RS11745> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1592,8 +1312,7 @@ LAU37_RS11745
  -35 box at pos.     76 CTGAAT    Score    20
 
  
-LAU37_RS29935
-> test sequence                                                                 
+LAU37_RS29935> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1602,8 +1321,7 @@ LAU37_RS29935
  -35 box at pos.    175 TTGTAA    Score    47
 
  
-LAU37_RS31050
-> test sequence                                                                 
+LAU37_RS31050> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1612,8 +1330,7 @@ LAU37_RS31050
  -35 box at pos.    213 TTGTAA    Score    47
 
  
-LAU37_RS13180
-> test sequence                                                                 
+LAU37_RS13180> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1622,8 +1339,7 @@ LAU37_RS13180
  -35 box at pos.    153 TTGACC    Score    44
 
  
-LAU37_RS20225
-> test sequence                                                                 
+LAU37_RS20225> test sequence                                                                 
  Length of sequence-       269
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1632,8 +1348,7 @@ LAU37_RS20225
  -35 box at pos.     83 CTGATA    Score    23
 
  
-LAU37_RS27420
-> test sequence                                                                 
+LAU37_RS27420> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1642,8 +1357,7 @@ LAU37_RS27420
  -35 box at pos.    188 TCGATG    Score    15
 
  
-LAU37_RS13530
-> test sequence                                                                 
+LAU37_RS13530> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1652,8 +1366,7 @@ LAU37_RS13530
  -35 box at pos.     72 ATACCA    Score     8
 
  
-LAU37_RS13530
-> test sequence                                                                 
+LAU37_RS13530> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1662,8 +1375,7 @@ LAU37_RS13530
  -35 box at pos.     72 ATACCA    Score     8
 
  
-LAU37_RS26960
-> test sequence                                                                 
+LAU37_RS26960> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1672,8 +1384,7 @@ LAU37_RS26960
  -35 box at pos.    157 TTGACA    Score    66
 
  
-LAU37_RS27180
-> test sequence                                                                 
+LAU37_RS27180> test sequence                                                                 
  Length of sequence-       281
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1682,8 +1393,7 @@ LAU37_RS27180
  -35 box at pos.     43 TTGAGA    Score    43
 
  
-LAU37_RS27425
-> test sequence                                                                 
+LAU37_RS27425> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1692,8 +1402,7 @@ LAU37_RS27425
  -35 box at pos.     62 TTGAGA    Score    43
 
  
-LAU37_RS19915
-> test sequence                                                                 
+LAU37_RS19915> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1702,8 +1411,7 @@ LAU37_RS19915
  -35 box at pos.     62 TTGAGA    Score    43
 
  
-LAU37_RS17220
-> test sequence                                                                 
+LAU37_RS17220> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1712,8 +1420,7 @@ LAU37_RS17220
  -35 box at pos.     62 TTGAGA    Score    43
 
  
-LAU37_RS04185
-> test sequence                                                                 
+LAU37_RS04185> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1722,8 +1429,7 @@ LAU37_RS04185
  -35 box at pos.    186 TTGCCC    Score    39
 
  
-LAU37_RS15175
-> test sequence                                                                 
+LAU37_RS15175> test sequence                                                                 
  Length of sequence-        84
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1732,8 +1438,7 @@ LAU37_RS15175
  -35 box at pos.     21 CGGACA    Score    -6
 
  
-LAU37_RS08525
-> test sequence                                                                 
+LAU37_RS08525> test sequence                                                                 
  Length of sequence-       136
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1742,8 +1447,7 @@ LAU37_RS08525
  -35 box at pos.     65 ATGAAT    Score    25
 
  
-LAU37_RS14940
-> test sequence                                                                 
+LAU37_RS14940> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1752,8 +1456,7 @@ LAU37_RS14940
  -35 box at pos.    150 TTGGCG    Score    32
 
  
-LAU37_RS14945
-> test sequence                                                                 
+LAU37_RS14945> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1762,18 +1465,15 @@ LAU37_RS14945
  -35 box at pos.     93 TAGAGG    Score     0
 
  
-LAU37_RS30605
-> test sequence                                                                 
+LAU37_RS30605> test sequence                                                                 
  Length of sequence-        43
  Threshold for promoters -  0.20
  Number of predicted promoters -      
-LAU37_RS07205
-> test sequence                                                                 
+LAU37_RS07205> test sequence                                                                 
  Length of sequence-        89
  Threshold for promoters -  0.20
  Number of predicted promoters -      
-LAU37_RS13815
-> test sequence                                                                 
+LAU37_RS13815> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1782,8 +1482,7 @@ LAU37_RS13815
  -35 box at pos.     42 TCATCT    Score   -12
 
  
-LAU37_RS17205
-> test sequence                                                                 
+LAU37_RS17205> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1792,8 +1491,7 @@ LAU37_RS17205
  -35 box at pos.    140 TTCATA    Score    38
 
  
-LAU37_RS04245
-> test sequence                                                                 
+LAU37_RS04245> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1802,8 +1500,7 @@ LAU37_RS04245
  -35 box at pos.    127 TTTAAT    Score    36
 
  
-LAU37_RS04370
-> test sequence                                                                 
+LAU37_RS04370> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1812,8 +1509,7 @@ LAU37_RS04370
  -35 box at pos.    212 TTTAAA    Score    41
 
  
-LAU37_RS24175
-> test sequence                                                                 
+LAU37_RS24175> test sequence                                                                 
  Length of sequence-        95
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1822,8 +1518,7 @@ LAU37_RS24175
  -35 box at pos.     40 TTTACT    Score    42
 
  
-LAU37_RS24555
-> test sequence                                                                 
+LAU37_RS24555> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1832,8 +1527,7 @@ LAU37_RS24555
  -35 box at pos.    213 TTCACT    Score    41
 
  
-LAU37_RS03660
-> test sequence                                                                 
+LAU37_RS03660> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1842,8 +1536,7 @@ LAU37_RS03660
  -35 box at pos.    125 AAGAAA    Score    -7
 
  
-LAU37_RS03660
-> test sequence                                                                 
+LAU37_RS03660> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1852,8 +1545,7 @@ LAU37_RS03660
  -35 box at pos.    125 AAGAAA    Score    -7
 
  
-LAU37_RS19505
-> test sequence                                                                 
+LAU37_RS19505> test sequence                                                                 
  Length of sequence-       164
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1862,8 +1554,7 @@ LAU37_RS19505
  -35 box at pos.     84 AAGACA    Score    -1
 
  
-LAU37_RS16350
-> test sequence                                                                 
+LAU37_RS16350> test sequence                                                                 
  Length of sequence-       226
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1872,8 +1563,7 @@ LAU37_RS16350
  -35 box at pos.    166 TTCTCT    Score    28
 
  
-LAU37_RS18485
-> test sequence                                                                 
+LAU37_RS18485> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1882,8 +1572,7 @@ LAU37_RS18485
  -35 box at pos.    148 TCGAAA    Score    23
 
  
-LAU37_RS02800
-> test sequence                                                                 
+LAU37_RS02800> test sequence                                                                 
  Length of sequence-       146
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1892,8 +1581,7 @@ LAU37_RS02800
  -35 box at pos.     75 TTCAAA    Score    40
 
  
-LAU37_RS03670
-> test sequence                                                                 
+LAU37_RS03670> test sequence                                                                 
  Length of sequence-       266
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1902,8 +1590,7 @@ LAU37_RS03670
  -35 box at pos.    195 GAGCTA    Score   -17
 
  
-LAU37_RS08610
-> test sequence                                                                 
+LAU37_RS08610> test sequence                                                                 
  Length of sequence-       210
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
@@ -1912,8 +1599,7 @@ LAU37_RS08610
  -35 box at pos.    115 TAGCCT    Score    19
 
  
-LAU37_RS18780
-> test sequence                                                                 
+LAU37_RS18780> test sequence                                                                 
  Length of sequence-       300
  Threshold for promoters -  0.20
  Number of predicted promoters -      1
