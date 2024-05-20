@@ -1,0 +1,1600 @@
+********************************************************************************
+MEME - Motif discovery tool
+********************************************************************************
+MEME version 5.5.5 (Release date: Thu Sep 14 08:48:04 2023 +1000)
+
+For further information on how to interpret these results please access https://meme-suite.org/meme.
+To get a copy of the MEME Suite software please access https://meme-suite.org.
+
+********************************************************************************
+
+
+********************************************************************************
+REFERENCE
+********************************************************************************
+If you use this program in your research, please cite:
+
+Timothy L. Bailey and Charles Elkan,
+"Fitting a mixture model by expectation maximization to
+discover motifs in biopolymers",
+Proceedings of the Second International Conference on Intelligent Systems
+for Molecular Biology, pp. 28-36, AAAI Press, Menlo Park, California, 1994.
+********************************************************************************
+
+
+********************************************************************************
+TRAINING SET
+********************************************************************************
+PRIMARY SEQUENCES= /home/davide/Desktop/motivo10.fasta
+CONTROL SEQUENCES= --none--
+ALPHABET= ACGT
+Sequence name            Weight Length  Sequence name            Weight Length  
+-------------            ------ ------  -------------            ------ ------  
+C7B79_RS33745            1.0000    300  C7B79_RS06870            1.0000    300  
+C7B79_RS10170            1.0000    300  C7B79_RS10855            1.0000    300  
+C7B79_RS11070            1.0000    300  C7B79_RS15330            1.0000    300  
+C7B79_RS16230            1.0000    300  C7B79_RS20425            1.0000    300  
+C7B79_RS23640            1.0000    300  C7B79_RS24040            1.0000    278  
+CLLPBCKN_RS00240         1.0000    300  CLLPBCKN_RS07015         1.0000    300  
+CLLPBCKN_RS15495         1.0000    300  CLLPBCKN_RS17400         1.0000    300  
+CLLPBCKN_RS18275         1.0000    300  CLLPBCKN_RS19570         1.0000    300  
+CLLPBCKN_RS28415         1.0000    300  CLLPBCKN_RS37430         1.0000    300  
+CLLPBCKN_RS40065         1.0000    278  CLLPBCKN_RS40555         1.0000    300  
+C7Y66_RS21490            1.0000    300  C7Y66_RS22745            1.0000    300  
+C7Y66_RS24170            1.0000    300  C7Y66_RS29920            1.0000    300  
+C7Y66_RS06295            1.0000    300  C7Y66_RS25970            1.0000    300  
+C7Y66_RS26035            1.0000    300  C7Y66_RS26880            1.0000    300  
+C7Y66_RS13555            1.0000    276  C7Y66_RS29510            1.0000    300  
+LAU37_RS00945            1.0000    300  LAU37_RS06145            1.0000    300  
+LAU37_RS08940            1.0000    300  LAU37_RS12200            1.0000    300  
+LAU37_RS25670            1.0000    269  LAU37_RS02210            1.0000    300  
+LAU37_RS02750            1.0000    300  LAU37_RS04025            1.0000    300  
+LAU37_RS10190            1.0000    300  LAU37_RS16325            1.0000    300  
+M5J74_RS05245            1.0000    300  M5J74_RS27825            1.0000    300  
+M5J74_RS28510            1.0000    278  M5J74_RS28975            1.0000    300  
+M5J74_RS06970            1.0000    300  M5J74_RS07825            1.0000    300  
+M5J74_RS08925            1.0000    300  M5J74_RS15655            1.0000    300  
+M5J74_RS20805            1.0000    300  M5J74_RS25250            1.0000    300  
+H6G17_RS00250            1.0000    300  H6G17_RS12660            1.0000    300  
+H6G17_RS15450            1.0000    300  H6G17_RS01870            1.0000    246  
+H6G17_RS02340            1.0000    300  H6G17_RS21500            1.0000    300  
+H6G17_RS23875            1.0000    300  H6G17_RS24445            1.0000    300  
+H6G17_RS05880            1.0000    300  H6G17_RS27350            1.0000    300  
+N4J56_RS06865            1.0000    300  N4J56_RS07970            1.0000    300  
+N4J56_RS20525            1.0000    300  N4J56_RS03570            1.0000    300  
+N4J56_RS04480            1.0000    300  N4J56_RS13095            1.0000    300  
+N4J56_RS27345            1.0000    300  N4J56_RS28200            1.0000    300  
+N4J56_RS28735            1.0000    278  N4J56_RS30410            1.0000    300  
+B1A85_RS20745            1.0000    300  B1A85_RS02630            1.0000    225  
+B1A85_RS07360            1.0000    300  B1A85_RS07435            1.0000    300  
+B1A85_RS04855            1.0000    141  B1A85_RS08685            1.0000    300  
+B1A85_RS10345            1.0000    300  B1A85_RS09555            1.0000    300  
+B1A85_RS12550            1.0000    300  B1A85_RS12615            1.0000    300  
+CHRO_RS04825             1.0000    300  CHRO_RS25525             1.0000    300  
+CHRO_RS26170             1.0000    278  CHRO_RS26605             1.0000    300  
+CHRO_RS06615             1.0000    300  CHRO_RS07380             1.0000    300  
+CHRO_RS08390             1.0000    300  CHRO_RS14670             1.0000    300  
+CHRO_RS19445             1.0000    300  CHRO_RS23670             1.0000    300  
+********************************************************************************
+
+********************************************************************************
+COMMAND LINE SUMMARY
+********************************************************************************
+This information can also be useful in the event you wish to report a
+problem with the MEME software.
+
+command: meme /home/davide/Desktop/motivo10.fasta -dna -mod zoops -pal -minw 16 -maxw 20 -o motivo10_zoops -nmotifs 5 
+
+model:  mod=         zoops    nmotifs=         5    evt=           inf
+objective function:           em=       E-value of product of p-values
+                              starts=   E-value of product of p-values
+strands: +
+width:  minw=           16    maxw=           20
+nsites: minsites=        2    maxsites=       90    wnsites=       0.8
+theta:  spmap=         uni    spfuzz=        0.5
+em:     prior=   dirichlet    b=            0.01    maxiter=        50
+        distance=    1e-05
+trim:   wg=             11    ws=              1    endgaps=       yes
+data:   n=           26547    N=              90
+sample: seed=            0    hsfrac=          0
+        searchsize=  26547    norand=         no    csites=       1000
+Letter frequencies in dataset:
+A 0.311 C 0.199 G 0.197 T 0.292 
+Background letter frequencies (from file dataset with add-one prior applied):
+A 0.311 C 0.199 G 0.197 T 0.292 
+Background model order: 0
+********************************************************************************
+
+
+********************************************************************************
+MOTIF KBARBHGCGATCGCDVYTVM MEME-1	width =  20  sites =  77  llr = 776  E-value = 2.1e-080
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif KBARBHGCGATCGCDVYTVM MEME-1 Description
+--------------------------------------------------------------------------------
+Simplified        A  11641311191:1:44:244
+pos.-specific     C  231:33:82:17:9:26223
+probability       G  32262:9:71:28:33:132
+matrix            T  442:44:1:19111314611
+
+         bits    2.3                     
+                 2.1                     
+                 1.9       *      *      
+                 1.6       *      *      
+Relative         1.4       *      *      
+Entropy          1.2       ** ** **      
+(14.5 bits)      0.9    *  ********  *   
+                 0.7    *  ********  *   
+                 0.5    * ********** *   
+                 0.2 ********************
+                 0.0 --------------------
+
+Multilevel           TTAGTTGCGATCGCAACTAA
+consensus            GC ACC        GGT GC
+sequence             CG  GA        TC  CG
+                                         
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif KBARBHGCGATCGCDVYTVM MEME-1 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value                    Site      
+-------------             ----- ---------            --------------------
+B1A85_RS12550               182  3.10e-08 ATGGCTGCCA TCAAGTGCGATCGCAATTAC TTATATCTTT
+CHRO_RS04825                161  4.44e-08 TCTTCCATCG GGAAGCGCGATCGCAACAGC TGAAGCTTGG
+H6G17_RS05880               161  4.44e-08 TCTTCCATCG GGAAGCGCGATCGCAACAGC TGGAGCTTGG
+M5J74_RS05245               161  4.44e-08 TCTTCCATCG GGAAGCGCGATCGCAACAGC TGAAGCTTGG
+C7Y66_RS25970               161  4.44e-08 TCTTCCATCG GGAAGCGCGATCGCAACAGC TGAAGCTTGG
+CLLPBCKN_RS15495            161  4.44e-08 TCTTCCATCG GGAAGCGCGATCGCAACAGC TGAAGCTTGG
+C7B79_RS23640               161  4.44e-08 TCTTCCATCG GGAAGCGCGATCGCAACAGC TGAAGCTTGG
+N4J56_RS30410               161  6.27e-08 TCTTCCATCG GGAAGCGCGATCGCACCAGC TGAAGCTTGG
+CHRO_RS07380                 27  1.20e-07 TTTCTCACAC TCAGCCGCGATCGCTCTGCA AAACTTCGCC
+N4J56_RS03570                27  1.20e-07 TTTCTCACAC TCAGCCGCGATCGCTCTGCA AAACTTCGCC
+M5J74_RS07825                27  1.20e-07 TTTCTCACAC TCAGCCGCGATCGCTCTGCA AAACTTCGCC
+C7Y66_RS21490                27  1.20e-07 TTTCTCACAC TCAGCCGCGATCGCTCTGCA AAACTTCGCC
+CLLPBCKN_RS18275             27  1.20e-07 TTTCTCACAC TCAGCCGCGATCGCTCTGCA AAACTTCGCC
+C7B79_RS16230                27  1.20e-07 TTTCTCACAC TCAGCCGCGATCGCTCTGCA AAACTTCGCC
+CHRO_RS26605                191  1.41e-07 CTAAGTTCGC TTAGCTGCGATTGCTATTAC TGGTTTGAGG
+M5J74_RS28975               191  1.41e-07 CTAAGTTCGC TTAGCTGCGATTGCTATTAC TGGTTTGAGG
+CLLPBCKN_RS40555            191  1.41e-07 CTAAGTTCGC TTAGCTGCGATTGCTATTAC TGGTTTGAGG
+C7B79_RS20425               191  1.41e-07 CTAAGTTCGC TTAGCTGCGATTGCTATTAC TGGTTTGAGG
+H6G17_RS21500                27  1.92e-07 TTTCTCACAC TCAGCCGCGATCGCTCTGCG AAACTTCGCC
+N4J56_RS28200               191  5.26e-07 CTAAGTTCGC TTAGCTACGATCGCTATTAC TGGTTTGAGG
+CHRO_RS26170                  1  1.49e-06          . TCGGCAGCGATCTCTTCTAG TCGGGTATAG
+H6G17_RS02340               190  1.49e-06 CTAAGTTCGC TTAGCTACGATCGCGCTTTA CTGGTTTGAG
+M5J74_RS28510                 1  1.49e-06          . TCGGCAGCGATCTCTTCTAG TCGGGTATAG
+CLLPBCKN_RS40065              1  1.49e-06          . TCGGCAGCGATCTCTTCTAG TCGGGTATAG
+C7B79_RS24040                 1  1.49e-06          . TCGGCAGCGATCTCTTCTAG TCGGGTATAG
+CHRO_RS14670                218  1.69e-06 GCCAAGAGAT TTGTCTGCGATCGCGATCGC CAAATCAGCG
+H6G17_RS15450               224  1.69e-06 GCCAAGAGAT TTGTCTGCGATCGCGATCGC CAAATCAGCG
+M5J74_RS15655               218  1.69e-06 GCCAAGAGAT TTGTCTGCGATCGCGATCGC CAAATCAGCG
+C7Y66_RS29510               218  1.69e-06 GCCAAGAGAT TTGTCTGCGATCGCGATCGC CAAATCAGCG
+CLLPBCKN_RS07015            218  1.69e-06 GCCAAGAGAT TTGTCTGCGATCGCGATCGC CAAATCAGCG
+C7B79_RS10855               218  1.69e-06 GCCAAGAGAT TTGTCTGCGATCGCGATCGC CAAATCAGCG
+C7Y66_RS26880               191  4.81e-06 CTAAGTTCGC TTAGCTACGATTGCTATTAC TGGTTTGAGG
+N4J56_RS13095               218  5.99e-06 TAACTGATAA CTGATTACGATCGCGATCGC CAAATCAGCG
+N4J56_RS28735                 1  6.67e-06          . TCGGAAGCGATCTCTTCTAG TCGGGTAGAG
+H6G17_RS01870                 1  6.67e-06          . TCGGAAGCGATCTCTTCTAG TCGGGTATAG
+C7Y66_RS13555                 1  6.67e-06          . TCGGAAGCGATCTCTTCTAG TCGGGTATAG
+CHRO_RS06615                145  7.41e-06 ACGATTTGAT TGAATTGCCACTGCGACTGA TAAACCTGGA
+N4J56_RS04480               145  7.41e-06 ACAATTTGAT TGAATTGCCACTGCGACTGA TAAACTTGGA
+H6G17_RS12660               145  7.41e-06 ACAATTTGAT TGAATTGCCACTGCGACTGA TAAACTTGGA
+M5J74_RS06970               145  9.13e-06 ACGATTTGAT TGAAGTGCCACTGCGACTGA TAAACCTGGA
+C7Y66_RS26035               145  9.13e-06 ACGATTTGAT TGAAGTGCCACTGCGACTGA TAAACCTGGA
+CLLPBCKN_RS17400            145  9.13e-06 ACAATTTGAT TGAAGTGCCACTGCGACTGA TAAACCTGGA
+C7B79_RS10170               145  9.13e-06 ACAATTTGAT TGAAGTGCCACTGCGACTGA TAAACCTGGA
+LAU37_RS02210                80  1.01e-05 GAGAACTATA TTAGCAGCGTTGGCTCCTAT AACTAGCTCA
+CHRO_RS25525                130  1.12e-05 GTCATTTGCA ATTGATGCGATCGCAGTTTG AAATATGACT
+N4J56_RS07970               130  1.12e-05 GTCATTTGCA ATTGATGCGATCGCAGTTTG AAATATGACT
+H6G17_RS00250               130  1.12e-05 GTCATTTGCA ATTGATGCGATCGCAGTTTG AAATATGACT
+M5J74_RS27825               130  1.12e-05 GTCATTTGCA ATTGATGCGATCGCAGTTTG AAATATGACT
+C7Y66_RS24170               130  1.12e-05 GTCATTTGCA ATTGATGCGATCGCAGTTTG AAATATGACT
+CLLPBCKN_RS37430            130  1.12e-05 GTCATTTGCA ATTGATGCGATCGCAGTTTG AAATATGACT
+C7B79_RS06870               130  1.12e-05 GTCATTTGCA ATTGATGCGATCGCAGTTTG AAATATGACT
+CHRO_RS19445                 68  2.43e-05 AGTCCGAATC GTTGTCGAGATGACGGTTCG GAGGAGCATC
+H6G17_RS24445                68  2.43e-05 GAGTCCGATC GTTGTCGAGATGACGGTTCG GAAGAGCATC
+M5J74_RS20805                68  2.43e-05 AGTCCGAATC GTTGTCGAGATGACGGTTCG GAGGAGCATC
+C7Y66_RS22745                68  2.43e-05 AGTCCGAATC GTTGTCGAGATGACGGTTCG GAGGAGCATC
+CLLPBCKN_RS00240             68  2.43e-05 AGTCCGAATC GTTGTCGAGATGACGGTTCG GAGGAGCATC
+C7B79_RS11070                68  2.43e-05 AGTCCGAATC GTTGTCGAGATGACGGTTCG GAGGAGCATC
+LAU37_RS10190                52  2.66e-05 GCAGGTAGAG AAAACAGCGATCGCACTGCA ACACCTCACC
+CHRO_RS23670                188  2.92e-05 TTAAGTTTAT TTGGGAGCGATTACAACATA TCTACTTTTG
+H6G17_RS23875               188  2.92e-05 TTAAGTTTAT TTGGGAGCGATTACAACATA TCTACTTTTG
+M5J74_RS25250               188  2.92e-05 TTAAGTTTAT TTGGGAGCGATTACAACATA TCTACTTTTG
+C7Y66_RS29920               188  2.92e-05 TTAAGTTTAT TTGGGAGCGATTACAACATA TCTACTTTTG
+CLLPBCKN_RS28415            188  2.92e-05 TTAAGTTTAT TTGGGAGCGATTACAACATA TCTACTTTTG
+C7B79_RS15330               188  2.92e-05 TTAAGTTTAT TTGGGAGCGATTACAACATA TCTACTTTTG
+N4J56_RS20525                68  5.38e-05 GAGTCCGATC GTTATCGAGATGACGGTTCG GAGGAGCATC
+CHRO_RS08390                188  9.51e-05 CTATCTTTCT GGAGTCGTGAAGGTTACTGG GATGGGACAA
+N4J56_RS06865               136  9.51e-05 CTATCTCTCT GGAGTCGTGAAGGTTACTGG GATGGGACAA
+M5J74_RS08925               188  9.51e-05 CTATCTTTCT GGAGTCGTGAAGGTTACTGG GATGGGACAA
+C7Y66_RS06295               163  9.51e-05 CTATCTTTCT GGAGTCGTGAAGGTTACTGG GATGGGACAA
+CLLPBCKN_RS19570            188  9.51e-05 CTATCTTTCT GGAGTCGTGAAGGTTACTGG GATGGGACAA
+C7B79_RS33745               188  9.51e-05 CTATCTTTCT GGAGTCGTGAAGGTTACTGG GATGGGACAA
+H6G17_RS27350               171  1.11e-04 CTATCTTTCT GGAGTTGTGAAGGTTACTGG GATGGGACAA
+LAU37_RS12200               149  1.20e-04 ATGATCTGGT TGAACTGCCAATTCGATTGA TAAATTTTGG
+N4J56_RS27345               188  1.29e-04 TTAAGTTTAT TTGGGAGCAATTACAACATA TCTACTTTTG
+LAU37_RS06145                58  2.15e-04 AACCAGTCCT CCAGCTACAATGGCACTAGT CAACATGGTA
+B1A85_RS07360               262  2.64e-04 GCTGCATCTT GTTGTAACGTTTTCGGCTAA AAGCCAAATG
+B1A85_RS09555               192  3.66e-04 ATGAACAATA CTAGAAGACACGGCGGTTTA ACTTCCTCAC
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif KBARBHGCGATCGCDVYTVM MEME-1 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+B1A85_RS12550                     3.1e-08  181_[+1]_99
+CHRO_RS04825                      4.4e-08  160_[+1]_120
+H6G17_RS05880                     4.4e-08  160_[+1]_120
+M5J74_RS05245                     4.4e-08  160_[+1]_120
+C7Y66_RS25970                     4.4e-08  160_[+1]_120
+CLLPBCKN_RS15495                  4.4e-08  160_[+1]_120
+C7B79_RS23640                     4.4e-08  160_[+1]_120
+N4J56_RS30410                     6.3e-08  160_[+1]_120
+CHRO_RS07380                      1.2e-07  26_[+1]_254
+N4J56_RS03570                     1.2e-07  26_[+1]_254
+M5J74_RS07825                     1.2e-07  26_[+1]_254
+C7Y66_RS21490                     1.2e-07  26_[+1]_254
+CLLPBCKN_RS18275                  1.2e-07  26_[+1]_254
+C7B79_RS16230                     1.2e-07  26_[+1]_254
+CHRO_RS26605                      1.4e-07  190_[+1]_90
+M5J74_RS28975                     1.4e-07  190_[+1]_90
+CLLPBCKN_RS40555                  1.4e-07  190_[+1]_90
+C7B79_RS20425                     1.4e-07  190_[+1]_90
+H6G17_RS21500                     1.9e-07  26_[+1]_254
+N4J56_RS28200                     5.3e-07  190_[+1]_90
+CHRO_RS26170                      1.5e-06  [+1]_258
+H6G17_RS02340                     1.5e-06  189_[+1]_91
+M5J74_RS28510                     1.5e-06  [+1]_258
+CLLPBCKN_RS40065                  1.5e-06  [+1]_258
+C7B79_RS24040                     1.5e-06  [+1]_258
+CHRO_RS14670                      1.7e-06  217_[+1]_63
+H6G17_RS15450                     1.7e-06  223_[+1]_57
+M5J74_RS15655                     1.7e-06  217_[+1]_63
+C7Y66_RS29510                     1.7e-06  217_[+1]_63
+CLLPBCKN_RS07015                  1.7e-06  217_[+1]_63
+C7B79_RS10855                     1.7e-06  217_[+1]_63
+C7Y66_RS26880                     4.8e-06  190_[+1]_90
+N4J56_RS13095                       6e-06  217_[+1]_63
+N4J56_RS28735                     6.7e-06  [+1]_258
+H6G17_RS01870                     6.7e-06  [+1]_226
+C7Y66_RS13555                     6.7e-06  [+1]_256
+CHRO_RS06615                      7.4e-06  144_[+1]_136
+N4J56_RS04480                     7.4e-06  144_[+1]_136
+H6G17_RS12660                     7.4e-06  144_[+1]_136
+M5J74_RS06970                     9.1e-06  144_[+1]_136
+C7Y66_RS26035                     9.1e-06  144_[+1]_136
+CLLPBCKN_RS17400                  9.1e-06  144_[+1]_136
+C7B79_RS10170                     9.1e-06  144_[+1]_136
+LAU37_RS02210                       1e-05  79_[+1]_201
+CHRO_RS25525                      1.1e-05  129_[+1]_151
+N4J56_RS07970                     1.1e-05  129_[+1]_151
+H6G17_RS00250                     1.1e-05  129_[+1]_151
+M5J74_RS27825                     1.1e-05  129_[+1]_151
+C7Y66_RS24170                     1.1e-05  129_[+1]_151
+CLLPBCKN_RS37430                  1.1e-05  129_[+1]_151
+C7B79_RS06870                     1.1e-05  129_[+1]_151
+CHRO_RS19445                      2.4e-05  67_[+1]_213
+H6G17_RS24445                     2.4e-05  67_[+1]_213
+M5J74_RS20805                     2.4e-05  67_[+1]_213
+C7Y66_RS22745                     2.4e-05  67_[+1]_213
+CLLPBCKN_RS00240                  2.4e-05  67_[+1]_213
+C7B79_RS11070                     2.4e-05  67_[+1]_213
+LAU37_RS10190                     2.7e-05  51_[+1]_229
+CHRO_RS23670                      2.9e-05  187_[+1]_93
+H6G17_RS23875                     2.9e-05  187_[+1]_93
+M5J74_RS25250                     2.9e-05  187_[+1]_93
+C7Y66_RS29920                     2.9e-05  187_[+1]_93
+CLLPBCKN_RS28415                  2.9e-05  187_[+1]_93
+C7B79_RS15330                     2.9e-05  187_[+1]_93
+N4J56_RS20525                     5.4e-05  67_[+1]_213
+CHRO_RS08390                      9.5e-05  187_[+1]_93
+N4J56_RS06865                     9.5e-05  135_[+1]_145
+M5J74_RS08925                     9.5e-05  187_[+1]_93
+C7Y66_RS06295                     9.5e-05  162_[+1]_118
+CLLPBCKN_RS19570                  9.5e-05  187_[+1]_93
+C7B79_RS33745                     9.5e-05  187_[+1]_93
+H6G17_RS27350                     0.00011  170_[+1]_110
+LAU37_RS12200                     0.00012  148_[+1]_132
+N4J56_RS27345                     0.00013  187_[+1]_93
+LAU37_RS06145                     0.00021  57_[+1]_223
+B1A85_RS07360                     0.00026  261_[+1]_19
+B1A85_RS09555                     0.00037  191_[+1]_89
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif KBARBHGCGATCGCDVYTVM MEME-1 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF KBARBHGCGATCGCDVYTVM width=20 seqs=77
+B1A85_RS12550            (  182) TCAAGTGCGATCGCAATTAC  1 
+CHRO_RS04825             (  161) GGAAGCGCGATCGCAACAGC  1 
+H6G17_RS05880            (  161) GGAAGCGCGATCGCAACAGC  1 
+M5J74_RS05245            (  161) GGAAGCGCGATCGCAACAGC  1 
+C7Y66_RS25970            (  161) GGAAGCGCGATCGCAACAGC  1 
+CLLPBCKN_RS15495         (  161) GGAAGCGCGATCGCAACAGC  1 
+C7B79_RS23640            (  161) GGAAGCGCGATCGCAACAGC  1 
+N4J56_RS30410            (  161) GGAAGCGCGATCGCACCAGC  1 
+CHRO_RS07380             (   27) TCAGCCGCGATCGCTCTGCA  1 
+N4J56_RS03570            (   27) TCAGCCGCGATCGCTCTGCA  1 
+M5J74_RS07825            (   27) TCAGCCGCGATCGCTCTGCA  1 
+C7Y66_RS21490            (   27) TCAGCCGCGATCGCTCTGCA  1 
+CLLPBCKN_RS18275         (   27) TCAGCCGCGATCGCTCTGCA  1 
+C7B79_RS16230            (   27) TCAGCCGCGATCGCTCTGCA  1 
+CHRO_RS26605             (  191) TTAGCTGCGATTGCTATTAC  1 
+M5J74_RS28975            (  191) TTAGCTGCGATTGCTATTAC  1 
+CLLPBCKN_RS40555         (  191) TTAGCTGCGATTGCTATTAC  1 
+C7B79_RS20425            (  191) TTAGCTGCGATTGCTATTAC  1 
+H6G17_RS21500            (   27) TCAGCCGCGATCGCTCTGCG  1 
+N4J56_RS28200            (  191) TTAGCTACGATCGCTATTAC  1 
+CHRO_RS26170             (    1) TCGGCAGCGATCTCTTCTAG  1 
+H6G17_RS02340            (  190) TTAGCTACGATCGCGCTTTA  1 
+M5J74_RS28510            (    1) TCGGCAGCGATCTCTTCTAG  1 
+CLLPBCKN_RS40065         (    1) TCGGCAGCGATCTCTTCTAG  1 
+C7B79_RS24040            (    1) TCGGCAGCGATCTCTTCTAG  1 
+CHRO_RS14670             (  218) TTGTCTGCGATCGCGATCGC  1 
+H6G17_RS15450            (  224) TTGTCTGCGATCGCGATCGC  1 
+M5J74_RS15655            (  218) TTGTCTGCGATCGCGATCGC  1 
+C7Y66_RS29510            (  218) TTGTCTGCGATCGCGATCGC  1 
+CLLPBCKN_RS07015         (  218) TTGTCTGCGATCGCGATCGC  1 
+C7B79_RS10855            (  218) TTGTCTGCGATCGCGATCGC  1 
+C7Y66_RS26880            (  191) TTAGCTACGATTGCTATTAC  1 
+N4J56_RS13095            (  218) CTGATTACGATCGCGATCGC  1 
+N4J56_RS28735            (    1) TCGGAAGCGATCTCTTCTAG  1 
+H6G17_RS01870            (    1) TCGGAAGCGATCTCTTCTAG  1 
+C7Y66_RS13555            (    1) TCGGAAGCGATCTCTTCTAG  1 
+CHRO_RS06615             (  145) TGAATTGCCACTGCGACTGA  1 
+N4J56_RS04480            (  145) TGAATTGCCACTGCGACTGA  1 
+H6G17_RS12660            (  145) TGAATTGCCACTGCGACTGA  1 
+M5J74_RS06970            (  145) TGAAGTGCCACTGCGACTGA  1 
+C7Y66_RS26035            (  145) TGAAGTGCCACTGCGACTGA  1 
+CLLPBCKN_RS17400         (  145) TGAAGTGCCACTGCGACTGA  1 
+C7B79_RS10170            (  145) TGAAGTGCCACTGCGACTGA  1 
+LAU37_RS02210            (   80) TTAGCAGCGTTGGCTCCTAT  1 
+CHRO_RS25525             (  130) ATTGATGCGATCGCAGTTTG  1 
+N4J56_RS07970            (  130) ATTGATGCGATCGCAGTTTG  1 
+H6G17_RS00250            (  130) ATTGATGCGATCGCAGTTTG  1 
+M5J74_RS27825            (  130) ATTGATGCGATCGCAGTTTG  1 
+C7Y66_RS24170            (  130) ATTGATGCGATCGCAGTTTG  1 
+CLLPBCKN_RS37430         (  130) ATTGATGCGATCGCAGTTTG  1 
+C7B79_RS06870            (  130) ATTGATGCGATCGCAGTTTG  1 
+CHRO_RS19445             (   68) GTTGTCGAGATGACGGTTCG  1 
+H6G17_RS24445            (   68) GTTGTCGAGATGACGGTTCG  1 
+M5J74_RS20805            (   68) GTTGTCGAGATGACGGTTCG  1 
+C7Y66_RS22745            (   68) GTTGTCGAGATGACGGTTCG  1 
+CLLPBCKN_RS00240         (   68) GTTGTCGAGATGACGGTTCG  1 
+C7B79_RS11070            (   68) GTTGTCGAGATGACGGTTCG  1 
+LAU37_RS10190            (   52) AAAACAGCGATCGCACTGCA  1 
+CHRO_RS23670             (  188) TTGGGAGCGATTACAACATA  1 
+H6G17_RS23875            (  188) TTGGGAGCGATTACAACATA  1 
+M5J74_RS25250            (  188) TTGGGAGCGATTACAACATA  1 
+C7Y66_RS29920            (  188) TTGGGAGCGATTACAACATA  1 
+CLLPBCKN_RS28415         (  188) TTGGGAGCGATTACAACATA  1 
+C7B79_RS15330            (  188) TTGGGAGCGATTACAACATA  1 
+N4J56_RS20525            (   68) GTTATCGAGATGACGGTTCG  1 
+CHRO_RS08390             (  188) GGAGTCGTGAAGGTTACTGG  1 
+N4J56_RS06865            (  136) GGAGTCGTGAAGGTTACTGG  1 
+M5J74_RS08925            (  188) GGAGTCGTGAAGGTTACTGG  1 
+C7Y66_RS06295            (  163) GGAGTCGTGAAGGTTACTGG  1 
+CLLPBCKN_RS19570         (  188) GGAGTCGTGAAGGTTACTGG  1 
+C7B79_RS33745            (  188) GGAGTCGTGAAGGTTACTGG  1 
+H6G17_RS27350            (  171) GGAGTTGTGAAGGTTACTGG  1 
+LAU37_RS12200            (  149) TGAACTGCCAATTCGATTGA  1 
+N4J56_RS27345            (  188) TTGGGAGCAATTACAACATA  1 
+LAU37_RS06145            (   58) CCAGCTACAATGGCACTAGT  1 
+B1A85_RS07360            (  262) GTTGTAACGTTTTCGGCTAA  1 
+B1A85_RS09555            (  192) CTAGAAGACACGGCGGTTTA  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif KBARBHGCGATCGCDVYTVM MEME-1 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 20 n= 24837 bayes= 8.53888 E= 2.1e-080 
+  -226      6     50     62 
+  -150     58     28     27 
+    88   -194    -12    -58 
+    30  -1292    155   -290 
+  -141     52      3     44 
+    -6     76  -1290     32 
+  -188  -1292    221  -1286 
+  -150    192  -1290   -110 
+  -106    -24    179  -1286 
+   150  -1301   -192   -217 
+  -226   -194  -1293    160 
+ -1299    177    -22    -97 
+  -119  -1298    193   -140 
+ -1299    220  -1296   -179 
+    22  -1298     77      3 
+    35      1     53   -132 
+  -300    153  -1296     39 
+   -68    -13   -192     97 
+    17     27     60   -140 
+    52     49      7   -217 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif KBARBHGCGATCGCDVYTVM MEME-1 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 20 nsites= 77 E= 2.1e-080 
+ 0.064935  0.207792  0.279221  0.448052 
+ 0.110390  0.298701  0.240260  0.350649 
+ 0.571429  0.051948  0.181818  0.194805 
+ 0.383117  0.000000  0.577922  0.038961 
+ 0.116883  0.285714  0.201299  0.396104 
+ 0.298701  0.337662  0.000000  0.363636 
+ 0.084416  0.000000  0.915584  0.000000 
+ 0.110390  0.753247  0.000000  0.136364 
+ 0.149351  0.168831  0.681818  0.000000 
+ 0.883115  0.000000  0.051947  0.064934 
+ 0.064935  0.051948  0.000000  0.883116 
+ 0.000000  0.681817  0.168830  0.149350 
+ 0.136363  0.000000  0.753246  0.110389 
+ 0.000000  0.915583  0.000000  0.084415 
+ 0.363635  0.000000  0.337661  0.298700 
+ 0.396103  0.201298  0.285713  0.116882 
+ 0.038960  0.577921  0.000000  0.383116 
+ 0.194804  0.181817  0.051947  0.571428 
+ 0.350648  0.240259  0.298700  0.110389 
+ 0.448051  0.279220  0.207791  0.064934 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif KBARBHGCGATCGCDVYTVM MEME-1 regular expression
+--------------------------------------------------------------------------------
+[TGC][TCG]A[GA][TCG][TCA]GCGATCGC[AGT][AGC][CT]T[AGC][ACG]
+--------------------------------------------------------------------------------
+
+
+
+
+Time  7.67 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+MOTIF CTMMTTTTGTWACAAAAKKAG MEME-2	width =  21  sites =  22  llr = 358  E-value = 2.5e-038
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif CTMMTTTTGTWACAAAAKKAG MEME-2 Description
+--------------------------------------------------------------------------------
+Simplified        A  325322:2::3a28a78::8:
+pos.-specific     C  7:55::::::2:8::2:2:::
+probability       G  :::2:2::8:2::::::55:7
+matrix            T  :8::87a82a3::2:223523
+
+         bits    2.3                      
+                 2.1                      
+                 1.9       *  *           
+                 1.6       * ** ** *      
+Relative         1.4       * ** ** *      
+Entropy          1.2 **    **** ****   * *
+(23.5 bits)      0.9 *** * **** **** * ***
+                 0.7 ********** **** *****
+                 0.5 ********** **********
+                 0.2 ********** **********
+                 0.0 ---------------------
+
+Multilevel           CTCCTTTTGTTACAAAAGGAG
+consensus            A AA      A      TT T
+sequence                                  
+                                          
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif CTMMTTTTGTWACAAAAKKAG MEME-2 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value                    Site       
+-------------             ----- ---------            ---------------------
+CHRO_RS19445                248  1.90e-10 CTAGCTCGTT CACATTTTGTTACAAAAGGAG AGTATGGATA
+B1A85_RS12550               252  1.90e-10 CTGTCTTCTT CACATTTTGTTACAAAAGGAG GAAGACGTTC
+N4J56_RS20525               248  1.90e-10 CTAGCTCGTT CACATTTTGTTACAAAAGGAG AGTATGGATA
+M5J74_RS20805               248  1.90e-10 CTAGCTCGTT CACATTTTGTTACAAAAGGAG AGTATGGATA
+C7Y66_RS22745               248  1.90e-10 CTAGCTCGTT CACATTTTGTTACAAAAGGAG AGTATGGATA
+CLLPBCKN_RS00240            248  1.90e-10 CTAGCTCGTT CACATTTTGTTACAAAAGGAG AGTATGGATA
+C7B79_RS11070               248  1.90e-10 CTAGCTCGTT CACATTTTGTTACAAAAGGAG AGTATGGATA
+H6G17_RS24445               248  1.42e-08 CTAGCTCGTT CACATTTTGTTACAAAGGGAG AGTATGGATA
+CHRO_RS14670                249  3.51e-08 AAATCAGCGG ATAATTTTGTCACTATAGTAG TCTGTCAATT
+N4J56_RS13095               249  3.51e-08 AAATCAGCGG ATAATTTTGTCACTATAGTAG TCTGACAATT
+H6G17_RS15450               255  3.51e-08 AAATCAGCGG ATAATTTTGTCACTATAGTAG TCTGTCAATT
+M5J74_RS15655               249  3.51e-08 AAATCAGCGG ATAATTTTGTCACTATAGTAG TCTGTCAATT
+C7Y66_RS29510               249  3.51e-08 AAATCAGCGG ATAATTTTGTCACTATAGTAG TCTGTCAATT
+CLLPBCKN_RS07015            249  3.51e-08 AAATCAGCGG ATAATTTTGTCACTATAGTAG TCTGTCAATT
+C7B79_RS10855               249  3.51e-08 AAATCAGCGG ATAATTTTGTCACTATAGTAG TCTGTCAATT
+CHRO_RS23670                209  9.58e-08 TACAACATAT CTACTTTTGTAAAAACTCGAT ACAGCTTTCA
+N4J56_RS27345               209  9.58e-08 TACAACATAT CTACTTTTGTAAAAACTCGAT ATAGCTTTCA
+H6G17_RS23875               209  9.58e-08 TACAACATAT CTACTTTTGTAAAAACTCGAT ACAGCTTTCA
+M5J74_RS25250               209  9.58e-08 TACAACATAT CTACTTTTGTAAAAACTCGAT ACAGCTTTCA
+C7Y66_RS29920               209  9.58e-08 TACAACATAT CTACTTTTGTAAAAACTCGAT ACAGCTTTCA
+CLLPBCKN_RS28415            209  9.58e-08 TACAACATAT CTACTTTTGTAAAAACTCGAT ACAGCTTTCA
+C7B79_RS15330               209  9.58e-08 TACAACATAT CTACTTTTGTAAAAACTCGAT ACAGCTTTCA
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif CTMMTTTTGTWACAAAAKKAG MEME-2 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+CHRO_RS19445                      1.9e-10  247_[+2]_32
+B1A85_RS12550                     1.9e-10  251_[+2]_28
+N4J56_RS20525                     1.9e-10  247_[+2]_32
+M5J74_RS20805                     1.9e-10  247_[+2]_32
+C7Y66_RS22745                     1.9e-10  247_[+2]_32
+CLLPBCKN_RS00240                  1.9e-10  247_[+2]_32
+C7B79_RS11070                     1.9e-10  247_[+2]_32
+H6G17_RS24445                     1.4e-08  247_[+2]_32
+CHRO_RS14670                      3.5e-08  248_[+2]_31
+N4J56_RS13095                     3.5e-08  248_[+2]_31
+H6G17_RS15450                     3.5e-08  254_[+2]_25
+M5J74_RS15655                     3.5e-08  248_[+2]_31
+C7Y66_RS29510                     3.5e-08  248_[+2]_31
+CLLPBCKN_RS07015                  3.5e-08  248_[+2]_31
+C7B79_RS10855                     3.5e-08  248_[+2]_31
+CHRO_RS23670                      9.6e-08  208_[+2]_71
+N4J56_RS27345                     9.6e-08  208_[+2]_71
+H6G17_RS23875                     9.6e-08  208_[+2]_71
+M5J74_RS25250                     9.6e-08  208_[+2]_71
+C7Y66_RS29920                     9.6e-08  208_[+2]_71
+CLLPBCKN_RS28415                  9.6e-08  208_[+2]_71
+C7B79_RS15330                     9.6e-08  208_[+2]_71
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif CTMMTTTTGTWACAAAAKKAG MEME-2 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF CTMMTTTTGTWACAAAAKKAG width=21 seqs=22
+CHRO_RS19445             (  248) CACATTTTGTTACAAAAGGAG  1 
+B1A85_RS12550            (  252) CACATTTTGTTACAAAAGGAG  1 
+N4J56_RS20525            (  248) CACATTTTGTTACAAAAGGAG  1 
+M5J74_RS20805            (  248) CACATTTTGTTACAAAAGGAG  1 
+C7Y66_RS22745            (  248) CACATTTTGTTACAAAAGGAG  1 
+CLLPBCKN_RS00240         (  248) CACATTTTGTTACAAAAGGAG  1 
+C7B79_RS11070            (  248) CACATTTTGTTACAAAAGGAG  1 
+H6G17_RS24445            (  248) CACATTTTGTTACAAAGGGAG  1 
+CHRO_RS14670             (  249) ATAATTTTGTCACTATAGTAG  1 
+N4J56_RS13095            (  249) ATAATTTTGTCACTATAGTAG  1 
+H6G17_RS15450            (  255) ATAATTTTGTCACTATAGTAG  1 
+M5J74_RS15655            (  249) ATAATTTTGTCACTATAGTAG  1 
+C7Y66_RS29510            (  249) ATAATTTTGTCACTATAGTAG  1 
+CLLPBCKN_RS07015         (  249) ATAATTTTGTCACTATAGTAG  1 
+C7B79_RS10855            (  249) ATAATTTTGTCACTATAGTAG  1 
+CHRO_RS23670             (  209) CTACTTTTGTAAAAACTCGAT  1 
+N4J56_RS27345            (  209) CTACTTTTGTAAAAACTCGAT  1 
+H6G17_RS23875            (  209) CTACTTTTGTAAAAACTCGAT  1 
+M5J74_RS25250            (  209) CTACTTTTGTAAAAACTCGAT  1 
+C7Y66_RS29920            (  209) CTACTTTTGTAAAAACTCGAT  1 
+CLLPBCKN_RS28415         (  209) CTACTTTTGTAAAAACTCGAT  1 
+C7B79_RS15330            (  209) CTACTTTTGTAAAAACTCGAT  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif CTMMTTTTGTWACAAAAKKAG MEME-2 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 21 n= 24747 bayes= 8.335 E= 2.5e-038 
+     3    177  -1110  -1106 
+   -78  -1111  -1110    149 
+    62    139  -1110  -1106 
+    13    133    -31  -1106 
+   -97   -313  -1110    149 
+   -97  -1111    -31    122 
+ -1115  -1111  -1110    178 
+   -97  -1111  -1110    153 
+ -1115  -1111    209    -87 
+ -1117  -1114  -1112    178 
+    13    -33    -31     22 
+   168  -1112  -1110  -1106 
+   -97    208  -1111  -1107 
+   143  -1113  -1111    -87 
+   168  -1113  -1111  -1107 
+   113    -33  -1111    -87 
+   139  -1113   -311    -87 
+ -1116    -33    134     22 
+ -1116  -1113    141     71 
+   139  -1113  -1111    -68 
+ -1116  -1113    179     12 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif CTMMTTTTGTWACAAAAKKAG MEME-2 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 21 nsites= 22 E= 2.5e-038 
+ 0.318182  0.681818  0.000000  0.000000 
+ 0.181818  0.000000  0.000000  0.818182 
+ 0.477273  0.522727  0.000000  0.000000 
+ 0.340909  0.500000  0.159091  0.000000 
+ 0.159091  0.022727  0.000000  0.818182 
+ 0.159091  0.000000  0.159091  0.681818 
+ 0.000000  0.000000  0.000000  1.000000 
+ 0.159091  0.000000  0.000000  0.840909 
+ 0.000000  0.000000  0.840909  0.159091 
+ 0.000000  0.000000  0.000000  0.999998 
+ 0.340908  0.159089  0.159090  0.340909 
+ 0.999999  0.000000  0.000000  0.000000 
+ 0.159090  0.840908  0.000000  0.000000 
+ 0.840908  0.000000  0.000000  0.159090 
+ 0.999999  0.000000  0.000000  0.000000 
+ 0.681817  0.159090  0.000000  0.159090 
+ 0.818181  0.000000  0.022726  0.159090 
+ 0.000000  0.159090  0.499999  0.340908 
+ 0.000000  0.000000  0.522726  0.477272 
+ 0.818181  0.000000  0.000000  0.181817 
+ 0.000000  0.000000  0.681817  0.318181 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif CTMMTTTTGTWACAAAAKKAG MEME-2 regular expression
+--------------------------------------------------------------------------------
+[CA]T[CA][CA]TTTTGT[TA]ACAAAA[GT][GT]A[GT]
+--------------------------------------------------------------------------------
+
+
+
+
+Time 14.97 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+MOTIF AACTWMDCHATDGHKWAGTT MEME-3	width =  20  sites =  70  llr = 645  E-value = 3.0e-036
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif AACTWMDCHATDGHKWAGTT MEME-3 Description
+--------------------------------------------------------------------------------
+Simplified        A  87:353414733:413721:
+pos.-specific     C  128116:72::132:1:::2
+probability       G  21::1:231::27:61:721
+matrix            T  :137314:337414353:78
+
+         bits    2.3                     
+                 2.1                     
+                 1.9                     
+                 1.6                     
+Relative         1.4   *              *  
+Entropy          1.2   *              *  
+(13.3 bits)      0.9 * *    * ** *    * *
+                 0.7 * ** * * ** * * ** *
+                 0.5 **** * * ** * * ****
+                 0.2 ******** ** ********
+                 0.0 --------------------
+
+Multilevel           AACTACACAATTGTGTAGTT
+consensus              TATATGTTAACATATA  
+sequence                   G C  G C      
+                                         
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif AACTWMDCHATDGHKWAGTT MEME-3 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value                    Site      
+-------------             ----- ---------            --------------------
+CHRO_RS23670                158  2.18e-07 AAGGTATATA AACTTCAGCATACAGAAGTT TTAAGTTTAT
+H6G17_RS23875               158  2.18e-07 AAGGTATATA AACTTCAGCATACAGAAGTT TTAAGTTTAT
+M5J74_RS25250               158  2.18e-07 AAGGTATATA AACTTCAGCATACAGAAGTT TTAAGTTTAT
+C7Y66_RS29920               158  2.18e-07 AAGGTATATA AACTTCAGCATACAGAAGTT TTAAGTTTAT
+CLLPBCKN_RS28415            158  2.18e-07 AAGGTATATA AACTTCAGCATACAGAAGTT TTAAGTTTAT
+C7B79_RS15330               158  2.18e-07 AAGGTATATA AACTTCAGCATACAGAAGTT TTAAGTTTAT
+LAU37_RS06145               276  3.10e-07 TTAGTCTGAC AACTAAGGTATTGAGAAGGT TGCGA     
+CHRO_RS26605                168  4.31e-07 AGACAGATAA AACAAATCTATGGCTAAGTT CGCTTAGCTG
+M5J74_RS28975               168  4.31e-07 AGACAGATAA AACAAATCTATGGCTAAGTT CGCTTAGCTG
+C7Y66_RS26880               168  4.31e-07 AGACAGATAA AACAAATCTATGGCTAAGTT CGCTTAGCTA
+CLLPBCKN_RS40555            168  4.31e-07 AGACAGATAA AACAAATCTATGGCTAAGTT CGCTTAGCTG
+C7B79_RS20425               168  4.31e-07 AGACAGATAA AACAAATCTATGGCTAAGTT CGCTTAGCTG
+N4J56_RS28200               168  5.85e-07 AGACAAATAA AACAAATCTATAGCTAAGTT CGCTTAGCTA
+H6G17_RS02340               167  5.85e-07 AGACAAATAA AACAAATCTATAGCTAAGTT CGCTTAGCTA
+CHRO_RS14670                276  1.41e-06 GTAGTCTGTC AATTAAGCGATTGAGAAGGT TGCGA     
+N4J56_RS13095               276  1.41e-06 GTAGTCTGAC AATTAAGCGATTGAGAAGGT TGCGA     
+M5J74_RS15655               276  1.41e-06 GTAGTCTGTC AATTAAGCGATTGAGAAGGT TGCGA     
+C7Y66_RS29510               276  1.41e-06 GTAGTCTGTC AATTAAGCGATTGAGAAGGT TGCGA     
+CLLPBCKN_RS07015            276  1.41e-06 GTAGTCTGTC AATTAAGCGATTGAGAAGGT TGCGA     
+C7B79_RS10855               276  1.41e-06 GTAGTCTGTC AATTAAGCGATTGAGAAGGT TGCGA     
+N4J56_RS27345               158  2.12e-06 AAGGTATATA AATTTCAGCATACAGAAGTT TTAAGTTTAT
+CHRO_RS06615                180  5.86e-06 CTGGACTGCC AACTTCTCAATTGTGCGGTG GTAGTCCGAC
+M5J74_RS06970               180  5.86e-06 CTGGACTGCC AACTTCTCAATTGTGCGGTG GTAGTCCGAC
+C7Y66_RS26035               180  5.86e-06 CTGGACTGCC AACTTCTCAATTGTGCGGTG GTAGTCCGAC
+CLLPBCKN_RS17400            180  5.86e-06 CTGGACTGCC AACTTCTCAATTGTGCGGTG GTAGTCCGAC
+C7B79_RS10170               180  5.86e-06 CTGGACTGCC AACTTCTCAATTGTGCGGTG GTAGTCCGAC
+N4J56_RS04480               180  1.17e-05 TTGGACTGCC AACTTCTCAATCGTGCGGTG GTAGTCCGAC
+H6G17_RS12660               180  1.17e-05 TTGGACTGCC AACTTCTCAATCGTGCGGTG GTAGTCCGAC
+B1A85_RS20745                19  1.62e-05 AAAAATGCGC AACTAAACCTTAGCATAAGT ACTGAGGACG
+LAU37_RS04025                26  1.62e-05 AAAAATGTGC AACTAAACCTTAGCATAAGT ACTGAACCAG
+LAU37_RS12200               102  1.80e-05 TCCGCGAAAG AATATCACCAACCTGTAGTC CCCCTCTGGC
+B1A85_RS10345                98  2.21e-05 TCCGCGACAG AACATCGCCAACGCGCAATC CACCGCGCGC
+CHRO_RS19445                175  3.29e-05 AACTTATACT GGCTGCGGGAATGATTAGTT TACTTTCCTC
+M5J74_RS20805               175  3.29e-05 AACTTATACT GGCTGCGGGAATGATTAGTT TACTTTCCTC
+C7Y66_RS22745               175  3.29e-05 AACTTATACT GGCTGCGGGAATGATTAGTT TACTTTCCTC
+CLLPBCKN_RS00240            175  3.29e-05 AACTTATACT GGCTGCGGGAATGATTAGTT TACTTTCCTC
+C7B79_RS11070               175  3.29e-05 AACTTATACT GGCTGCGGGAATGATTAGTT TACTTTCCTC
+CHRO_RS04825                 22  4.37e-05 AAAAATGTGC AACAAAACCTTAGCATAAGT ACTAAGCCAC
+N4J56_RS30410                22  4.37e-05 AAAAATGTGC AACAAAACCTTAGCATAAGT ACTAAGCCAC
+H6G17_RS05880                22  4.37e-05 AAAAATGTGC AACAAAACCTTAGCATAAGT ACTAAGCCAC
+M5J74_RS05245                22  4.37e-05 AAAAATGTGC AACAAAACCTTAGCATAAGT ACTAAGCCAC
+C7Y66_RS25970                22  4.37e-05 AAAAATGTGC AACAAAACCTTAGCATAAGT ACTAAGCCAC
+CLLPBCKN_RS15495             22  4.37e-05 AAAAATGTGC AACAAAACCTTAGCATAAGT ACTAAGCCAC
+C7B79_RS23640                22  4.37e-05 AAAAATGTGC AACAAAACCTTAGCATAAGT ACTAAGCCAC
+CHRO_RS08390                213  5.74e-05 ACTGGGATGG GACAATACAAATCAGTTGTC AGTTATCAGT
+H6G17_RS27350               196  5.74e-05 ACTGGGATGG GACAATACAAATCAGTTGTC AGAGAACAGG
+M5J74_RS08925               213  5.74e-05 ACTGGGATGG GACAATACAAATCAGTTGTC AGTTATCAGT
+C7Y66_RS06295               188  5.74e-05 ACTGGGATGG GACAATACAAATCAGTTGTC AGTGGCTAGT
+CLLPBCKN_RS19570            213  5.74e-05 ACTGGGATGG GACAATACAAATCAGTTGTC AGTTATCAGT
+C7B79_RS33745               213  5.74e-05 ACTGGGATGG GACAATACAAATCAGTTGTC AGTTATCAGT
+CHRO_RS25525                236  6.27e-05 AAGCTTTCAG ACTTACACAAAATTGTAGAT GTTCCTTGCC
+N4J56_RS07970               236  6.27e-05 AAGCTTTCAG ACTTACACAAAATTGTAGAT GTTCCTTGCC
+H6G17_RS00250               236  6.27e-05 AAGCTTTCAG ACTTACACAAAATTGTAGAT GTTCCTTGCC
+M5J74_RS27825               236  6.27e-05 AAGCTTTCAG ACTTACACAAAATTGTAGAT GTTCCTTGCC
+C7Y66_RS24170               236  6.27e-05 AAGCTTTCAG ACTTACACAAAATTGTAGAT GTTCCTTGCC
+CLLPBCKN_RS37430            236  6.27e-05 AAGCTTTCAG ACTTACACAAAATTGTAGAT GTTCCTTGCC
+C7B79_RS06870               236  6.27e-05 AAGCTTTCAG ACTTACACAAAATTGTAGAT GTTCCTTGCC
+N4J56_RS20525               175  8.13e-05 AACTTATACT GGCTGAGGGAATGATTAGTT TACTTTCCTC
+H6G17_RS24445               175  8.13e-05 AACTTATACT GGCTGAGGGAATGATTAGTT TACCACCTAG
+B1A85_RS02630                14  8.85e-05 ATTTACATAA ATTTACACAATTGAAAAATC TTTATATTTT
+LAU37_RS00945               229  1.55e-04 TCACGCTCAT CACTCCTCGATTATGAAGTT CTCACTCCTC
+CHRO_RS07380                277  1.67e-04 GTATCTGTTT AATAAATCCAAACTGGAGAT AAAT      
+N4J56_RS03570               277  1.67e-04 GTATCTGTTT AATAAATCCAAACTGGAGAT AAAT      
+M5J74_RS07825               277  1.67e-04 GTATCTGTTT AATAAATCCAAACTGGAGAT AAAT      
+C7Y66_RS21490               277  1.67e-04 GTATCTGTTT AATAAATCCAAACTGGAGAT AAAT      
+CLLPBCKN_RS18275            277  1.67e-04 GTATCTGTTT AATAAATCCAAACTGGAGAT AAAT      
+C7B79_RS16230               277  1.67e-04 GTATCTGTTT AATAAATCCAAACTGGAGAT AAAT      
+H6G17_RS21500               277  1.80e-04 GTATCTGTTG AATAAATCCAAACAGGAGAT AAAT      
+B1A85_RS07435                77  2.08e-04 CCAGGATAAA ACCAGCGTAATTCTGCTGTT GTCAGCATAA
+B1A85_RS07360               103  2.08e-04 TCAAATCAAA AACTGCAAAATTTAGTAAAT AATAAGTAAC
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif AACTWMDCHATDGHKWAGTT MEME-3 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+CHRO_RS23670                      2.2e-07  157_[+3]_123
+H6G17_RS23875                     2.2e-07  157_[+3]_123
+M5J74_RS25250                     2.2e-07  157_[+3]_123
+C7Y66_RS29920                     2.2e-07  157_[+3]_123
+CLLPBCKN_RS28415                  2.2e-07  157_[+3]_123
+C7B79_RS15330                     2.2e-07  157_[+3]_123
+LAU37_RS06145                     3.1e-07  275_[+3]_5
+CHRO_RS26605                      4.3e-07  167_[+3]_113
+M5J74_RS28975                     4.3e-07  167_[+3]_113
+C7Y66_RS26880                     4.3e-07  167_[+3]_113
+CLLPBCKN_RS40555                  4.3e-07  167_[+3]_113
+C7B79_RS20425                     4.3e-07  167_[+3]_113
+N4J56_RS28200                     5.8e-07  167_[+3]_113
+H6G17_RS02340                     5.8e-07  166_[+3]_114
+CHRO_RS14670                      1.4e-06  275_[+3]_5
+N4J56_RS13095                     1.4e-06  275_[+3]_5
+M5J74_RS15655                     1.4e-06  275_[+3]_5
+C7Y66_RS29510                     1.4e-06  275_[+3]_5
+CLLPBCKN_RS07015                  1.4e-06  275_[+3]_5
+C7B79_RS10855                     1.4e-06  275_[+3]_5
+N4J56_RS27345                     2.1e-06  157_[+3]_123
+CHRO_RS06615                      5.9e-06  179_[+3]_101
+M5J74_RS06970                     5.9e-06  179_[+3]_101
+C7Y66_RS26035                     5.9e-06  179_[+3]_101
+CLLPBCKN_RS17400                  5.9e-06  179_[+3]_101
+C7B79_RS10170                     5.9e-06  179_[+3]_101
+N4J56_RS04480                     1.2e-05  179_[+3]_101
+H6G17_RS12660                     1.2e-05  179_[+3]_101
+B1A85_RS20745                     1.6e-05  18_[+3]_262
+LAU37_RS04025                     1.6e-05  25_[+3]_255
+LAU37_RS12200                     1.8e-05  101_[+3]_179
+B1A85_RS10345                     2.2e-05  97_[+3]_183
+CHRO_RS19445                      3.3e-05  174_[+3]_106
+M5J74_RS20805                     3.3e-05  174_[+3]_106
+C7Y66_RS22745                     3.3e-05  174_[+3]_106
+CLLPBCKN_RS00240                  3.3e-05  174_[+3]_106
+C7B79_RS11070                     3.3e-05  174_[+3]_106
+CHRO_RS04825                      4.4e-05  21_[+3]_259
+N4J56_RS30410                     4.4e-05  21_[+3]_259
+H6G17_RS05880                     4.4e-05  21_[+3]_259
+M5J74_RS05245                     4.4e-05  21_[+3]_259
+C7Y66_RS25970                     4.4e-05  21_[+3]_259
+CLLPBCKN_RS15495                  4.4e-05  21_[+3]_259
+C7B79_RS23640                     4.4e-05  21_[+3]_259
+CHRO_RS08390                      5.7e-05  212_[+3]_68
+H6G17_RS27350                     5.7e-05  195_[+3]_85
+M5J74_RS08925                     5.7e-05  212_[+3]_68
+C7Y66_RS06295                     5.7e-05  187_[+3]_93
+CLLPBCKN_RS19570                  5.7e-05  212_[+3]_68
+C7B79_RS33745                     5.7e-05  212_[+3]_68
+CHRO_RS25525                      6.3e-05  235_[+3]_45
+N4J56_RS07970                     6.3e-05  235_[+3]_45
+H6G17_RS00250                     6.3e-05  235_[+3]_45
+M5J74_RS27825                     6.3e-05  235_[+3]_45
+C7Y66_RS24170                     6.3e-05  235_[+3]_45
+CLLPBCKN_RS37430                  6.3e-05  235_[+3]_45
+C7B79_RS06870                     6.3e-05  235_[+3]_45
+N4J56_RS20525                     8.1e-05  174_[+3]_106
+H6G17_RS24445                     8.1e-05  174_[+3]_106
+B1A85_RS02630                     8.8e-05  13_[+3]_192
+LAU37_RS00945                     0.00015  228_[+3]_52
+CHRO_RS07380                      0.00017  276_[+3]_4
+N4J56_RS03570                     0.00017  276_[+3]_4
+M5J74_RS07825                     0.00017  276_[+3]_4
+C7Y66_RS21490                     0.00017  276_[+3]_4
+CLLPBCKN_RS18275                  0.00017  276_[+3]_4
+C7B79_RS16230                     0.00017  276_[+3]_4
+H6G17_RS21500                     0.00018  276_[+3]_4
+B1A85_RS07435                     0.00021  76_[+3]_204
+B1A85_RS07360                     0.00021  102_[+3]_178
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif AACTWMDCHATDGHKWAGTT MEME-3 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF AACTWMDCHATDGHKWAGTT width=20 seqs=70
+CHRO_RS23670             (  158) AACTTCAGCATACAGAAGTT  1 
+H6G17_RS23875            (  158) AACTTCAGCATACAGAAGTT  1 
+M5J74_RS25250            (  158) AACTTCAGCATACAGAAGTT  1 
+C7Y66_RS29920            (  158) AACTTCAGCATACAGAAGTT  1 
+CLLPBCKN_RS28415         (  158) AACTTCAGCATACAGAAGTT  1 
+C7B79_RS15330            (  158) AACTTCAGCATACAGAAGTT  1 
+LAU37_RS06145            (  276) AACTAAGGTATTGAGAAGGT  1 
+CHRO_RS26605             (  168) AACAAATCTATGGCTAAGTT  1 
+M5J74_RS28975            (  168) AACAAATCTATGGCTAAGTT  1 
+C7Y66_RS26880            (  168) AACAAATCTATGGCTAAGTT  1 
+CLLPBCKN_RS40555         (  168) AACAAATCTATGGCTAAGTT  1 
+C7B79_RS20425            (  168) AACAAATCTATGGCTAAGTT  1 
+N4J56_RS28200            (  168) AACAAATCTATAGCTAAGTT  1 
+H6G17_RS02340            (  167) AACAAATCTATAGCTAAGTT  1 
+CHRO_RS14670             (  276) AATTAAGCGATTGAGAAGGT  1 
+N4J56_RS13095            (  276) AATTAAGCGATTGAGAAGGT  1 
+M5J74_RS15655            (  276) AATTAAGCGATTGAGAAGGT  1 
+C7Y66_RS29510            (  276) AATTAAGCGATTGAGAAGGT  1 
+CLLPBCKN_RS07015         (  276) AATTAAGCGATTGAGAAGGT  1 
+C7B79_RS10855            (  276) AATTAAGCGATTGAGAAGGT  1 
+N4J56_RS27345            (  158) AATTTCAGCATACAGAAGTT  1 
+CHRO_RS06615             (  180) AACTTCTCAATTGTGCGGTG  1 
+M5J74_RS06970            (  180) AACTTCTCAATTGTGCGGTG  1 
+C7Y66_RS26035            (  180) AACTTCTCAATTGTGCGGTG  1 
+CLLPBCKN_RS17400         (  180) AACTTCTCAATTGTGCGGTG  1 
+C7B79_RS10170            (  180) AACTTCTCAATTGTGCGGTG  1 
+N4J56_RS04480            (  180) AACTTCTCAATCGTGCGGTG  1 
+H6G17_RS12660            (  180) AACTTCTCAATCGTGCGGTG  1 
+B1A85_RS20745            (   19) AACTAAACCTTAGCATAAGT  1 
+LAU37_RS04025            (   26) AACTAAACCTTAGCATAAGT  1 
+LAU37_RS12200            (  102) AATATCACCAACCTGTAGTC  1 
+B1A85_RS10345            (   98) AACATCGCCAACGCGCAATC  1 
+CHRO_RS19445             (  175) GGCTGCGGGAATGATTAGTT  1 
+M5J74_RS20805            (  175) GGCTGCGGGAATGATTAGTT  1 
+C7Y66_RS22745            (  175) GGCTGCGGGAATGATTAGTT  1 
+CLLPBCKN_RS00240         (  175) GGCTGCGGGAATGATTAGTT  1 
+C7B79_RS11070            (  175) GGCTGCGGGAATGATTAGTT  1 
+CHRO_RS04825             (   22) AACAAAACCTTAGCATAAGT  1 
+N4J56_RS30410            (   22) AACAAAACCTTAGCATAAGT  1 
+H6G17_RS05880            (   22) AACAAAACCTTAGCATAAGT  1 
+M5J74_RS05245            (   22) AACAAAACCTTAGCATAAGT  1 
+C7Y66_RS25970            (   22) AACAAAACCTTAGCATAAGT  1 
+CLLPBCKN_RS15495         (   22) AACAAAACCTTAGCATAAGT  1 
+C7B79_RS23640            (   22) AACAAAACCTTAGCATAAGT  1 
+CHRO_RS08390             (  213) GACAATACAAATCAGTTGTC  1 
+H6G17_RS27350            (  196) GACAATACAAATCAGTTGTC  1 
+M5J74_RS08925            (  213) GACAATACAAATCAGTTGTC  1 
+C7Y66_RS06295            (  188) GACAATACAAATCAGTTGTC  1 
+CLLPBCKN_RS19570         (  213) GACAATACAAATCAGTTGTC  1 
+C7B79_RS33745            (  213) GACAATACAAATCAGTTGTC  1 
+CHRO_RS25525             (  236) ACTTACACAAAATTGTAGAT  1 
+N4J56_RS07970            (  236) ACTTACACAAAATTGTAGAT  1 
+H6G17_RS00250            (  236) ACTTACACAAAATTGTAGAT  1 
+M5J74_RS27825            (  236) ACTTACACAAAATTGTAGAT  1 
+C7Y66_RS24170            (  236) ACTTACACAAAATTGTAGAT  1 
+CLLPBCKN_RS37430         (  236) ACTTACACAAAATTGTAGAT  1 
+C7B79_RS06870            (  236) ACTTACACAAAATTGTAGAT  1 
+N4J56_RS20525            (  175) GGCTGAGGGAATGATTAGTT  1 
+H6G17_RS24445            (  175) GGCTGAGGGAATGATTAGTT  1 
+B1A85_RS02630            (   14) ATTTACACAATTGAAAAATC  1 
+LAU37_RS00945            (  229) CACTCCTCGATTATGAAGTT  1 
+CHRO_RS07380             (  277) AATAAATCCAAACTGGAGAT  1 
+N4J56_RS03570            (  277) AATAAATCCAAACTGGAGAT  1 
+M5J74_RS07825            (  277) AATAAATCCAAACTGGAGAT  1 
+C7Y66_RS21490            (  277) AATAAATCCAAACTGGAGAT  1 
+CLLPBCKN_RS18275         (  277) AATAAATCCAAACTGGAGAT  1 
+C7B79_RS16230            (  277) AATAAATCCAAACTGGAGAT  1 
+H6G17_RS21500            (  277) AATAAATCCAAACAGGAGAT  1 
+B1A85_RS07435            (   77) ACCAGCGTAATTCTGCTGTT  1 
+B1A85_RS07360            (  103) AACTGCAAAATTTAGTAAAT  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif AACTWMDCHATDGHKWAGTT MEME-3 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 20 n= 24837 bayes= 8.56961 E= 3.0e-036 
+   133   -180    -33  -1273 
+   109    -22   -198   -135 
+ -1282    191  -1277    -22 
+   -24   -200  -1277    123 
+    78   -180    -62     -7 
+     8    148  -1277   -135 
+    33  -1278     26     35 
+  -228    172     42   -435 
+    25     10    -62     -3 
+   123  -1286  -1284    -10 
+   -20  -1281  -1279    132 
+   -12    -63     12     35 
+  -444     41    174   -218 
+    25     24  -1282     43 
+  -145  -1283    150     17 
+   -16    -63   -179     88 
+   114  -1283   -198    -14 
+   -32  -1283    193  -1276 
+  -145   -200    -20    119 
+ -1285    -34   -179    143 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif AACTWMDCHATDGHKWAGTT MEME-3 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 20 nsites= 70 E= 3.0e-036 
+ 0.785714  0.057143  0.157143  0.000000 
+ 0.664286  0.171429  0.050000  0.114286 
+ 0.000000  0.750000  0.000000  0.250000 
+ 0.264286  0.050000  0.000000  0.685714 
+ 0.535714  0.057143  0.128571  0.278571 
+ 0.328571  0.557143  0.000000  0.114286 
+ 0.392857  0.000000  0.235714  0.371429 
+ 0.064286  0.657143  0.264286  0.014286 
+ 0.371429  0.214286  0.128571  0.285714 
+ 0.728570  0.000000  0.000000  0.271427 
+ 0.271428  0.000000  0.000000  0.728571 
+ 0.285713  0.128570  0.214285  0.371428 
+ 0.014285  0.264285  0.657142  0.064285 
+ 0.371428  0.235713  0.000000  0.392856 
+ 0.114285  0.000000  0.557142  0.328570 
+ 0.278570  0.128570  0.057142  0.535713 
+ 0.685713  0.000000  0.049999  0.264285 
+ 0.249999  0.000000  0.749999  0.000000 
+ 0.114285  0.049999  0.171428  0.664285 
+ 0.000000  0.157142  0.057142  0.785713 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif AACTWMDCHATDGHKWAGTT MEME-3 regular expression
+--------------------------------------------------------------------------------
+AA[CT][TA][AT][CA][ATG][CG][ATC][AT][TA][TAG][GC][TAC][GT][TA][AT][GA]TT
+--------------------------------------------------------------------------------
+
+
+
+
+Time 22.00 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+MOTIF GVCAGRAGGNSNCCTYCTGBC MEME-4	width =  21  sites =  42  llr = 496  E-value = 8.3e-038
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif GVCAGRAGGNSNCCTYCTGBC MEME-4 Description
+--------------------------------------------------------------------------------
+Simplified        A  142713523213:122::1:1
+pos.-specific     C  :46:::2::34277:592227
+probability       G  822395:77243::2:::64:
+matrix            T  1:1::221:312325317241
+
+         bits    2.3                      
+                 2.1                      
+                 1.9     *           *    
+                 1.6     *           *    
+Relative         1.4     *   *   *   *    
+Entropy          1.2 *   *   *   *   *   *
+(17.0 bits)      0.9 *  **  **   **  **  *
+                 0.7 *  *** **   ** *** **
+                 0.5 ********* * *********
+                 0.2 ********* * *********
+                 0.0 ---------------------
+
+Multilevel           GCCAGGAGGTGACCTCCTGGC
+consensus             A G AC ACCGT AT C T 
+sequence              G    T  A T  G    C 
+                                          
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GVCAGRAGGNSNCCTYCTGBC MEME-4 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value                    Site       
+-------------             ----- ---------            ---------------------
+CHRO_RS23670                 54  2.94e-09 GCACAACGCC GCCAGTAAGCCGCCGCCTGCC GCTACTGCCA
+M5J74_RS25250                54  2.94e-09 GCACAACGCC GCCAGTAAGCCGCCGCCTGCC GCTACTGCCA
+C7Y66_RS29920                54  2.94e-09 GCACAACGCC GCCAGTAAGCCGCCGCCTGCC GCTACTGCCA
+CLLPBCKN_RS28415             54  2.94e-09 GCACAACGCC GCCAGTAAGCCGCCGCCTGCC GCTACTGCCA
+C7B79_RS15330                54  2.94e-09 GCACAACGCC GCCAGTAAGCCGCCGCCTGCC GCTACTGCCA
+N4J56_RS27345                54  6.51e-09 GCATAACGCC GCCAGTAAGCCGCCACCTGCC GCTACTGCCA
+H6G17_RS23875                54  6.51e-09 GCATAACGCC GCCAGTAAGCCGCCACCTGCC GCTACTGCCA
+CHRO_RS14670                 84  8.08e-08 CATAATGACT GCTAGAAGGGTTCCGCCTGTC ACCTGACTGA
+N4J56_RS13095                27  8.08e-08 CATAATGACT GCTAGAAGGGTTCCGCCTGTC ACCTGACTGA
+H6G17_RS15450                90  8.08e-08 CATAATGACT GCTAGAAGGGTTCCGCCTGTC ACCTGACTGA
+M5J74_RS15655                84  8.08e-08 CATAATGACT GCTAGAAGGGTTCCGCCTGTC ACCTGACTGA
+C7Y66_RS29510                84  8.08e-08 CATAATGACT GCTAGAAGGGTTCCGCCTGTC ACCTGACTGA
+CLLPBCKN_RS07015             84  8.08e-08 CATAATGACT GCTAGAAGGGTTCCGCCTGTC ACCTGACTGA
+C7B79_RS10855                84  8.08e-08 CATAATGACT GCTAGAAGGGTTCCGCCTGTC ACCTGACTGA
+CHRO_RS06615                 93  1.64e-06 GTAAATGCGG GAAAGAATGTCGCCTACCCGC AAGCCTCCCC
+H6G17_RS12660                93  1.64e-06 GTAAATGCGG GAAAGAATGTCGCCTACCCGC AAGCCTCCCC
+M5J74_RS06970                93  1.64e-06 GTAAATGCGG GAAAGAATGTCGCCTACCCGC AAGCCTCCCC
+C7Y66_RS26035                93  1.64e-06 GTAAATGCGG GAAAGAATGTCGCCTACCCGC AAGCCTCCCC
+CLLPBCKN_RS17400             93  1.64e-06 GTAAATGCGG GAAAGAATGTCGCCTACCCGC AAACCTCCCC
+C7B79_RS10170                93  1.64e-06 GTAAATGCGG GAAAGAATGTCGCCTACCCGC AAACCTCCCC
+CHRO_RS26605                217  1.99e-06 TTACTGGTTT GAGGAGTGGAGTTCACCTGCC AACCAATTTG
+M5J74_RS28975               217  1.99e-06 TTACTGGTTT GAGGAGTGGAGTTCACCTGCC AACCAATTTG
+C7Y66_RS26880               217  1.99e-06 TTACTGGTTT GAGGAGTGGAGTTCACCTGCC AACCAATTTG
+CLLPBCKN_RS40555            217  1.99e-06 TTACTGGTTT GAGGAGTGGAGTTCACCTGCC AACCAATTTG
+C7B79_RS20425               217  1.99e-06 TTACTGGTTT GAGGAGTGGAGTTCACCTGCC AACCAATTTG
+CHRO_RS26170                165  2.19e-06 TGCCCGAGCC GGCAGGAAATGACAACCTGGA TAGTCTAAAA
+M5J74_RS28510               165  2.19e-06 TGCCCGAGCC GGCAGGAAATGACAACCTGGA TAGTCTAAAA
+CLLPBCKN_RS40065            165  2.19e-06 TGCCCGAGCC GGCAGGAAATGACAACCTGGA TAGTCTAAAA
+C7B79_RS24040               165  2.19e-06 TGCCCGAGCC GGCAGGAAATGACAACCTGGA TAGTCTAAAA
+N4J56_RS04480                93  6.44e-06 GTAGATGCGG GAAAGAATATCGCCTACCCGC AAGCCTCCCC
+CHRO_RS04825                 80  7.62e-06 AGTAGCCTTG TAAGGGCGATCCCCTTCTGGT AGGATCTACT
+N4J56_RS30410                80  7.62e-06 AGTAGCCTTG TAAGGGCGATCCCCTTCTGGT AGGATCTACT
+H6G17_RS05880                80  7.62e-06 AGTAGCCTTG TAAGGGCGATCCCCTTCTGGT AGGATCTACT
+M5J74_RS05245                80  7.62e-06 AGTAGCCTTG TAAGGGCGATCCCCTTCTGGT AGGATCTACT
+C7Y66_RS25970                80  7.62e-06 AGTAGCCTTG TAAGGGCGATCCCCTTCTGGT AGGATCTACT
+CLLPBCKN_RS15495             80  7.62e-06 AGTAGCCTTG TAAGGGCGATCCCCTTCTGGT AGGATCTACT
+C7B79_RS23640                80  7.62e-06 AGTAGCCTTG TAAGGGCGATCCCCTTCTGGT AGGATCTACT
+LAU37_RS06145                91  8.28e-06 CATGGTAAAT GCCAGTAGGGTACCGCCAGTT ACCTGACCAA
+B1A85_RS20745               171  9.75e-06 GGAGTGTTAC GCGAAGACGCTGTCTCCTGTC AAGAGCTCTG
+LAU37_RS04025                82  2.44e-05 TTCAGCCTTG TATAGGAGATCCCATTCTGGT AGGATCTACT
+H6G17_RS02340               217  3.24e-05 TTACTGGTTT GAGGAGTAAAGTTCACCTGCC AACCAATTTG
+N4J56_RS28200               217  6.69e-05 TTACTGGTTT GAGGAGTAAAGTTCATCTGCC AACCAATTTG
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GVCAGRAGGNSNCCTYCTGBC MEME-4 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+CHRO_RS23670                      2.9e-09  53_[+4]_226
+M5J74_RS25250                     2.9e-09  53_[+4]_226
+C7Y66_RS29920                     2.9e-09  53_[+4]_226
+CLLPBCKN_RS28415                  2.9e-09  53_[+4]_226
+C7B79_RS15330                     2.9e-09  53_[+4]_226
+N4J56_RS27345                     6.5e-09  53_[+4]_226
+H6G17_RS23875                     6.5e-09  53_[+4]_226
+CHRO_RS14670                      8.1e-08  83_[+4]_196
+N4J56_RS13095                     8.1e-08  26_[+4]_253
+H6G17_RS15450                     8.1e-08  89_[+4]_190
+M5J74_RS15655                     8.1e-08  83_[+4]_196
+C7Y66_RS29510                     8.1e-08  83_[+4]_196
+CLLPBCKN_RS07015                  8.1e-08  83_[+4]_196
+C7B79_RS10855                     8.1e-08  83_[+4]_196
+CHRO_RS06615                      1.6e-06  92_[+4]_187
+H6G17_RS12660                     1.6e-06  92_[+4]_187
+M5J74_RS06970                     1.6e-06  92_[+4]_187
+C7Y66_RS26035                     1.6e-06  92_[+4]_187
+CLLPBCKN_RS17400                  1.6e-06  92_[+4]_187
+C7B79_RS10170                     1.6e-06  92_[+4]_187
+CHRO_RS26605                        2e-06  216_[+4]_63
+M5J74_RS28975                       2e-06  216_[+4]_63
+C7Y66_RS26880                       2e-06  216_[+4]_63
+CLLPBCKN_RS40555                    2e-06  216_[+4]_63
+C7B79_RS20425                       2e-06  216_[+4]_63
+CHRO_RS26170                      2.2e-06  164_[+4]_93
+M5J74_RS28510                     2.2e-06  164_[+4]_93
+CLLPBCKN_RS40065                  2.2e-06  164_[+4]_93
+C7B79_RS24040                     2.2e-06  164_[+4]_93
+N4J56_RS04480                     6.4e-06  92_[+4]_187
+CHRO_RS04825                      7.6e-06  79_[+4]_200
+N4J56_RS30410                     7.6e-06  79_[+4]_200
+H6G17_RS05880                     7.6e-06  79_[+4]_200
+M5J74_RS05245                     7.6e-06  79_[+4]_200
+C7Y66_RS25970                     7.6e-06  79_[+4]_200
+CLLPBCKN_RS15495                  7.6e-06  79_[+4]_200
+C7B79_RS23640                     7.6e-06  79_[+4]_200
+LAU37_RS06145                     8.3e-06  90_[+4]_189
+B1A85_RS20745                     9.8e-06  170_[+4]_109
+LAU37_RS04025                     2.4e-05  81_[+4]_198
+H6G17_RS02340                     3.2e-05  216_[+4]_63
+N4J56_RS28200                     6.7e-05  216_[+4]_63
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GVCAGRAGGNSNCCTYCTGBC MEME-4 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF GVCAGRAGGNSNCCTYCTGBC width=21 seqs=42
+CHRO_RS23670             (   54) GCCAGTAAGCCGCCGCCTGCC  1 
+M5J74_RS25250            (   54) GCCAGTAAGCCGCCGCCTGCC  1 
+C7Y66_RS29920            (   54) GCCAGTAAGCCGCCGCCTGCC  1 
+CLLPBCKN_RS28415         (   54) GCCAGTAAGCCGCCGCCTGCC  1 
+C7B79_RS15330            (   54) GCCAGTAAGCCGCCGCCTGCC  1 
+N4J56_RS27345            (   54) GCCAGTAAGCCGCCACCTGCC  1 
+H6G17_RS23875            (   54) GCCAGTAAGCCGCCACCTGCC  1 
+CHRO_RS14670             (   84) GCTAGAAGGGTTCCGCCTGTC  1 
+N4J56_RS13095            (   27) GCTAGAAGGGTTCCGCCTGTC  1 
+H6G17_RS15450            (   90) GCTAGAAGGGTTCCGCCTGTC  1 
+M5J74_RS15655            (   84) GCTAGAAGGGTTCCGCCTGTC  1 
+C7Y66_RS29510            (   84) GCTAGAAGGGTTCCGCCTGTC  1 
+CLLPBCKN_RS07015         (   84) GCTAGAAGGGTTCCGCCTGTC  1 
+C7B79_RS10855            (   84) GCTAGAAGGGTTCCGCCTGTC  1 
+CHRO_RS06615             (   93) GAAAGAATGTCGCCTACCCGC  1 
+H6G17_RS12660            (   93) GAAAGAATGTCGCCTACCCGC  1 
+M5J74_RS06970            (   93) GAAAGAATGTCGCCTACCCGC  1 
+C7Y66_RS26035            (   93) GAAAGAATGTCGCCTACCCGC  1 
+CLLPBCKN_RS17400         (   93) GAAAGAATGTCGCCTACCCGC  1 
+C7B79_RS10170            (   93) GAAAGAATGTCGCCTACCCGC  1 
+CHRO_RS26605             (  217) GAGGAGTGGAGTTCACCTGCC  1 
+M5J74_RS28975            (  217) GAGGAGTGGAGTTCACCTGCC  1 
+C7Y66_RS26880            (  217) GAGGAGTGGAGTTCACCTGCC  1 
+CLLPBCKN_RS40555         (  217) GAGGAGTGGAGTTCACCTGCC  1 
+C7B79_RS20425            (  217) GAGGAGTGGAGTTCACCTGCC  1 
+CHRO_RS26170             (  165) GGCAGGAAATGACAACCTGGA  1 
+M5J74_RS28510            (  165) GGCAGGAAATGACAACCTGGA  1 
+CLLPBCKN_RS40065         (  165) GGCAGGAAATGACAACCTGGA  1 
+C7B79_RS24040            (  165) GGCAGGAAATGACAACCTGGA  1 
+N4J56_RS04480            (   93) GAAAGAATATCGCCTACCCGC  1 
+CHRO_RS04825             (   80) TAAGGGCGATCCCCTTCTGGT  1 
+N4J56_RS30410            (   80) TAAGGGCGATCCCCTTCTGGT  1 
+H6G17_RS05880            (   80) TAAGGGCGATCCCCTTCTGGT  1 
+M5J74_RS05245            (   80) TAAGGGCGATCCCCTTCTGGT  1 
+C7Y66_RS25970            (   80) TAAGGGCGATCCCCTTCTGGT  1 
+CLLPBCKN_RS15495         (   80) TAAGGGCGATCCCCTTCTGGT  1 
+C7B79_RS23640            (   80) TAAGGGCGATCCCCTTCTGGT  1 
+LAU37_RS06145            (   91) GCCAGTAGGGTACCGCCAGTT  1 
+B1A85_RS20745            (  171) GCGAAGACGCTGTCTCCTGTC  1 
+LAU37_RS04025            (   82) TATAGGAGATCCCATTCTGGT  1 
+H6G17_RS02340            (  217) GAGGAGTAAAGTTCACCTGCC  1 
+N4J56_RS28200            (  217) GAGGAGTAAAGTTCATCTGCC  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GVCAGRAGGNSNCCTYCTGBC MEME-4 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 21 n= 24747 bayes= 10.1877 E= 8.3e-038 
+  -154  -1204    193   -103 
+    24    106     12  -1199 
+   -90    149    -14   -161 
+   124  -1204     34   -461 
+  -171  -1204    220  -1199 
+   -19  -1204    147    -71 
+    75     26  -1203    -29 
+  -101   -406    181   -103 
+   -19  -1204    188  -1199 
+   -32     46     -5     -3 
+  -154     98     99   -144 
+   -12     -7     47    -22 
+ -1210    186  -1206     -9 
+  -112    179   -405    -91 
+   -39  -1208     27     84 
+   -80    146  -1206     -9 
+ -1210    218  -1206   -161 
+  -470     33  -1206    134 
+  -171    -16    150    -81 
+ -1210     10    108     34 
+  -112    191  -1206   -144 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GVCAGRAGGNSNCCTYCTGBC MEME-4 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 21 nsites= 42 E= 8.3e-038 
+ 0.107143  0.000000  0.750000  0.142857 
+ 0.369048  0.416667  0.214286  0.000000 
+ 0.166667  0.559524  0.178571  0.095238 
+ 0.738095  0.000000  0.250000  0.011905 
+ 0.095238  0.000000  0.904762  0.000000 
+ 0.273810  0.000000  0.547619  0.178571 
+ 0.523810  0.238095  0.000000  0.238095 
+ 0.154762  0.011905  0.690476  0.142857 
+ 0.273810  0.000000  0.726190  0.000000 
+ 0.249998  0.273808  0.190475  0.285713 
+ 0.107141  0.392856  0.392857  0.107142 
+ 0.285714  0.190476  0.273809  0.249999 
+ 0.000000  0.726189  0.000000  0.273809 
+ 0.142856  0.690475  0.011904  0.154761 
+ 0.238094  0.000000  0.238094  0.523809 
+ 0.178570  0.547618  0.000000  0.273809 
+ 0.000000  0.904761  0.000000  0.095237 
+ 0.011904  0.249999  0.000000  0.738094 
+ 0.095237  0.178570  0.559523  0.166666 
+ 0.000000  0.214285  0.416666  0.369047 
+ 0.142856  0.749999  0.000000  0.107142 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GVCAGRAGGNSNCCTYCTGBC MEME-4 regular expression
+--------------------------------------------------------------------------------
+G[CAG]C[AG]G[GA][ACT]G[GA][TCA][GC][AGT][CT]C[TAG][CT]C[TC]G[GTC]C
+--------------------------------------------------------------------------------
+
+
+
+
+Time 28.49 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+MOTIF AAKTMTTAMMWKKTAAKAMTT MEME-5	width =  21  sites =  28  llr = 387  E-value = 2.0e-029
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif AAKTMTTAMMWKKTAAKAMTT MEME-5 Description
+--------------------------------------------------------------------------------
+Simplified        A  87:151:9645:::a617521
+pos.-specific     C  1::14:::46:::1:2::5::
+probability       G  ::5::3:1:::64:::41::1
+matrix            T  125816a:::5469:151:78
+
+         bits    2.3                      
+                 2.1                      
+                 1.9       *              
+                 1.6       *       *      
+Relative         1.4       *      **      
+Entropy          1.2   *   ** * * **      
+(19.9 bits)      0.9   *   **** ****   *  
+                 0.7 **** **********  ****
+                 0.5 *********************
+                 0.2 *********************
+                 0.0 ---------------------
+
+Multilevel           AAGTATTAACTGTTAATAATT
+consensus             TT CG  CAATG  CG CA 
+sequence                                  
+                                          
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif AAKTMTTAMMWKKTAAKAMTT MEME-5 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name             Start   P-value                    Site       
+-------------             ----- ---------            ---------------------
+CHRO_RS07380                221  5.04e-09 TGGATGTAAG AATTATTACAAGTTACGAATT ATGAATTCTA
+N4J56_RS03570               221  5.04e-09 TAGATGTAAG AATTATTACAAGTTACGAATT ATGAATTCTA
+H6G17_RS21500               221  5.04e-09 TGGATGTAAG AATTATTACAAGTTACGAATT ATGAATTCTA
+M5J74_RS07825               221  5.04e-09 TGGATGTAAG AATTATTACAAGTTACGAATT ATGAATTCTA
+C7Y66_RS21490               221  5.04e-09 TGGATGTAAG AATTATTACAAGTTACGAATT ATGAATTCTA
+CLLPBCKN_RS18275            221  5.04e-09 TGGATGTAAG AATTATTACAAGTTACGAATT ATGAATTCTA
+C7B79_RS16230               221  5.04e-09 TGGATGTAAG AATTATTACAAGTTACGAATT ATGAATTCTA
+H6G17_RS27350               104  9.09e-08 TATCAGATAA ATGTATTAAATGTTACTAAAT TTATTCAATA
+N4J56_RS06865                69  1.12e-07 AATCAAACAA CTGTATTAAATGTTACTAATT TTATTAAATA
+CHRO_RS25525                191  2.06e-07 AAGCATTTTT AAGTTTTGCCAGTTAAGTATT GCTTTCGCTG
+M5J74_RS27825               191  2.06e-07 AAGCATTTTT AAGTTTTGCCAGTTAAGTATT GCTTTCGCTG
+C7Y66_RS24170               191  2.06e-07 AAGCATTTTT AAGTTTTGCCAGTTAAGTATT GCTTTCGCTG
+CLLPBCKN_RS37430            191  2.06e-07 AAGCATTTTT AAGTTTTGCCAGTTAAGTATT GCTTTCGCTG
+C7B79_RS06870               191  2.06e-07 AAGCATTTTT AAGTTTTGCCAGTTAAGTATT GCTTTCGCTG
+CHRO_RS08390                121  4.24e-07 TATCAGACAA CTGTATTAAATGTTACTAAAT TTAGTAAATA
+CHRO_RS04825                200  4.24e-07 GAGGCAACCC AAGCAATACAAGTTAAGACTA CCAGATTAAG
+N4J56_RS30410               200  4.24e-07 GAGGCAACCC AAGCAATACAAGTTAAGACTA CCAGATTAAG
+H6G17_RS05880               200  4.24e-07 GAGGCAACCC AAGCAATACAAGTTAAGACTA CCAGATTAAG
+M5J74_RS08925               121  4.24e-07 TATCAGACAA CTGTATTAAATGTTACTAAAT TTAGTAAATA
+M5J74_RS05245               200  4.24e-07 GAGGCAACCC AAGCAATACAAGTTAAGACTA CCAGATTAAG
+C7Y66_RS25970               200  4.24e-07 GAGGCAACCC AAGCAATACAAGTTAAGACTA CCAGATTAAG
+C7Y66_RS06295                96  4.24e-07 TATCAGACAA CTGTATTAAATGTTACTAAAT TTAGTAAATA
+CLLPBCKN_RS19570            121  4.24e-07 TATCAGACAA CTGTATTAAATGTTACTAAAT TTAGTAAATA
+CLLPBCKN_RS15495            200  4.24e-07 GAGGCAACCC AAGCAATACAAGTTAAGACTA CCAGATTAAG
+C7B79_RS23640               200  4.24e-07 GAGGCAACCC AAGCAATACAAGTTAAGACTA CCAGATTAAG
+C7B79_RS33745               121  4.24e-07 TATCAGACAA CTGTATTAAATGTTACTAAAT TTAGTAAATA
+N4J56_RS07970               191  1.93e-06 AAGCATTTTT AAGTTTTGCCAGTTAAGTACT GCTTTCGCTT
+H6G17_RS00250               191  1.93e-06 AAGCATTTTT AAGTTTTGCCAGTTAAGTACT GCTTTCGCTG
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif AAKTMTTAMMWKKTAAKAMTT MEME-5 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+CHRO_RS07380                        5e-09  220_[+5]_59
+N4J56_RS03570                       5e-09  220_[+5]_59
+H6G17_RS21500                       5e-09  220_[+5]_59
+M5J74_RS07825                       5e-09  220_[+5]_59
+C7Y66_RS21490                       5e-09  220_[+5]_59
+CLLPBCKN_RS18275                    5e-09  220_[+5]_59
+C7B79_RS16230                       5e-09  220_[+5]_59
+H6G17_RS27350                     9.1e-08  103_[+5]_176
+N4J56_RS06865                     1.1e-07  68_[+5]_211
+CHRO_RS25525                      2.1e-07  190_[+5]_89
+M5J74_RS27825                     2.1e-07  190_[+5]_89
+C7Y66_RS24170                     2.1e-07  190_[+5]_89
+CLLPBCKN_RS37430                  2.1e-07  190_[+5]_89
+C7B79_RS06870                     2.1e-07  190_[+5]_89
+CHRO_RS08390                      4.2e-07  120_[+5]_159
+CHRO_RS04825                      4.2e-07  199_[+5]_80
+N4J56_RS30410                     4.2e-07  199_[+5]_80
+H6G17_RS05880                     4.2e-07  199_[+5]_80
+M5J74_RS08925                     4.2e-07  120_[+5]_159
+M5J74_RS05245                     4.2e-07  199_[+5]_80
+C7Y66_RS25970                     4.2e-07  199_[+5]_80
+C7Y66_RS06295                     4.2e-07  95_[+5]_184
+CLLPBCKN_RS19570                  4.2e-07  120_[+5]_159
+CLLPBCKN_RS15495                  4.2e-07  199_[+5]_80
+C7B79_RS23640                     4.2e-07  199_[+5]_80
+C7B79_RS33745                     4.2e-07  120_[+5]_159
+N4J56_RS07970                     1.9e-06  190_[+5]_89
+H6G17_RS00250                     1.9e-06  190_[+5]_89
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif AAKTMTTAMMWKKTAAKAMTT MEME-5 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF AAKTMTTAMMWKKTAAKAMTT width=21 seqs=28
+CHRO_RS07380             (  221) AATTATTACAAGTTACGAATT  1 
+N4J56_RS03570            (  221) AATTATTACAAGTTACGAATT  1 
+H6G17_RS21500            (  221) AATTATTACAAGTTACGAATT  1 
+M5J74_RS07825            (  221) AATTATTACAAGTTACGAATT  1 
+C7Y66_RS21490            (  221) AATTATTACAAGTTACGAATT  1 
+CLLPBCKN_RS18275         (  221) AATTATTACAAGTTACGAATT  1 
+C7B79_RS16230            (  221) AATTATTACAAGTTACGAATT  1 
+H6G17_RS27350            (  104) ATGTATTAAATGTTACTAAAT  1 
+N4J56_RS06865            (   69) CTGTATTAAATGTTACTAATT  1 
+CHRO_RS25525             (  191) AAGTTTTGCCAGTTAAGTATT  1 
+M5J74_RS27825            (  191) AAGTTTTGCCAGTTAAGTATT  1 
+C7Y66_RS24170            (  191) AAGTTTTGCCAGTTAAGTATT  1 
+CLLPBCKN_RS37430         (  191) AAGTTTTGCCAGTTAAGTATT  1 
+C7B79_RS06870            (  191) AAGTTTTGCCAGTTAAGTATT  1 
+CHRO_RS08390             (  121) CTGTATTAAATGTTACTAAAT  1 
+CHRO_RS04825             (  200) AAGCAATACAAGTTAAGACTA  1 
+N4J56_RS30410            (  200) AAGCAATACAAGTTAAGACTA  1 
+H6G17_RS05880            (  200) AAGCAATACAAGTTAAGACTA  1 
+M5J74_RS08925            (  121) CTGTATTAAATGTTACTAAAT  1 
+M5J74_RS05245            (  200) AAGCAATACAAGTTAAGACTA  1 
+C7Y66_RS25970            (  200) AAGCAATACAAGTTAAGACTA  1 
+C7Y66_RS06295            (   96) CTGTATTAAATGTTACTAAAT  1 
+CLLPBCKN_RS19570         (  121) CTGTATTAAATGTTACTAAAT  1 
+CLLPBCKN_RS15495         (  200) AAGCAATACAAGTTAAGACTA  1 
+C7B79_RS23640            (  200) AAGCAATACAAGTTAAGACTA  1 
+C7B79_RS33745            (  121) CTGTATTAAATGTTACTAAAT  1 
+N4J56_RS07970            (  191) AAGTTTTGCCAGTTAAGTACT  1 
+H6G17_RS00250            (  191) AAGTTTTGCCAGTTAAGTACT  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif AAKTMTTAMMWKKTAAKAMTT MEME-5 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 21 n= 24747 bayes= 9.62967 E= 2.0e-029 
+   130    -90  -1144   -122 
+   123  -1146   -246    -33 
+ -1150  -1146    134     78 
+  -132    -67  -1144    136 
+    68     91  -1144   -122 
+  -132  -1146     34    110 
+ -1150  -1146  -1144    178 
+   149  -1146    -66  -1140 
+   100     91  -1144  -1140 
+    27    165  -1147  -1142 
+    68  -1149  -1145     78 
+ -1150  -1147    166     36 
+ -1151  -1148     93    110 
+ -1151    -67  -1146    158 
+   168  -1148  -1146  -1142 
+   100     33  -1146   -122 
+  -132  -1148     93     78 
+   127  -1148    -66   -122 
+    68    133  -1146  -1142 
+   -42   -248  -1146    133 
+  -132  -1148    -88    140 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif AAKTMTTAMMWKKTAAKAMTT MEME-5 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 21 nsites= 28 E= 2.0e-029 
+ 0.767857  0.107143  0.000000  0.125000 
+ 0.732143  0.000000  0.035714  0.232143 
+ 0.000000  0.000000  0.500000  0.500000 
+ 0.125000  0.125000  0.000000  0.750000 
+ 0.500000  0.375000  0.000000  0.125000 
+ 0.125000  0.000000  0.250000  0.625000 
+ 0.000000  0.000000  0.000000  1.000000 
+ 0.875000  0.000000  0.125000  0.000000 
+ 0.625000  0.375000  0.000000  0.000000 
+ 0.374999  0.624998  0.000000  0.000000 
+ 0.499999  0.000000  0.000000  0.500000 
+ 0.000000  0.000000  0.624999  0.375000 
+ 0.000000  0.000000  0.374999  0.624999 
+ 0.000000  0.124999  0.000000  0.874999 
+ 0.999999  0.000000  0.000000  0.000000 
+ 0.624999  0.249999  0.000000  0.124999 
+ 0.124999  0.000000  0.374999  0.499999 
+ 0.749999  0.000000  0.124999  0.124999 
+ 0.499999  0.499999  0.000000  0.000000 
+ 0.232142  0.035713  0.000000  0.732142 
+ 0.124999  0.000000  0.107142  0.767856 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif AAKTMTTAMMWKKTAAKAMTT MEME-5 regular expression
+--------------------------------------------------------------------------------
+A[AT][GT]T[AC][TG]TA[AC][CA][TA][GT][TG]TA[AC][TG]A[AC][TA]T
+--------------------------------------------------------------------------------
+
+
+
+
+Time 34.69 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+SUMMARY OF MOTIFS
+********************************************************************************
+
+--------------------------------------------------------------------------------
+	Combined block diagrams: non-overlapping sites with p-value < 0.0001
+--------------------------------------------------------------------------------
+SEQUENCE NAME            COMBINED P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+C7B79_RS33745                    1.17e-04  120_[+5(4.24e-07)]_46_\
+    [+1(9.51e-05)]_5_[+3(5.74e-05)]_68
+C7B79_RS06870                    2.56e-06  129_[+1(1.12e-05)]_41_\
+    [+5(2.06e-07)]_24_[+3(6.27e-05)]_45
+C7B79_RS10170                    5.06e-06  92_[+4(1.64e-06)]_31_[+1(9.13e-06)]_\
+    15_[+3(5.86e-06)]_101
+C7B79_RS10855                    2.66e-12  83_[+4(8.08e-08)]_113_\
+    [+1(1.69e-06)]_11_[+2(3.51e-08)]_6_[+3(1.41e-06)]_5
+C7B79_RS11070                    5.85e-08  67_[+1(2.43e-05)]_87_[+3(3.29e-05)]_\
+    53_[+2(1.90e-10)]_32
+C7B79_RS15330                    7.90e-13  53_[+4(2.94e-09)]_83_[+3(2.18e-07)]_\
+    10_[+1(2.92e-05)]_1_[+2(9.58e-08)]_71
+C7B79_RS16230                    1.01e-08  26_[+1(1.20e-07)]_174_\
+    [+5(5.04e-09)]_59
+C7B79_RS20425                    6.47e-09  48_[+3(5.74e-05)]_99_[+3(4.31e-07)]_\
+    3_[+1(1.41e-07)]_6_[+4(1.99e-06)]_63
+C7B79_RS23640                    6.27e-10  21_[+3(4.37e-05)]_38_[+4(7.62e-06)]_\
+    60_[+1(4.44e-08)]_19_[+5(4.24e-07)]_80
+C7B79_RS24040                    7.72e-05  [+1(1.49e-06)]_144_[+4(2.19e-06)]_\
+    93
+CLLPBCKN_RS00240                 5.85e-08  67_[+1(2.43e-05)]_87_[+3(3.29e-05)]_\
+    53_[+2(1.90e-10)]_32
+CLLPBCKN_RS07015                 2.66e-12  83_[+4(8.08e-08)]_113_\
+    [+1(1.69e-06)]_11_[+2(3.51e-08)]_6_[+3(1.41e-06)]_5
+CLLPBCKN_RS15495                 6.27e-10  21_[+3(4.37e-05)]_38_[+4(7.62e-06)]_\
+    60_[+1(4.44e-08)]_19_[+5(4.24e-07)]_80
+CLLPBCKN_RS17400                 5.06e-06  92_[+4(1.64e-06)]_31_[+1(9.13e-06)]_\
+    15_[+3(5.86e-06)]_101
+CLLPBCKN_RS18275                 1.01e-08  26_[+1(1.20e-07)]_174_\
+    [+5(5.04e-09)]_59
+CLLPBCKN_RS19570                 1.17e-04  120_[+5(4.24e-07)]_46_\
+    [+1(9.51e-05)]_5_[+3(5.74e-05)]_68
+CLLPBCKN_RS28415                 7.90e-13  53_[+4(2.94e-09)]_83_[+3(2.18e-07)]_\
+    10_[+1(2.92e-05)]_1_[+2(9.58e-08)]_71
+CLLPBCKN_RS37430                 2.56e-06  129_[+1(1.12e-05)]_41_\
+    [+5(2.06e-07)]_24_[+3(6.27e-05)]_45
+CLLPBCKN_RS40065                 7.72e-05  [+1(1.49e-06)]_144_[+4(2.19e-06)]_\
+    93
+CLLPBCKN_RS40555                 6.47e-09  48_[+3(5.74e-05)]_99_[+3(4.31e-07)]_\
+    3_[+1(1.41e-07)]_6_[+4(1.99e-06)]_63
+C7Y66_RS21490                    1.01e-08  26_[+1(1.20e-07)]_174_\
+    [+5(5.04e-09)]_59
+C7Y66_RS22745                    5.85e-08  67_[+1(2.43e-05)]_87_[+3(3.29e-05)]_\
+    53_[+2(1.90e-10)]_32
+C7Y66_RS24170                    2.56e-06  129_[+1(1.12e-05)]_41_\
+    [+5(2.06e-07)]_24_[+3(6.27e-05)]_45
+C7Y66_RS29920                    7.90e-13  53_[+4(2.94e-09)]_83_[+3(2.18e-07)]_\
+    10_[+1(2.92e-05)]_1_[+2(9.58e-08)]_71
+C7Y66_RS06295                    1.27e-04  95_[+5(4.24e-07)]_46_[+1(9.51e-05)]_\
+    5_[+3(5.74e-05)]_93
+C7Y66_RS25970                    6.27e-10  21_[+3(4.37e-05)]_38_[+4(7.62e-06)]_\
+    60_[+1(4.44e-08)]_19_[+5(4.24e-07)]_80
+C7Y66_RS26035                    5.06e-06  92_[+4(1.64e-06)]_31_[+1(9.13e-06)]_\
+    15_[+3(5.86e-06)]_101
+C7Y66_RS26880                    1.35e-07  48_[+3(5.74e-05)]_99_[+3(4.31e-07)]_\
+    3_[+1(4.81e-06)]_6_[+4(1.99e-06)]_63
+C7Y66_RS13555                    1.61e-02  [+1(6.67e-06)]_256
+C7Y66_RS29510                    2.66e-12  83_[+4(8.08e-08)]_113_\
+    [+1(1.69e-06)]_11_[+2(3.51e-08)]_6_[+3(1.41e-06)]_5
+LAU37_RS00945                    4.19e-02  57_[+2(3.17e-05)]_222
+LAU37_RS06145                    4.42e-05  90_[+4(8.28e-06)]_164_\
+    [+3(3.10e-07)]_5
+LAU37_RS08940                    6.94e-01  300
+LAU37_RS12200                    4.54e-03  101_[+3(1.80e-05)]_33_\
+    [+3(9.61e-05)]_126
+LAU37_RS25670                    2.72e-02  223_[+2(5.21e-06)]_25
+LAU37_RS02210                    4.93e-02  79_[+1(1.01e-05)]_201
+LAU37_RS02750                    4.51e-01  300
+LAU37_RS04025                    2.37e-03  25_[+3(1.62e-05)]_36_[+4(2.44e-05)]_\
+    198
+LAU37_RS10190                    2.08e-02  51_[+1(2.66e-05)]_177_\
+    [+2(5.25e-05)]_31
+LAU37_RS16325                    6.14e-01  300
+M5J74_RS05245                    6.27e-10  21_[+3(4.37e-05)]_38_[+4(7.62e-06)]_\
+    60_[+1(4.44e-08)]_19_[+5(4.24e-07)]_80
+M5J74_RS27825                    2.56e-06  129_[+1(1.12e-05)]_41_\
+    [+5(2.06e-07)]_24_[+3(6.27e-05)]_45
+M5J74_RS28510                    7.72e-05  [+1(1.49e-06)]_144_[+4(2.19e-06)]_\
+    93
+M5J74_RS28975                    6.47e-09  48_[+3(5.74e-05)]_99_[+3(4.31e-07)]_\
+    3_[+1(1.41e-07)]_6_[+4(1.99e-06)]_63
+M5J74_RS06970                    5.06e-06  92_[+4(1.64e-06)]_31_[+1(9.13e-06)]_\
+    15_[+3(5.86e-06)]_101
+M5J74_RS07825                    1.01e-08  26_[+1(1.20e-07)]_174_\
+    [+5(5.04e-09)]_59
+M5J74_RS08925                    1.17e-04  120_[+5(4.24e-07)]_46_\
+    [+1(9.51e-05)]_5_[+3(5.74e-05)]_68
+M5J74_RS15655                    2.66e-12  83_[+4(8.08e-08)]_113_\
+    [+1(1.69e-06)]_11_[+2(3.51e-08)]_6_[+3(1.41e-06)]_5
+M5J74_RS20805                    5.85e-08  67_[+1(2.43e-05)]_87_[+3(3.29e-05)]_\
+    53_[+2(1.90e-10)]_32
+M5J74_RS25250                    7.90e-13  53_[+4(2.94e-09)]_83_[+3(2.18e-07)]_\
+    10_[+1(2.92e-05)]_1_[+2(9.58e-08)]_71
+H6G17_RS00250                    1.56e-05  129_[+1(1.12e-05)]_41_\
+    [+5(1.93e-06)]_24_[+3(6.27e-05)]_45
+H6G17_RS12660                    7.50e-06  92_[+4(1.64e-06)]_31_[+1(7.41e-06)]_\
+    15_[+3(1.17e-05)]_101
+H6G17_RS15450                    2.51e-09  89_[+4(8.08e-08)]_113_\
+    [+1(1.69e-06)]_11_[+2(3.51e-08)]_25
+H6G17_RS01870                    1.65e-02  [+1(6.67e-06)]_226
+H6G17_RS02340                    1.59e-06  46_[+3(5.74e-05)]_100_\
+    [+3(5.85e-07)]_3_[+1(1.49e-06)]_7_[+4(3.24e-05)]_63
+H6G17_RS21500                    1.61e-08  26_[+1(1.92e-07)]_174_\
+    [+5(5.04e-09)]_59
+H6G17_RS23875                    1.62e-12  53_[+4(6.51e-09)]_83_[+3(2.18e-07)]_\
+    10_[+1(2.92e-05)]_1_[+2(9.58e-08)]_71
+H6G17_RS24445                    2.90e-06  67_[+1(2.43e-05)]_87_[+3(8.13e-05)]_\
+    53_[+2(1.42e-08)]_32
+H6G17_RS05880                    6.27e-10  21_[+3(4.37e-05)]_38_[+4(7.62e-06)]_\
+    60_[+1(4.44e-08)]_19_[+5(4.24e-07)]_80
+H6G17_RS27350                    3.87e-05  103_[+5(9.09e-08)]_71_\
+    [+3(5.74e-05)]_85
+N4J56_RS06865                    2.97e-04  68_[+5(1.12e-07)]_46_[+1(9.51e-05)]_\
+    145
+N4J56_RS07970                    1.56e-05  129_[+1(1.12e-05)]_41_\
+    [+5(1.93e-06)]_24_[+3(6.27e-05)]_45
+N4J56_RS20525                    1.73e-07  67_[+1(5.38e-05)]_87_[+3(8.13e-05)]_\
+    53_[+2(1.90e-10)]_32
+N4J56_RS03570                    1.01e-08  26_[+1(1.20e-07)]_174_\
+    [+5(5.04e-09)]_59
+N4J56_RS04480                    7.94e-06  92_[+4(6.44e-06)]_31_[+1(7.41e-06)]_\
+    15_[+3(1.17e-05)]_101
+N4J56_RS13095                    5.02e-12  26_[+4(8.08e-08)]_170_\
+    [+1(5.99e-06)]_11_[+2(3.51e-08)]_6_[+3(1.41e-06)]_5
+N4J56_RS27345                    3.70e-11  53_[+4(6.51e-09)]_83_[+3(2.12e-06)]_\
+    31_[+2(9.58e-08)]_71
+N4J56_RS28200                    1.06e-06  48_[+3(5.74e-05)]_99_[+3(5.85e-07)]_\
+    3_[+1(5.26e-07)]_6_[+4(6.69e-05)]_63
+N4J56_RS28735                    2.47e-02  [+1(6.67e-06)]_258
+N4J56_RS30410                    8.49e-10  21_[+3(4.37e-05)]_38_[+4(7.62e-06)]_\
+    60_[+1(6.27e-08)]_19_[+5(4.24e-07)]_80
+B1A85_RS20745                    8.47e-04  18_[+3(1.62e-05)]_132_\
+    [+4(9.75e-06)]_109
+B1A85_RS02630                    5.72e-02  13_[+3(8.85e-05)]_192
+B1A85_RS07360                    1.26e-02  122_[+5(2.59e-05)]_157
+B1A85_RS07435                    5.08e-01  300
+B1A85_RS04855                    1.04e-01  141
+B1A85_RS08685                    2.23e-01  300
+B1A85_RS10345                    9.11e-02  97_[+3(2.21e-05)]_183
+B1A85_RS09555                    2.71e-01  300
+B1A85_RS12550                    2.18e-10  181_[+1(3.10e-08)]_50_\
+    [+2(1.90e-10)]_28
+B1A85_RS12615                    7.28e-01  300
+CHRO_RS04825                     6.27e-10  21_[+3(4.37e-05)]_38_[+4(7.62e-06)]_\
+    60_[+1(4.44e-08)]_19_[+5(4.24e-07)]_80
+CHRO_RS25525                     2.56e-06  129_[+1(1.12e-05)]_41_\
+    [+5(2.06e-07)]_24_[+3(6.27e-05)]_45
+CHRO_RS26170                     7.72e-05  [+1(1.49e-06)]_144_[+4(2.19e-06)]_\
+    93
+CHRO_RS26605                     6.47e-09  48_[+3(5.74e-05)]_99_[+3(4.31e-07)]_\
+    3_[+1(1.41e-07)]_6_[+4(1.99e-06)]_63
+CHRO_RS06615                     4.26e-06  92_[+4(1.64e-06)]_31_[+1(7.41e-06)]_\
+    15_[+3(5.86e-06)]_101
+CHRO_RS07380                     1.01e-08  26_[+1(1.20e-07)]_174_\
+    [+5(5.04e-09)]_59
+CHRO_RS08390                     1.17e-04  120_[+5(4.24e-07)]_46_\
+    [+1(9.51e-05)]_5_[+3(5.74e-05)]_68
+CHRO_RS14670                     2.66e-12  83_[+4(8.08e-08)]_113_\
+    [+1(1.69e-06)]_11_[+2(3.51e-08)]_6_[+3(1.41e-06)]_5
+CHRO_RS19445                     5.85e-08  67_[+1(2.43e-05)]_87_[+3(3.29e-05)]_\
+    53_[+2(1.90e-10)]_32
+CHRO_RS23670                     7.90e-13  53_[+4(2.94e-09)]_83_[+3(2.18e-07)]_\
+    10_[+1(2.92e-05)]_1_[+2(9.58e-08)]_71
+--------------------------------------------------------------------------------
+
+********************************************************************************
+
+
+********************************************************************************
+Stopped because requested number of motifs (5) found.
+********************************************************************************
+
+CPU: pop-os
+
+********************************************************************************

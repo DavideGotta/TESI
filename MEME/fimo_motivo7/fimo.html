@@ -1,0 +1,2205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:cis="http://zlab.bu.edu/schema/cisml" xmlns:fimo="http://noble.gs.washington.edu/schema/cisml" xmlns:mem="http://noble.gs.washington.edu/meme">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>FIMO Results</title>
+<style type="text/css">
+td.left {text-align: left;}
+td.right {text-align: right; padding-right: 1cm;}
+</style>
+</head>
+<body color="#000000">
+<a name="top_buttons"></a>
+<hr>
+<table summary="buttons" align="left" cellspacing="0">
+<tr>
+<td bgcolor="#00FFFF"><a href="#database_and_motifs"><b>Database and Motifs</b></a></td>
+<td bgcolor="#DDFFDD"><a href="#sec_i"><b>High-scoring Motif Occurences</b></a></td>
+<td bgcolor="#DDDDFF"><a href="#debugging_information"><b>Debugging Information</b></a></td>
+<td bgcolor="#FFDD00"><a href="fimo.tsv""><b>Results in TSV Format</b></a></td>
+<td bgcolor="#FFDDFF"><a href="fimo.gff""><b>Results in GFF3 Format</b></a></td>
+<td bgcolor="#00FFFF" id="best_site"><a href="best_site.narrowPeak""><b>Best Site per Sequence</b></a></td>
+<script>
+var new_icon_src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAQCAMAAAAyEe/dAAAACVBMVEX//wAAAAD////s2cV/AAAAdUlEQVQYlXVRBxLAIAhL+P+jC2HZhXcBZEWEldDsZcLIcAhHWWnK8SDcWQhMFUHdAQ1CqQ5+CWPmlHojl+nCJNRtzu4qRc3IUzmTVpXYK0nox0z0PI1stgchdK7lEv7ekhvalw8WW547Gyzedt/2/gLx8WXjXF/1AYFriNAWAAAAAElFTkSuQmCC";
+var new_icon = document.createElement("img");
+new_icon.src = new_icon_src;
+new_icon.alt = "NEW";
+const elem = document.getElementById("best_site");
+elem.appendChild(document.createTextNode("  "));
+elem.appendChild(new_icon);
+</script>
+</tr>
+</table>
+<br/>
+<br/>
+<hr/>
+<center><big><b>FIMO - Motif search tool</b></big></center>
+<hr>
+<p>
+FIMO version 5.5.5, (Release date: Thu Sep 14 08:48:04 2023 +1000)
+</p>
+<p>
+For further information on how to interpret these results please access <a href="https://meme-suite.org/meme/doc/fimo-output-format.html">https://meme-suite.org/meme/doc/fimo-output-format.html</a>.<br>
+To get a copy of the FIMO software please access <a href="https://meme-suite.org">https://meme-suite.org</a>
+
+</p>
+<p>If you use FIMO in your research, please cite the following paper:<br>
+Charles E. Grant, Timothy L. Bailey, and William Stafford Noble,
+"FIMO: Scanning for occurrences of a given motif",
+<i>Bioinformatics</i>, <b>27</b>(7):1017-1018, 2011.
+<a href="http://bioinformatics.oxfordjournals.org/content/27/7/1017">[full text]</a></p>
+<hr>
+<center><big><b><a name="database_and_motifs">DATABASE AND MOTIFS</a></b></big></center>
+<hr>
+<div style="padding-left: 0.75in; line-height: 1em; font-family: monospace;">
+<p>
+  DATABASE /home/davide/PycharmProjects/TESI2/intergeniche_RefSeq/Chroococcidiopsis_sp._CCMEE_29_GCF_023558375_intergen.fasta
+  <br />
+  Database contains 5778 sequences, 1122463 residues
+</p>
+<p>
+  MOTIFS /home/davide/Desktop/genomiChro/MEME/motivi/motivo7.meme (DNA)
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom: 1px dashed;">MOTIF</th>
+        <th style="border-bottom: 1px dashed; padding-left: 1em;">WIDTH</th>
+        <th style="border-bottom: 1px dashed; padding-left: 1em;text-align:left;" >
+         BEST POSSIBLE MATCH
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align:right;">AAGTARNTTWARCTW</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">AAGTAAATTTAACTA</td>
+       </tr>
+    </tbody>
+  </table>
+</p>
+<p>
+Random model letter frequencies (--nrdb--):
+<br/>
+
+A 0.282 C 0.222 G 0.229 T 0.267 </p>
+</div>
+<hr>
+<center><big><b><a name="sec_i">SECTION I: HIGH-SCORING MOTIF OCCURENCES</a></b></big></center>
+<hr>
+<ul>
+<li>
+There were 183 motif occurences with a p-value less than 0.0001.
+
+The full set of motif occurences can be seen in the
+TSV (tab-delimited values) output file
+<a href="fimo.tsv">fimo.tsv</a>, 
+the GFF3 file 
+<a href="fimo.gff">fimo.gff</a> 
+which may be suitable for uploading to the 
+<a href="http://genome.ucsc.edu/cgi-bin/hgTables">UCSC Genome Table Browser</a>
+(assuming the FASTA input sequences included genomic coordinates in UCSC or Galaxy format),
+or the XML file 
+<a href="fimo.xml">fimo.xml</a>.
+</li>
+<li>
+The <i>p</i>-value of a motif occurrence is defined as the
+probability of a random sequence of the same length as the motif
+matching that position of the sequence with as good or better a score.
+</li>
+<li>
+The score for the match of a position in a sequence to a motif
+is computed by summing the appropriate entries from each column of
+the position-dependent scoring matrix that represents the motif.
+</li>
+<li>
+The q-value of a motif occurrence is defined as the
+false discovery rate if the occurrence is accepted as significant.
+</li>
+<li>The table is sorted by increasing <i>p</i>-value.</li>
+</ul>
+<table border="1">
+<thead>
+<tr>
+<th>Motif ID</th>
+<th>Alt ID</th>
+<th>Sequence Name</th>
+<th>Strand</th>
+<th>Start</th>
+<th>End</th>
+<th>p-value</th>
+<th>q-value</th>
+<th>Matched Sequence</th>
+</tr>
+</thead>
+<tbody>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS04175</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">156</td>
+      <td style="text-align:left;">170</td>
+      <td style="text-align:left;">7.32e-08</td>
+      <td style="text-align:left;">0.0736</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTAGCTTAAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS26365</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">131</td>
+      <td style="text-align:left;">145</td>
+      <td style="text-align:left;">4.4e-07</td>
+      <td style="text-align:left;">0.221</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTAGCTTAAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS23645</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">213</td>
+      <td style="text-align:left;">227</td>
+      <td style="text-align:left;">7.06e-07</td>
+      <td style="text-align:left;">0.237</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTAACACTAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS05455</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">141</td>
+      <td style="text-align:left;">155</td>
+      <td style="text-align:left;">1.68e-06</td>
+      <td style="text-align:left;">0.374</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTGTTTTAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS26345</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">106</td>
+      <td style="text-align:left;">120</td>
+      <td style="text-align:left;">2.38e-06</td>
+      <td style="text-align:left;">0.374</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTTCTTTGACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS16245</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">253</td>
+      <td style="text-align:left;">267</td>
+      <td style="text-align:left;">2.42e-06</td>
+      <td style="text-align:left;">0.374</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTAATTGAGACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS24100</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">261</td>
+      <td style="text-align:left;">275</td>
+      <td style="text-align:left;">2.6e-06</td>
+      <td style="text-align:left;">0.374</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTATTTTAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS18435</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">231</td>
+      <td style="text-align:left;">245</td>
+      <td style="text-align:left;">2.99e-06</td>
+      <td style="text-align:left;">0.376</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTTTTCTAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS02010</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">92</td>
+      <td style="text-align:left;">106</td>
+      <td style="text-align:left;">3.47e-06</td>
+      <td style="text-align:left;">0.376</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTACTCTAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS16505</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">43</td>
+      <td style="text-align:left;">57</td>
+      <td style="text-align:left;">3.8e-06</td>
+      <td style="text-align:left;">0.376</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTGATTCAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS00690</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">231</td>
+      <td style="text-align:left;">245</td>
+      <td style="text-align:left;">4.23e-06</td>
+      <td style="text-align:left;">0.376</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTAGGGTAAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS00450</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">180</td>
+      <td style="text-align:left;">194</td>
+      <td style="text-align:left;">4.62e-06</td>
+      <td style="text-align:left;">0.376</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTAACCTGAGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS10075</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">258</td>
+      <td style="text-align:left;">272</td>
+      <td style="text-align:left;">4.94e-06</td>
+      <td style="text-align:left;">0.376</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTAGTTGTAGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS21890</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">135</td>
+      <td style="text-align:left;">149</td>
+      <td style="text-align:left;">5.23e-06</td>
+      <td style="text-align:left;">0.376</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTTTATTAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS09960</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">16</td>
+      <td style="text-align:left;">30</td>
+      <td style="text-align:left;">5.83e-06</td>
+      <td style="text-align:left;">0.377</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTAATTTTCACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS10090</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">68</td>
+      <td style="text-align:left;">82</td>
+      <td style="text-align:left;">6.14e-06</td>
+      <td style="text-align:left;">0.377</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTACTAAAGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS19860</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">23</td>
+      <td style="text-align:left;">37</td>
+      <td style="text-align:left;">6.69e-06</td>
+      <td style="text-align:left;">0.377</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTTATGAAGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS28395</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">175</td>
+      <td style="text-align:left;">189</td>
+      <td style="text-align:left;">6.76e-06</td>
+      <td style="text-align:left;">0.377</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTTATTAGACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS16300</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">252</td>
+      <td style="text-align:left;">266</td>
+      <td style="text-align:left;">7.86e-06</td>
+      <td style="text-align:left;">0.402</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTAGTTTAGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS14260</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">131</td>
+      <td style="text-align:left;">145</td>
+      <td style="text-align:left;">7.99e-06</td>
+      <td style="text-align:left;">0.402</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTAATAGTAGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS20920</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">82</td>
+      <td style="text-align:left;">96</td>
+      <td style="text-align:left;">8.96e-06</td>
+      <td style="text-align:left;">0.409</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTAAGTAAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS18935</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">124</td>
+      <td style="text-align:left;">138</td>
+      <td style="text-align:left;">1.01e-05</td>
+      <td style="text-align:left;">0.409</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTATCTAAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS21480</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">87</td>
+      <td style="text-align:left;">101</td>
+      <td style="text-align:left;">1.02e-05</td>
+      <td style="text-align:left;">0.409</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTATAACTGGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS13555</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">67</td>
+      <td style="text-align:left;">81</td>
+      <td style="text-align:left;">1.03e-05</td>
+      <td style="text-align:left;">0.409</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTAAGGGAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS08375</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">229</td>
+      <td style="text-align:left;">243</td>
+      <td style="text-align:left;">1.11e-05</td>
+      <td style="text-align:left;">0.409</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTAACAATAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS25220</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">247</td>
+      <td style="text-align:left;">261</td>
+      <td style="text-align:left;">1.11e-05</td>
+      <td style="text-align:left;">0.409</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTATCCCAAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS26530</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">150</td>
+      <td style="text-align:left;">164</td>
+      <td style="text-align:left;">1.14e-05</td>
+      <td style="text-align:left;">0.409</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTACGAAAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS11475</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">62</td>
+      <td style="text-align:left;">76</td>
+      <td style="text-align:left;">1.23e-05</td>
+      <td style="text-align:left;">0.409</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTGGCTTGAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS30080</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">120</td>
+      <td style="text-align:left;">134</td>
+      <td style="text-align:left;">1.27e-05</td>
+      <td style="text-align:left;">0.409</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTTTCTTAGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS23080</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">4</td>
+      <td style="text-align:left;">18</td>
+      <td style="text-align:left;">1.35e-05</td>
+      <td style="text-align:left;">0.409</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTAGTCTCAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS10095</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">50</td>
+      <td style="text-align:left;">64</td>
+      <td style="text-align:left;">1.49e-05</td>
+      <td style="text-align:left;">0.409</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTAGCTTTCACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS23180</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">224</td>
+      <td style="text-align:left;">238</td>
+      <td style="text-align:left;">1.49e-05</td>
+      <td style="text-align:left;">0.409</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAGTAAAATAAGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS10125</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">245</td>
+      <td style="text-align:left;">259</td>
+      <td style="text-align:left;">1.54e-05</td>
+      <td style="text-align:left;">0.409</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTAGCGTATGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS01940</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">166</td>
+      <td style="text-align:left;">180</td>
+      <td style="text-align:left;">1.59e-05</td>
+      <td style="text-align:left;">0.409</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAGTAAATTTGGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS29570</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">150</td>
+      <td style="text-align:left;">164</td>
+      <td style="text-align:left;">1.64e-05</td>
+      <td style="text-align:left;">0.409</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGTAGCTTGGGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS04630</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">187</td>
+      <td style="text-align:left;">201</td>
+      <td style="text-align:left;">1.65e-05</td>
+      <td style="text-align:left;">0.409</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAGTATAGTTAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS29210</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">83</td>
+      <td style="text-align:left;">97</td>
+      <td style="text-align:left;">1.66e-05</td>
+      <td style="text-align:left;">0.409</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTTTGTAAGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS09880</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">195</td>
+      <td style="text-align:left;">209</td>
+      <td style="text-align:left;">1.71e-05</td>
+      <td style="text-align:left;">0.409</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGTAAAATGAGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS19040</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">31</td>
+      <td style="text-align:left;">45</td>
+      <td style="text-align:left;">1.72e-05</td>
+      <td style="text-align:left;">0.409</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGTAAAGCAAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS05730</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">71</td>
+      <td style="text-align:left;">85</td>
+      <td style="text-align:left;">1.73e-05</td>
+      <td style="text-align:left;">0.409</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTAAATGTTACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS04650</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">47</td>
+      <td style="text-align:left;">61</td>
+      <td style="text-align:left;">1.75e-05</td>
+      <td style="text-align:left;">0.409</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTTCATAGGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS26270</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">12</td>
+      <td style="text-align:left;">26</td>
+      <td style="text-align:left;">1.76e-05</td>
+      <td style="text-align:left;">0.409</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTAGTGGAGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS11090</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">19</td>
+      <td style="text-align:left;">33</td>
+      <td style="text-align:left;">1.82e-05</td>
+      <td style="text-align:left;">0.409</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGTAAATATAGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS06670</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">41</td>
+      <td style="text-align:left;">55</td>
+      <td style="text-align:left;">1.88e-05</td>
+      <td style="text-align:left;">0.409</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTATCCAAGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS23570</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">149</td>
+      <td style="text-align:left;">163</td>
+      <td style="text-align:left;">1.91e-05</td>
+      <td style="text-align:left;">0.409</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTCAATAAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS28865</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">203</td>
+      <td style="text-align:left;">217</td>
+      <td style="text-align:left;">1.96e-05</td>
+      <td style="text-align:left;">0.409</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTAGGTAAGACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS22070</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">227</td>
+      <td style="text-align:left;">241</td>
+      <td style="text-align:left;">1.96e-05</td>
+      <td style="text-align:left;">0.409</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTTGTCAAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS04560</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">26</td>
+      <td style="text-align:left;">40</td>
+      <td style="text-align:left;">1.99e-05</td>
+      <td style="text-align:left;">0.409</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGTTGCGTAAGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS01450</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">91</td>
+      <td style="text-align:left;">105</td>
+      <td style="text-align:left;">2.04e-05</td>
+      <td style="text-align:left;">0.409</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTAGAGAAAGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS07710</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">104</td>
+      <td style="text-align:left;">118</td>
+      <td style="text-align:left;">2.04e-05</td>
+      <td style="text-align:left;">0.409</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTATGTCAAGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS05975</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">253</td>
+      <td style="text-align:left;">267</td>
+      <td style="text-align:left;">2.13e-05</td>
+      <td style="text-align:left;">0.411</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTAGTAGAGACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS21520</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">201</td>
+      <td style="text-align:left;">215</td>
+      <td style="text-align:left;">2.16e-05</td>
+      <td style="text-align:left;">0.411</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTGGTGGAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS01780</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">219</td>
+      <td style="text-align:left;">233</td>
+      <td style="text-align:left;">2.17e-05</td>
+      <td style="text-align:left;">0.411</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTAATTTCGGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS12000</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">244</td>
+      <td style="text-align:left;">258</td>
+      <td style="text-align:left;">2.32e-05</td>
+      <td style="text-align:left;">0.416</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTATGTCAAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS29520</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">162</td>
+      <td style="text-align:left;">176</td>
+      <td style="text-align:left;">2.39e-05</td>
+      <td style="text-align:left;">0.416</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTTTATCAGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS16370</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">223</td>
+      <td style="text-align:left;">237</td>
+      <td style="text-align:left;">2.4e-05</td>
+      <td style="text-align:left;">0.416</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTTCTATGACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS04320</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">247</td>
+      <td style="text-align:left;">261</td>
+      <td style="text-align:left;">2.42e-05</td>
+      <td style="text-align:left;">0.416</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTAGGTTTTGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS04770</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">199</td>
+      <td style="text-align:left;">213</td>
+      <td style="text-align:left;">2.51e-05</td>
+      <td style="text-align:left;">0.416</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGTATCAGAAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS18930</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">286</td>
+      <td style="text-align:left;">300</td>
+      <td style="text-align:left;">2.51e-05</td>
+      <td style="text-align:left;">0.416</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTTAGATAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS07895</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">168</td>
+      <td style="text-align:left;">182</td>
+      <td style="text-align:left;">2.53e-05</td>
+      <td style="text-align:left;">0.416</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTAGCGTTCGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS09900</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">13</td>
+      <td style="text-align:left;">27</td>
+      <td style="text-align:left;">2.64e-05</td>
+      <td style="text-align:left;">0.416</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGTTGAATGAGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS29340</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">272</td>
+      <td style="text-align:left;">286</td>
+      <td style="text-align:left;">2.64e-05</td>
+      <td style="text-align:left;">0.416</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGTAACATCAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS09405</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">222</td>
+      <td style="text-align:left;">236</td>
+      <td style="text-align:left;">2.66e-05</td>
+      <td style="text-align:left;">0.416</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAGTAAATTCAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS19575</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">53</td>
+      <td style="text-align:left;">67</td>
+      <td style="text-align:left;">2.71e-05</td>
+      <td style="text-align:left;">0.416</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAGTATTGTAAGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS26600</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">229</td>
+      <td style="text-align:left;">243</td>
+      <td style="text-align:left;">2.71e-05</td>
+      <td style="text-align:left;">0.416</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAGTATTGTAAGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS22185</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">86</td>
+      <td style="text-align:left;">100</td>
+      <td style="text-align:left;">2.76e-05</td>
+      <td style="text-align:left;">0.416</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTATTTGACACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS11420</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">16</td>
+      <td style="text-align:left;">30</td>
+      <td style="text-align:left;">2.8e-05</td>
+      <td style="text-align:left;">0.416</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTATATTTGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS02115</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">169</td>
+      <td style="text-align:left;">183</td>
+      <td style="text-align:left;">2.86e-05</td>
+      <td style="text-align:left;">0.416</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTATTTGTTGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS31240</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">33</td>
+      <td style="text-align:left;">47</td>
+      <td style="text-align:left;">2.89e-05</td>
+      <td style="text-align:left;">0.416</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTGTTCTTGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS23645</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">227</td>
+      <td style="text-align:left;">241</td>
+      <td style="text-align:left;">2.9e-05</td>
+      <td style="text-align:left;">0.416</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTGATTAAAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS24915</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">219</td>
+      <td style="text-align:left;">233</td>
+      <td style="text-align:left;">3.03e-05</td>
+      <td style="text-align:left;">0.425</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTGGTAAAGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS16610</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">195</td>
+      <td style="text-align:left;">209</td>
+      <td style="text-align:left;">3.05e-05</td>
+      <td style="text-align:left;">0.425</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTTATAGAGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS19440</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">46</td>
+      <td style="text-align:left;">60</td>
+      <td style="text-align:left;">3.14e-05</td>
+      <td style="text-align:left;">0.426</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGTGTCTTTAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS22745</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">36</td>
+      <td style="text-align:left;">50</td>
+      <td style="text-align:left;">3.19e-05</td>
+      <td style="text-align:left;">0.426</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGTAGGTGGAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS19985</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">24</td>
+      <td style="text-align:left;">38</td>
+      <td style="text-align:left;">3.23e-05</td>
+      <td style="text-align:left;">0.426</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTTTTATAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS04815</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">20</td>
+      <td style="text-align:left;">34</td>
+      <td style="text-align:left;">3.27e-05</td>
+      <td style="text-align:left;">0.426</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTGTTTCGGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS11440</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">133</td>
+      <td style="text-align:left;">147</td>
+      <td style="text-align:left;">3.35e-05</td>
+      <td style="text-align:left;">0.426</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTTAGCAAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS25670</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">238</td>
+      <td style="text-align:left;">252</td>
+      <td style="text-align:left;">3.35e-05</td>
+      <td style="text-align:left;">0.426</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTATGAATAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS23750</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">125</td>
+      <td style="text-align:left;">139</td>
+      <td style="text-align:left;">3.41e-05</td>
+      <td style="text-align:left;">0.426</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTATAGGGACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS20595</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">185</td>
+      <td style="text-align:left;">199</td>
+      <td style="text-align:left;">3.42e-05</td>
+      <td style="text-align:left;">0.426</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTATATAAGGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS16515</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">14</td>
+      <td style="text-align:left;">28</td>
+      <td style="text-align:left;">3.45e-05</td>
+      <td style="text-align:left;">0.426</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTGAATCAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS19185</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">73</td>
+      <td style="text-align:left;">87</td>
+      <td style="text-align:left;">3.52e-05</td>
+      <td style="text-align:left;">0.426</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTATTTGCAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS30875</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">254</td>
+      <td style="text-align:left;">268</td>
+      <td style="text-align:left;">3.56e-05</td>
+      <td style="text-align:left;">0.426</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGTAAAAATAGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS03180</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">140</td>
+      <td style="text-align:left;">154</td>
+      <td style="text-align:left;">3.59e-05</td>
+      <td style="text-align:left;">0.426</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAGTAGAGGTAGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS27290</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">30</td>
+      <td style="text-align:left;">44</td>
+      <td style="text-align:left;">3.6e-05</td>
+      <td style="text-align:left;">0.426</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTCTTGAAGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS09880</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">225</td>
+      <td style="text-align:left;">239</td>
+      <td style="text-align:left;">3.64e-05</td>
+      <td style="text-align:left;">0.426</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGTTAACTTAGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS09690</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">260</td>
+      <td style="text-align:left;">274</td>
+      <td style="text-align:left;">3.94e-05</td>
+      <td style="text-align:left;">0.455</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTGAAGCAGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS28120</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">127</td>
+      <td style="text-align:left;">141</td>
+      <td style="text-align:left;">4.13e-05</td>
+      <td style="text-align:left;">0.468</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAGTATTGCAAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS30465</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">187</td>
+      <td style="text-align:left;">201</td>
+      <td style="text-align:left;">4.14e-05</td>
+      <td style="text-align:left;">0.468</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTTTCTCAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS30470</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">22</td>
+      <td style="text-align:left;">36</td>
+      <td style="text-align:left;">4.19e-05</td>
+      <td style="text-align:left;">0.468</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTGAGAAAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS25215</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">223</td>
+      <td style="text-align:left;">237</td>
+      <td style="text-align:left;">4.37e-05</td>
+      <td style="text-align:left;">0.478</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTAGTTAGCACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS09175</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">178</td>
+      <td style="text-align:left;">192</td>
+      <td style="text-align:left;">4.41e-05</td>
+      <td style="text-align:left;">0.478</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAGTAACAAAAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS18790</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">7</td>
+      <td style="text-align:left;">21</td>
+      <td style="text-align:left;">4.45e-05</td>
+      <td style="text-align:left;">0.478</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTAGTTCAGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS06540</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">258</td>
+      <td style="text-align:left;">272</td>
+      <td style="text-align:left;">4.47e-05</td>
+      <td style="text-align:left;">0.478</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGTTAAACTGGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS03990</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">163</td>
+      <td style="text-align:left;">177</td>
+      <td style="text-align:left;">4.64e-05</td>
+      <td style="text-align:left;">0.482</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTTCCTTGGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS01680</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">115</td>
+      <td style="text-align:left;">129</td>
+      <td style="text-align:left;">4.79e-05</td>
+      <td style="text-align:left;">0.482</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAGTAAAGATAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS05350</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">137</td>
+      <td style="text-align:left;">151</td>
+      <td style="text-align:left;">4.79e-05</td>
+      <td style="text-align:left;">0.482</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGTTGAATCAGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS20915</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">140</td>
+      <td style="text-align:left;">154</td>
+      <td style="text-align:left;">4.79e-05</td>
+      <td style="text-align:left;">0.482</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAGTAAAGATAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS18175</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">18</td>
+      <td style="text-align:left;">32</td>
+      <td style="text-align:left;">4.8e-05</td>
+      <td style="text-align:left;">0.482</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGTAAACGGAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS09510</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">156</td>
+      <td style="text-align:left;">170</td>
+      <td style="text-align:left;">4.82e-05</td>
+      <td style="text-align:left;">0.482</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGGTAAATTTAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS13735</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">167</td>
+      <td style="text-align:left;">181</td>
+      <td style="text-align:left;">4.84e-05</td>
+      <td style="text-align:left;">0.482</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTAGACAAAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS00090</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">140</td>
+      <td style="text-align:left;">154</td>
+      <td style="text-align:left;">4.91e-05</td>
+      <td style="text-align:left;">0.483</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTATTCATAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS18645</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">270</td>
+      <td style="text-align:left;">284</td>
+      <td style="text-align:left;">4.95e-05</td>
+      <td style="text-align:left;">0.483</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTGGATCGGACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS06615</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">184</td>
+      <td style="text-align:left;">198</td>
+      <td style="text-align:left;">5.02e-05</td>
+      <td style="text-align:left;">0.486</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTAAAGTGTGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS25750</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">96</td>
+      <td style="text-align:left;">110</td>
+      <td style="text-align:left;">5.29e-05</td>
+      <td style="text-align:left;">0.486</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAGTATTATTGGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS18850</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">254</td>
+      <td style="text-align:left;">268</td>
+      <td style="text-align:left;">5.29e-05</td>
+      <td style="text-align:left;">0.486</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTGTTGCAAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS15115</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">67</td>
+      <td style="text-align:left;">81</td>
+      <td style="text-align:left;">5.31e-05</td>
+      <td style="text-align:left;">0.486</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAGTTAATAAAGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS26855</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">18</td>
+      <td style="text-align:left;">32</td>
+      <td style="text-align:left;">5.33e-05</td>
+      <td style="text-align:left;">0.486</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTTCAGCAGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS08380</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">227</td>
+      <td style="text-align:left;">241</td>
+      <td style="text-align:left;">5.33e-05</td>
+      <td style="text-align:left;">0.486</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTATTGTTACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS13545</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">46</td>
+      <td style="text-align:left;">60</td>
+      <td style="text-align:left;">5.37e-05</td>
+      <td style="text-align:left;">0.486</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTATCTTTGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS04130</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">119</td>
+      <td style="text-align:left;">133</td>
+      <td style="text-align:left;">5.37e-05</td>
+      <td style="text-align:left;">0.486</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTAGTGTTACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS02125</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">3</td>
+      <td style="text-align:left;">17</td>
+      <td style="text-align:left;">5.43e-05</td>
+      <td style="text-align:left;">0.487</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGTTAGATTGGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS15060</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">243</td>
+      <td style="text-align:left;">257</td>
+      <td style="text-align:left;">5.6e-05</td>
+      <td style="text-align:left;">0.498</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTATTTAGGACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS18865</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;">15</td>
+      <td style="text-align:left;">5.7e-05</td>
+      <td style="text-align:left;">0.503</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTATCAATGGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS19865</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">48</td>
+      <td style="text-align:left;">62</td>
+      <td style="text-align:left;">5.78e-05</td>
+      <td style="text-align:left;">0.505</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ACGTAATTTTAGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS08895</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">15</td>
+      <td style="text-align:left;">29</td>
+      <td style="text-align:left;">5.82e-05</td>
+      <td style="text-align:left;">0.505</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTGCTTTTAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS21280</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">58</td>
+      <td style="text-align:left;">72</td>
+      <td style="text-align:left;">5.97e-05</td>
+      <td style="text-align:left;">0.513</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTATATTTACCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS11815</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">121</td>
+      <td style="text-align:left;">135</td>
+      <td style="text-align:left;">6.05e-05</td>
+      <td style="text-align:left;">0.513</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAGTATTGTAGGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS22810</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">178</td>
+      <td style="text-align:left;">192</td>
+      <td style="text-align:left;">6.11e-05</td>
+      <td style="text-align:left;">0.513</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTGTGCTTGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS24025</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">75</td>
+      <td style="text-align:left;">89</td>
+      <td style="text-align:left;">6.17e-05</td>
+      <td style="text-align:left;">0.513</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGTATAGATGACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS09880</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">263</td>
+      <td style="text-align:left;">277</td>
+      <td style="text-align:left;">6.24e-05</td>
+      <td style="text-align:left;">0.513</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTAGAAAATGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS27635</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">39</td>
+      <td style="text-align:left;">53</td>
+      <td style="text-align:left;">6.25e-05</td>
+      <td style="text-align:left;">0.513</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTACTAGAGGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS10655</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">223</td>
+      <td style="text-align:left;">237</td>
+      <td style="text-align:left;">6.27e-05</td>
+      <td style="text-align:left;">0.513</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTACAGGAAGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS22045</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">62</td>
+      <td style="text-align:left;">76</td>
+      <td style="text-align:left;">6.53e-05</td>
+      <td style="text-align:left;">0.518</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATTAAATTTAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS01610</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">113</td>
+      <td style="text-align:left;">127</td>
+      <td style="text-align:left;">6.57e-05</td>
+      <td style="text-align:left;">0.518</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTATCAACAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS19185</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">120</td>
+      <td style="text-align:left;">134</td>
+      <td style="text-align:left;">6.59e-05</td>
+      <td style="text-align:left;">0.518</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGTTTCAATAGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS01605</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">213</td>
+      <td style="text-align:left;">227</td>
+      <td style="text-align:left;">6.64e-05</td>
+      <td style="text-align:left;">0.518</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTGTTGATACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS02920</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">243</td>
+      <td style="text-align:left;">257</td>
+      <td style="text-align:left;">6.64e-05</td>
+      <td style="text-align:left;">0.518</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTAAATTAAGCAA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS20425</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">177</td>
+      <td style="text-align:left;">191</td>
+      <td style="text-align:left;">6.69e-05</td>
+      <td style="text-align:left;">0.518</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTACCCTTACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS13675</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">157</td>
+      <td style="text-align:left;">171</td>
+      <td style="text-align:left;">6.71e-05</td>
+      <td style="text-align:left;">0.518</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTAGGCAGGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS19180</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">257</td>
+      <td style="text-align:left;">271</td>
+      <td style="text-align:left;">6.75e-05</td>
+      <td style="text-align:left;">0.518</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGGAGCTTTAGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS30040</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">46</td>
+      <td style="text-align:left;">60</td>
+      <td style="text-align:left;">6.93e-05</td>
+      <td style="text-align:left;">0.524</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTTCGACAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS04280</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">150</td>
+      <td style="text-align:left;">164</td>
+      <td style="text-align:left;">6.93e-05</td>
+      <td style="text-align:left;">0.524</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTAGTCCTTGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS03415</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">5</td>
+      <td style="text-align:left;">19</td>
+      <td style="text-align:left;">7.15e-05</td>
+      <td style="text-align:left;">0.534</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAGTTACATCAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS00455</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">183</td>
+      <td style="text-align:left;">197</td>
+      <td style="text-align:left;">7.17e-05</td>
+      <td style="text-align:left;">0.534</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGGTTACTTTAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS09545</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">170</td>
+      <td style="text-align:left;">184</td>
+      <td style="text-align:left;">7.36e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGTAGGGGGAGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS25200</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">261</td>
+      <td style="text-align:left;">275</td>
+      <td style="text-align:left;">7.46e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGTTGCGCCAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS02690</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">198</td>
+      <td style="text-align:left;">212</td>
+      <td style="text-align:left;">7.63e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTGAGTTTTACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS21025</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">53</td>
+      <td style="text-align:left;">67</td>
+      <td style="text-align:left;">7.65e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTGCTTTAACAA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS09845</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">24</td>
+      <td style="text-align:left;">38</td>
+      <td style="text-align:left;">7.7e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAGTTGAGTCAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS24005</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">155</td>
+      <td style="text-align:left;">169</td>
+      <td style="text-align:left;">7.7e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTAAAGTTACCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS03680</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">31</td>
+      <td style="text-align:left;">45</td>
+      <td style="text-align:left;">7.87e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGGTAAAATTAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS14310</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">26</td>
+      <td style="text-align:left;">40</td>
+      <td style="text-align:left;">7.96e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTAAATAATGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS18430</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">101</td>
+      <td style="text-align:left;">115</td>
+      <td style="text-align:left;">7.99e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTAGAAAAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS11620</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">68</td>
+      <td style="text-align:left;">82</td>
+      <td style="text-align:left;">8.01e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTAATAGGCACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS19190</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">269</td>
+      <td style="text-align:left;">283</td>
+      <td style="text-align:left;">8.1e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTGCAAATACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS13805</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">110</td>
+      <td style="text-align:left;">124</td>
+      <td style="text-align:left;">8.13e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGAAAATTAAGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS11400</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">251</td>
+      <td style="text-align:left;">265</td>
+      <td style="text-align:left;">8.13e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTCAGTTTAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS23270</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">192</td>
+      <td style="text-align:left;">206</td>
+      <td style="text-align:left;">8.21e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTAATTCTACCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS06315</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">133</td>
+      <td style="text-align:left;">147</td>
+      <td style="text-align:left;">8.29e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTAGTAGCTACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS15380</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">5</td>
+      <td style="text-align:left;">19</td>
+      <td style="text-align:left;">8.42e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAGTGGAGTTAGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS20560</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">77</td>
+      <td style="text-align:left;">91</td>
+      <td style="text-align:left;">8.49e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTAGTGTTACCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS30360</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">97</td>
+      <td style="text-align:left;">111</td>
+      <td style="text-align:left;">8.59e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTTCTCTTGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS09960</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">154</td>
+      <td style="text-align:left;">168</td>
+      <td style="text-align:left;">8.59e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTAACAGGTGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS31170</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">242</td>
+      <td style="text-align:left;">256</td>
+      <td style="text-align:left;">8.65e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGTATTTGCGACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS11440</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">174</td>
+      <td style="text-align:left;">188</td>
+      <td style="text-align:left;">8.71e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAATTGATTTAACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS26105</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">74</td>
+      <td style="text-align:left;">88</td>
+      <td style="text-align:left;">8.73e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTAGCAAAGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS14705</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">269</td>
+      <td style="text-align:left;">283</td>
+      <td style="text-align:left;">8.73e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGTTATATTTACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS23180</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">73</td>
+      <td style="text-align:left;">87</td>
+      <td style="text-align:left;">8.91e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTAGTTTTAGCTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS21830</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">1</td>
+      <td style="text-align:left;">15</td>
+      <td style="text-align:left;">8.99e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTAGATTTGAGTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS17115</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">88</td>
+      <td style="text-align:left;">102</td>
+      <td style="text-align:left;">8.99e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTAACAATTACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS21115</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">80</td>
+      <td style="text-align:left;">94</td>
+      <td style="text-align:left;">9.11e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTGTTGATGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS13640</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">165</td>
+      <td style="text-align:left;">179</td>
+      <td style="text-align:left;">9.17e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGTAGTTAATACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS17415</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">252</td>
+      <td style="text-align:left;">266</td>
+      <td style="text-align:left;">9.24e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTGATAGCGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS04060</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">107</td>
+      <td style="text-align:left;">121</td>
+      <td style="text-align:left;">9.27e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTAATTTGAGCGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS10580</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">132</td>
+      <td style="text-align:left;">146</td>
+      <td style="text-align:left;">9.27e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAGTACTTGAAGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS02310</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">4</td>
+      <td style="text-align:left;">18</td>
+      <td style="text-align:left;">9.3e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTCCACCAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS27060</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">60</td>
+      <td style="text-align:left;">74</td>
+      <td style="text-align:left;">9.3e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTCCACCAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS23760</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">60</td>
+      <td style="text-align:left;">74</td>
+      <td style="text-align:left;">9.3e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTCCACCAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS28235</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">78</td>
+      <td style="text-align:left;">92</td>
+      <td style="text-align:left;">9.3e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTCCACCAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS19865</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">109</td>
+      <td style="text-align:left;">123</td>
+      <td style="text-align:left;">9.3e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AACTAAATCTAGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS08805</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">276</td>
+      <td style="text-align:left;">290</td>
+      <td style="text-align:left;">9.3e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTCCACCAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS21515</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">276</td>
+      <td style="text-align:left;">290</td>
+      <td style="text-align:left;">9.3e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTTCCACCAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS11545</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">283</td>
+      <td style="text-align:left;">297</td>
+      <td style="text-align:left;">9.35e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAATAAATTGAGCTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS06490</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">102</td>
+      <td style="text-align:left;">116</td>
+      <td style="text-align:left;">9.38e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTAATGTCTACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS14095</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">210</td>
+      <td style="text-align:left;">224</td>
+      <td style="text-align:left;">9.41e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGAATTTTTAACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS11240</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">144</td>
+      <td style="text-align:left;">158</td>
+      <td style="text-align:left;">9.44e-05</td>
+      <td style="text-align:left;">0.536</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTAGCGATCGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS25890</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">138</td>
+      <td style="text-align:left;">152</td>
+      <td style="text-align:left;">9.76e-05</td>
+      <td style="text-align:left;">0.546</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTAAAGTAAATTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS15925</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">255</td>
+      <td style="text-align:left;">269</td>
+      <td style="text-align:left;">9.76e-05</td>
+      <td style="text-align:left;">0.546</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GAGTTGAATTTGCTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS06685</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">80</td>
+      <td style="text-align:left;">94</td>
+      <td style="text-align:left;">9.82e-05</td>
+      <td style="text-align:left;">0.546</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTAGATGCCACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS11320</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">7</td>
+      <td style="text-align:left;">21</td>
+      <td style="text-align:left;">9.85e-05</td>
+      <td style="text-align:left;">0.546</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAGTTGTAGACACTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS26010</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">177</td>
+      <td style="text-align:left;">191</td>
+      <td style="text-align:left;">9.89e-05</td>
+      <td style="text-align:left;">0.546</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAGTAGCGTTGACTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">AAGTARNTTWARCTW</td>
+      <td style="text-align:left;">motivo7</td>
+      <td style="text-align:left;">LAU37_RS21510</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">85</td>
+      <td style="text-align:left;">99</td>
+      <td style="text-align:left;">9.95e-05</td>
+      <td style="text-align:left;">0.547</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATTATCTTTAGCTT</td>
+   </tr>
+</tbody>
+</table>
+
+<hr>
+<center><big><b><a name="debugging_information">DEBUGGING INFORMATION</a></b></big></center>
+<hr>
+<p>
+Command line:
+</p>
+<pre>
+fimo --oc /home/davide/Desktop/genomiChro/MEME/fimo_motivo7 --norc /home/davide/Desktop/genomiChro/MEME/motivi/motivo7.meme /home/davide/PycharmProjects/TESI2/intergeniche_RefSeq/Chroococcidiopsis_sp._CCMEE_29_GCF_023558375_intergen.fasta
+</pre>
+<p>
+Settings:
+</p>
+<pre>
+<table>
+  <tr>
+    <td style="padding-right: 2em">output_directory = /home/davide/Desktop/genomiChro/MEME/fimo_motivo7</td>
+    <td style="padding-left: 5em; padding-right: 2em">MEME file name = /home/davide/Desktop/genomiChro/MEME/motivi/motivo7.meme</td>
+    <td style="padding-left: 5em; padding-right: 2em">sequence file name = /home/davide/PycharmProjects/TESI2/intergeniche_RefSeq/Chroococcidiopsis_sp._CCMEE_29_GCF_023558375_intergen.fasta</td>
+  </tr>  <tr>
+    <td style="padding-right: 2em">background file name = --nrdb--</td>
+    <td style="padding-left: 5em; padding-right: 2em">alphabet = DNA</td>
+    <td style="padding-left: 5em; padding-right: 2em">max stored scores = 100000</td>
+  </tr>  <tr>
+    <td style="padding-right: 2em">allow clobber = true</td>
+    <td style="padding-left: 5em; padding-right: 2em">compute q-values = true</td>
+    <td style="padding-left: 5em; padding-right: 2em">parse genomic coord. = true</td>
+  </tr>
+  <tr>
+    <td style="padding-right: 2em">text only = false</td>
+    <td style="padding-left: 5em; padding-right: 2em">scan both strands = false</td>
+    <td style="padding-left: 5em; padding-right: 2em">max strand = false</td>
+  </tr>
+  <tr>
+    <td style="padding-right: 2em">threshold type = p-value</td>
+    <td style="padding-left: 5em; padding-right: 2em">output theshold = 0.0001</td>
+    <td style="padding-left: 5em; padding-right: 2em">pseudocount = 0.1</td>
+  </tr>
+  <tr>
+    <td style="padding-right: 2em">alpha = 1</td>
+    <td style="padding-left: 5em; padding-right: 2em">verbosity = 2</td>
+    <td style="padding-left: 5em; padding-right: 2em"></td>
+  </tr>
+
+</table>
+</pre>
+<p>
+This information can be useful in the event you wish to report a
+problem with the FIMO software.
+</p>
+<hr>
+<span style="background-color: #DDDDFF"><a href="#top_buttons"><b>Go to top</b></a></span>
+</body>
+</html>
