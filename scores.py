@@ -3,6 +3,7 @@ import xml.etree.ElementTree as ET
 from collections import Counter
 from math import log
 from pathlib import Path
+import time
 
 import Bio
 from Bio import SeqIO
@@ -11,15 +12,15 @@ from Bio.motifs import meme
 
 # Create the parser
 parser = argparse.ArgumentParser(
-    description='Dato un motivo crea un file coi motivi trovati nelle intergeniche del genoma di interesse col maggiore score SM e quello raffinato rispetto agli ortologhi\nEsempio: python3 regulone.py -m meme.xml -i 0 -o output.txt',
+    description='Dato un motivo crea un file coi motivi trovati nelle intergeniche del genoma di interesse col maggiore score SM e quello raffinato rispetto agli ortologhi\nEsempio: python3 scores.py -m meme.xml -i 0 -o output.txt',
     formatter_class=argparse.RawTextHelpFormatter)
 
 # Add the arguments
-parser.add_argument('-m', '--meme_xml', type=str, required=True, help='The path to the meme xml file')
-parser.add_argument('-i', '--motif_index', type=int, required=True, help='The index of the motif')
-parser.add_argument('-o', '--output_file', type=str, required=True, help='The path to the output file')
-parser.add_argument('-d', '--intergen_dir', type=str, required=True, help='The path to the intergenic sequences directory of all the genomes of interest')
-parser.add_argument('-g', '--genome_ref', type=str, required=False, help='The genome of reference among the genomes of interest', default="CCMEE_29")
+parser.add_argument('-m', '--meme_xml', type=str, required=True, help='Il file MEME XML contenente il motivo')
+parser.add_argument('-i', '--motif_index', type=int, required=True, help='L\'indice del motivo nel file MEME XML')
+parser.add_argument('-o', '--output_file', type=str, required=True, help='Il file di output dove scrivere i risultati')
+parser.add_argument('-d', '--intergen_dir', type=str, required=True, help='La directory con le sequenze intergeniche in formato fasta')
+parser.add_argument('-g', '--genome_ref', type=str, required=False, help='Il genoma di interesse su cui fare le analisi, deve essere una sottostringa dei nomi dei file nella directory intergeniche(default: CCMEE_29)', default="CCMEE_29")
 
 # Parse the arguments
 args = parser.parse_args()
@@ -152,8 +153,6 @@ def extract_coding_seq(genoma: str):
 
 def countseqs(fasta_file):
     sequences = list(SeqIO.parse(fasta_file, "fasta"))
-    return len(sequences)
-
 def LOR(score):
 
     num = sum(1 for record in SeqIO.parse(intergen, "fasta") if sm(motivo, record.seq)[0] > score) / countseqs(intergen)
@@ -165,14 +164,18 @@ def LOR(score):
     else:
         return log(num / den)
 
+data= []
 
+data.append(command_line)
+for record in SeqIO.parse(intergen, "fasta"):
+    if len(record.seq) < len(motivo) or "N" in record.seq:
+        continue
+    start = record.description.find("WP_")
+    end = record.description.find("'", start)
+    pid = record.description[start:end]
+    data.append(str(record.id) + "\t" + "\t".join(map(str, refined_score(motivo, pid, record.seq))))
+start_time = time.time()
 with open(output_file, "w") as f:
-    f.write(command_line)
-    f.write("\n")
-    for record in SeqIO.parse(intergen, "fasta"):
-        if len(record.seq) < len(motivo) or "N" in record.seq:
-            continue
-        start = record.description.find("WP_")
-        end = record.description.find("'", start)
-        pid = record.description[start:end]
-        f.write(str(record.id) + "\t" + "\t".join(map(str, refined_score(motivo, pid, record.seq))) + "\n")
+    f.writelines("\n".join(data))
+end_time = time.time()
+print(f"Execution time: {end_time - start_time} seconds")
