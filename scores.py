@@ -12,7 +12,7 @@ from Bio.motifs import meme
 
 # Create the parser
 parser = argparse.ArgumentParser(
-    description='Dato un motivo crea un file coi motivi trovati nelle intergeniche del genoma di interesse col maggiore score SM e quello raffinato rispetto agli ortologhi\nEsempio: python3 scores.py -m meme.xml -i 0 -o output.txt',
+    description='Dato un motivo crea un file coi motivi trovati nelle intergeniche del genoma di interesse col maggiore score SM e quello raffinato rispetto agli ortologhi\nL\'output sarà formato da 5 colonne(locus_tag,score,score raffinato,motivo trovato, posizione rispetto a TSS) con tante righe quante sono le sequenze intergeniche\nEsempio: python3 scores.py -m meme.xml -i 0 -o output.txt -d intergeniche -g CCMEE_29',
     formatter_class=argparse.RawTextHelpFormatter)
 
 # Add the arguments
