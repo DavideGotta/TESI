@@ -86,6 +86,8 @@ def sm(motivo: Bio.motifs, seq: str, rel_entropy: list, pwm) -> tuple:
 
 def Hamming(s1: str, s2: str) -> int:
     """Calcola la distanza di Hamming tra due sequenze"""
+    if len(s1) != len(s2):
+        raise ValueError("Le sequenze devono avere la stessa lunghezza")
     return sum(1 for i in range(len(s1)) if s1[i] != s2[i])
 
 
