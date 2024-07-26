@@ -131,19 +131,19 @@ def main():
         cdsCCMEE29 = pickle.load(f)
     seqs = []
     i=0
-    for record in SeqIO.parse(file, "fasta"):
-        if len(record.seq) < len(motivo) or "N" in record.seq:
-            continue
-
-        i+=1
-        random_seqs = extract_300_random(len(record.seq), cdsCCMEE29)
-        seqs.extend(random_seqs)
+    # for record in SeqIO.parse(file, "fasta"):
+    #     if len(record.seq) < len(motivo) or "N" in record.seq:
+    #         continue
+    #
+    #     i+=1
+    #     random_seqs = extract_300_random(len(record.seq), cdsCCMEE29)
+    #     seqs.extend(random_seqs)
     scores=[]
     with open(output_file, "w") as f:
-        for seq in seqs:
+        for seq in cdsCCMEE29.items():
             score=refined_score_coding(motivo, cds, cdsCCMEE29, entropy, pwm, seq)
             scores.append(score)
-            f.write(f"{seq[0]}\t{score[0]}\t{score[1]}\n")
+            f.write(f"{score[0]}\t{score[1]}\n")
 
 
 
