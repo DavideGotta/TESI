@@ -164,7 +164,7 @@ def main():
     data = []
     data.append(command_line)
     entropy = relative_entropy(motivo)
-    with open("/home/davide/PycharmProjects/TESI2/dizop.pickle", "rb") as f:
+    with open("/home/davide/PycharmProjects/TESI2/piddict.pkl", "rb") as f:
         diz = pickle.load(f)
     start_time = time.time()
     for record in SeqIO.parse(intergen, "fasta"):

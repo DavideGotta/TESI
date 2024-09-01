@@ -26,9 +26,9 @@ for i in range(len(summaries['DocumentSummarySet']['DocumentSummary'])):
     ftp_path = summaries['DocumentSummarySet']['DocumentSummary'][i]['FtpPath_RefSeq']
     print(organism,assembly_accession,ftp_path)
     #downlaod fasta
-    filename = ftp_path + "/" + ftp_path.split('/')[-1] + '_protein.faa.gz'
+    filename = ftp_path + "/" + ftp_path.split('/')[-1] + '_protein..gz'
     print(filename)
-    #filename = ftp_path + "/" + ftp_path.split('/')[-1] + '_genomic.fna.gz'
+    #filename = ftp_path + "/" + ftp_path.split('/')[-1] + '_genomic..gz'
     localpath = f"/home/davide/Desktop/genomiChro/{organism}_{assembly_accession}.faa.gz"
     if ftp_path:
         urllib.request.urlretrieve(filename, localpath)
