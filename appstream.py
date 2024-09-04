@@ -137,15 +137,21 @@ def main():
     st.set_page_config(layout="wide")
     st.title("Gene Enrichment Analysis App")
     st.markdown("""
-    This app performs gene enrichment analysis based on Gene Ontology (GO) terms.
-    Upload your gene data file and adjust the parameters to run the analysis.
+    Questa app esegue l'analisi di arricchimento genico basata sui termini Gene Ontology (GO).
+    Carica il tuo file di dati genici e regola i parametri per eseguire l'analisi.
     """)
+    use_default = st.checkbox("Usa la tabella dati di default", value=True)
 
-    uploaded_file = st.file_uploader("Choose a CSV or XLSX file", type=["csv", "xlsx"])
+    if use_default:
+        #load file github https://github.com/DavideGotta/TESI/blob/master/operoniscorestream.csv
+        uploaded_file = 'https://raw.githubusercontent.com/DavideGotta/TESI/master/operoniscorestream.csv'
+        st.info("Si sta utilizzando un file di dati di esempio. Deseleziona la casella qui sopra per caricare il tuo file.")
+    else:
+        uploaded_file = st.file_uploader("Choose a CSV or XLSX file", type=["csv", "xlsx"])
 
     if uploaded_file is not None:
         try:
-            if uploaded_file.name.endswith('.csv'):
+            if isinstance(uploaded_file, str) or uploaded_file.name.endswith('.csv'):
                 df = pd.read_csv(uploaded_file)
             else:
                 df = pd.read_excel(uploaded_file)
@@ -160,13 +166,13 @@ def main():
                 use_refined = st.checkbox("Use refined p-value", value=True)
 
                 st.markdown("""
-                **GO Term Hierarchy Filters:**
-                - **Level**: The length of the shortest path from the root term. Lower values include more general terms.
-                - **Depth**: The length of the longest path from the root term. Higher values include more specific terms.
+                **Proprietà dei termini GO:**
+                - **Level**: La lunghezza del percorso più breve dal termine radice. I valori più bassi includono termini più generali.
+                - **Depth**: La lunghezza del percorso più lungo dal termine radice. I valori più alti includono termini più specifici.
                 """)
 
-                min_level = st.number_input("Minimum GO term level", min_value=0, value=0, step=1)
-                min_depth = st.number_input("Minimum GO term depth", min_value=0, value=0, step=1)
+                min_level = st.number_input("Min level per i termini GO", min_value=0, value=0, step=1)
+                min_depth = st.number_input("Min depth per i termini GO", min_value=0, value=0, step=1)
 
             with col2:
                 namespace_options = ["biological_process", "cellular_component", "molecular_function"]
