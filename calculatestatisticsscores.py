@@ -139,11 +139,12 @@ def main():
     #     random_seqs = extract_300_random(len(record.seq), cdsCCMEE29)
     #     seqs.extend(random_seqs)
     scores=[]
-    with open(output_file, "w") as f:
-        for seq in cdsCCMEE29.items():
-            score=refined_score_coding(motivo, cds, cdsCCMEE29, entropy, pwm, seq)
-            scores.append(score)
-            f.write(f"{score[0]}\t{score[1]}\n")
+    for seq in cdsCCMEE29.items():
+        score=refined_score_coding(motivo, cds, cdsCCMEE29, entropy, pwm, seq)
+        scores.append(score)
+    #save as pickle
+    with open("/home/davide/PycharmProjects/TESI2/scorescoding.pkl", "wb") as f:
+        pickle.dump(scores, f)
 
 
 

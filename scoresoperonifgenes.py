@@ -173,11 +173,13 @@ def main():
         start = record.description.find("pids=")
         end = record.description.find(",", start)
         pid = record.description[start:end]
-        pid=pid.replace("pids=","")
+       	pid=pid.replace("pids=","")
+        start_time2 = time.time()
 
         data.append(
             str(record.id) + "\t" + pid+ "\t" + str(len(record.seq)) + "\t" + "\t".join(map(str, refined_score(motivo, pid, str(record.seq), entropy, diz, pwm))))
-
+        end_time2 = time.time()
+        print(f"Tempo impiegato: {end_time2 - start_time2:.2f} secondi")
 
     with open(output_file, "w") as f:
         f.writelines("\n".join(data))

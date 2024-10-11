@@ -1608,3 +1608,23 @@ LAU37_RS18780> test sequence
  -35 box at pos.    136 ATGTTT    Score    10
 
  
+LAU37_RS16010
+> test sequence                                                                 
+ Length of sequence-       300
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:    175 LDF-  5.36
+ -10 box at pos.    159 AGTTACGAT Score    56
+ -35 box at pos.    135 TTAATG    Score    29
+
+ 
+LAU37_RS14470
+> test sequence                                                                 
+ Length of sequence-       128
+ Threshold for promoters -  0.20
+ Number of predicted promoters -      1
+ Promoter Pos:     63 LDF-  3.53
+ -10 box at pos.     48 CTTCATAAT Score    56
+ -35 box at pos.     29 TTGGAT    Score    27
+
+ 

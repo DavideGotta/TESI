@@ -5,6 +5,7 @@ from collections import Counter
 from scipy.stats import hypergeom
 from statsmodels.stats.multitest import multipletests
 from goatools.base import get_godag
+import plotly.express as px
 
 import io
 
@@ -30,7 +31,7 @@ def extract_GO_terms(row):
     row_str = ' '.join(row.astype(str))
     go_terms = re.findall(r'GO:\d+', row_str)
     unique_go_terms = list(set(go_terms))
-    return unique_go_terms
+    return unique_go_terms, row['protein_id']
 
 
 def extract_ancestors(go_id):
@@ -42,15 +43,24 @@ def extract_ancestors(go_id):
 
 
 def GO_enrichments(df, pvalue, refined=True, l=0, d=0, namespaces=None):
-    df['GOs'] = df.apply(extract_GO_terms, axis=1)
-    GOs_background = df["GOs"].tolist()
+    df['GOs_and_protein'] = df.apply(extract_GO_terms, axis=1)
+    GOs_background = df["GOs_and_protein"].apply(lambda x: x[0]).tolist()
     GOs_background = [item for sublist in GOs_background for item in sublist]
     GOs_background = [item for sublist in (extract_ancestors(x) for x in GOs_background) for item in sublist]
 
+    # Dizionario per memorizzare i protein_id associati a ciascun termine GO
+    go_to_proteins = {}
+
     newGOs_background = []
-    for x in GOs_background:
-        GO = godag[x].namespace + " - " + godag[x].name + " L" + str(godag[x].level) + " D" + str(godag[x].depth)
-        newGOs_background.append(GO)
+    for i, row in df.iterrows():
+        for go in row['GOs_and_protein'][0]:
+            ancestors = extract_ancestors(go)
+            for ancestor in ancestors:
+                GO = godag[ancestor].namespace + " - " + godag[ancestor].name + " L" + str(godag[ancestor].level) + " D" + str(godag[ancestor].depth)
+                newGOs_background.append(GO)
+                if GO not in go_to_proteins:
+                    go_to_proteins[GO] = set()
+                go_to_proteins[GO].add(row['GOs_and_protein'][1])
 
     background = newGOs_background
     if namespaces:
@@ -114,7 +124,8 @@ def GO_enrichments(df, pvalue, refined=True, l=0, d=0, namespaces=None):
         'GO term': list(p_values.keys()),
         'p-value': list(p_values.values()),
         'corrected p-value Bonferroni': corrected_pvals_bonferroni,
-        'corrected p-value Benjamini-Hochberg': corrected_pvals_benjamini_hochberg
+        'corrected p-value Benjamini-Hochberg': corrected_pvals_benjamini_hochberg,
+        'associated_proteins': [', '.join(go_to_proteins.get(go, [])) for go in p_values.keys()]
     }
     dfGO = pd.DataFrame(data)
     dfGO['enrichment'] = dfGO['GO term'].map(enrichments)
@@ -122,23 +133,13 @@ def GO_enrichments(df, pvalue, refined=True, l=0, d=0, namespaces=None):
     return dfGO
 
 
-import streamlit as st
-import pandas as pd
-import re
-from collections import Counter
-from scipy.stats import hypergeom
-from statsmodels.stats.multitest import multipletests
-import plotly.express as px
-
-
-# ... [previous code remains the same] ...
 
 def main():
     st.set_page_config(layout="wide")
     st.title("Gene Enrichment Analysis App")
     st.markdown("""
     Questa app esegue l'analisi di arricchimento genico basata sui termini Gene Ontology (GO).
-    Carica il tuo file di dati genici e regola i parametri per eseguire l'analisi.
+    Carica il tuo file di dati genici e regola i parametri per eseguire l'analisi
     """)
     use_default = st.checkbox("Usa la tabella dati di default", value=True)
 
@@ -195,7 +196,8 @@ def main():
                         'p-value': "{:.2e}",
                         'corrected p-value Bonferroni': "{:.2e}",
                         'corrected p-value Benjamini-Hochberg': "{:.2e}",
-                        'enrichment': "{:.2f}"
+                        'enrichment': "{:.2f}",
+                        'associated_proteins': lambda x: x
                     }), use_container_width=True)
 
                     # Create a bar plot of top enriched GO terms
@@ -203,7 +205,7 @@ def main():
                     fig = px.bar(top_terms, x='enrichment', y='GO term', orientation='h',
                                  title='Top 10 Enriched GO Terms',
                                  labels={'enrichment': 'Enrichment Score', 'GO term': 'GO Term'},
-                                 color='p-value', color_continuous_scale='Viridis')
+                                 color='p-value', color_con_scale='Viridis')
                     st.plotly_chart(fig, use_container_width=True)
 
                     # Download button
